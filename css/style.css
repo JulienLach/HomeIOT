@@ -487,3 +487,109 @@ body {
     padding: 1.5em 2em;
     color: #FFF;
 }
+
+
+
+/* PAGE MON COMPTE - MY ACCOUNT SECTION */
+
+.my-account .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.my-account-content {
+    display: grid;
+    grid-template-columns: 1.3fr 4fr;
+}
+
+.my-account-sumary h1 {
+    margin-bottom: 1em;
+}
+
+.my-account-sumary {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.my-account-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+
+.black-separator {
+    height: 2px;
+    background-color: black;
+}
+
+
+.disconnect-btn {
+    background-color: #0D67B5;
+    font-family: 'Noto Sans', sans-serif;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.7em 2em;
+    color: #FFF;
+}
+
+
+/* PAGE MON COMPTE - PURCHASES SECTION */
+
+
+.my-account-purchases {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.my-account-purchases h1 {
+    margin-bottom: 1em;
+}
+
+.my-account-purchases p {
+    font-size: 0.7em;
+    color: rgb(97, 97, 97);
+}
+
+.item-purchased {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+}
+
+.item-info {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+
+/* MEDIA QUERIES - PAGE MON COMPTE - MY ACCOUNT/PURCHASES SECTION */
+
+@media (max-width: 997px) {
+    .my-account-content {
+        grid-template-columns: 1fr;
+    }
+}
