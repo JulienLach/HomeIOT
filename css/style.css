@@ -28,7 +28,7 @@ body {
 
 .logo img {
     width: 100%;
-    border-radius: 0.5em;
+    border-radius: 0.3em;
 }
 
 /* SEARCH CONTAINER */
@@ -36,13 +36,12 @@ body {
 .search-container {
     background-color: #0D67B5;
     margin-left: 5em;
+    border-radius: 0.3em;
 }
 
 .search-container form {
     display: flex;
     align-items: center;
-    border: 2px solid #0D67B5;
-
 }
 
 .search-container form a {
@@ -54,6 +53,8 @@ body {
     width: 25vw;
     padding: 1.7em;
     border: none;
+    border: 2px solid #0D67B5;
+    border-radius: 0.3em;
 }
 
 /* MAIN MENU */
@@ -70,7 +71,7 @@ body {
     background-color: #0D67B5;
     height: 3em;
     padding: 1em;
-    border-radius: 0.5em;
+    border-radius: 0.3em;
     gap: 1em;
 }
 
@@ -101,5 +102,54 @@ body {
 
 .categories-links ul li a {
     text-decoration: none;
+    color: #FFF;
+}
+
+
+/* HEADER BANNER */
+
+.header-banner img {
+    width: 100%;
+}
+
+
+/* TOP SELLERS SECTION */
+
+.top-sellers .container {
+    width: 85%;
+    margin: auto;
+}
+
+.top-sellers-header {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.top-sellers-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 2em;
+    margin-bottom: 3em;
+}
+
+.top-sellers-item img {
+    height: 15em;
+    border: 1px solid lightgrey;
+}
+
+.top-sellers-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.7em;
+}
+
+.add-to-cart-btn {
+    background-color: #0D67B5;
+    font-family: 'Noto Sans', sans-serif;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.7em 2em;
     color: #FFF;
 }
