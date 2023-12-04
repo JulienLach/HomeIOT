@@ -329,7 +329,6 @@ body {
 }
 
 
-
 /* FOOTER SECTION */
 
 .footer .container {
@@ -361,4 +360,130 @@ body {
 
 .footer-links ul li {
     list-style: none;
+}
+
+
+/* PAGE CONNEXION - CONNEXION SECTION */
+
+.connexion .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.connexion-header {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.connexion-content div:nth-child(2) {
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
+    width: 85%;
+    margin: 2em auto;
+}
+
+.connexion-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+}
+
+.connexion-form input::placeholder {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.connexion-content div:nth-child(3) {
+    width: 85%;
+    margin: auto;
+    background-color: #83A0BA;
+    border-radius: 0.3em;
+    padding: 1em;
+}
+
+.text-form {
+    border: 1px solid lightgray;
+    border-radius: 0.4em;
+    padding: 1.6em;
+}
+
+.forgot-password {
+    color: #0D67B5;
+}
+
+.connexion-form .connexion-btn {
+    max-width: 15em;
+    background-color: #0D67B5;
+    font-family: 'Noto Sans', sans-serif;
+    border: none;
+    border-radius: 0.3em;
+    padding: 1.5em 2em;
+    color: #FFF;
+}
+
+.create-account-link {
+    color: #FFF;
+}
+
+
+
+
+/* PAGE CREATION COMPTE - CREATE ACCOUNT SECTION */
+
+.create-account .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.create-account-header {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.create-account-content div:nth-child(2) {
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
+    width: 85%;
+    margin: 2em auto;
+}
+
+.create-account-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+}
+
+.create-account-form input::placeholder {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.create-account-content div:nth-child(3) {
+    width: 85%;
+    margin: auto;
+    background-color: #83A0BA;
+    border-radius: 0.3em;
+    padding: 1em;
+}
+
+.text-form {
+    border: 1px solid lightgray;
+    border-radius: 0.4em;
+    padding: 1.6em;
+}
+
+.forgot-password {
+    color: #0D67B5;
+}
+
+.create-account-form .create-account-btn {
+    max-width: 15em;
+    background-color: #0D67B5;
+    font-family: 'Noto Sans', sans-serif;
+    border: none;
+    border-radius: 0.3em;
+    padding: 1.5em 2em;
+    color: #FFF;
 }
