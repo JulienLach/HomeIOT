@@ -105,6 +105,17 @@ body {
     color: #FFF;
 }
 
+.categories-links ul img {
+    height: 1.3em;
+}
+
+.categories-links ul li:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
 
 /* HEADER BANNER */
 
@@ -244,6 +255,39 @@ body {
 }
 
 .promotions-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.7em;
+}
+
+/* KITS-PACKS SECTION */
+
+.kits-packs .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.kits-packs-header {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.kits-packs-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: 2em;
+    margin-bottom: 3em;
+}
+
+.kits-packs-item img {
+    height: 15em;
+    border: 1px solid lightgrey;
+}
+
+.kits-packs-item {
     display: flex;
     flex-direction: column;
     align-items: center;
