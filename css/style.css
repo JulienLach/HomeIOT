@@ -362,6 +362,11 @@ body {
     list-style: none;
 }
 
+.footer-links ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
 
 /* PAGE CONNEXION - CONNEXION SECTION */
 
@@ -573,8 +578,36 @@ body {
 
 
 
+/* PAGE PRODUCT - PRODUCT SECTION */
+
+.product .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.product-infos {
+    margin: 2em auto;
+}
+
+.product-infos h1 {
+    font-size: 1.6em;
+}
 
 
+
+.product-main-image {
+    height: 350px;
+}
+
+.product-preview-images img {
+    height: 65px;
+}
 
 
 
@@ -584,7 +617,6 @@ body {
 
 
 /* MEDIA QUERIES */
-
 
 /* MEDIA QUERIES - PAGE MON COMPTE - MY ACCOUNT/PURCHASES SECTION */
 
