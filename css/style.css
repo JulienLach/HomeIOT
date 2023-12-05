@@ -701,6 +701,7 @@ body {
 
 
 .shopping-cart-validate-btn {
+    cursor: pointer;
     background-color: #0D67B5;
     font-family: 'Noto Sans', sans-serif;
     border: none;
@@ -785,6 +786,7 @@ body {
 
 
 .order-validate-btn {
+    cursor: pointer;
     background-color: #0D67B5;
     font-family: 'Noto Sans', sans-serif;
     border: none;
@@ -852,6 +854,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+
 /* PAGE MA COMMADE - CARD FORM SECTION */
 
 .card-form {
@@ -865,6 +868,32 @@ body {
 }
 
 
+
+/* PAGE COMMANDE VALIDÉE - ORDER-CONFIRMED SECTION */
+
+
+.order-confirmed .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.order-confirmed-header {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.order-confirmed-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    margin-bottom: 20vh;
+}
+
+.order-confirmed-infos p span {
+    font-weight: bold;
+}
 
 
 
