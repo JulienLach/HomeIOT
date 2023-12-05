@@ -871,7 +871,6 @@ body {
 
 /* PAGE COMMANDE VALIDÉE - ORDER-CONFIRMED SECTION */
 
-
 .order-confirmed .container {
     width: 85%;
     margin: auto;
@@ -896,8 +895,56 @@ body {
 }
 
 
+/* PAGE CONTACT - CONTACT FORM SECTION */
+
+.contact .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.contact-header {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.contact-content div:nth-child(2) {
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
+    width: 85%;
+    margin: 2em auto;
+}
+
+textarea {
+    border: 1px solid lightgray;
+    border-radius: 0.4em;
+    padding: 1.6em;
+    font-family: 'Noto Sans', sans-serif;
+    resize: vertical;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+}
+
+.contact-form input::placeholder {
+    font-family: 'Noto Sans', sans-serif;
+}
 
 
+.contact-submit-btn {
+    background-color: #0D67B5;
+    font-family: 'Noto Sans', sans-serif;
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 6em;
+    margin-right: auto;
+    color: #FFF;
+    font-size: 1em;
+}
 
 
 
