@@ -152,6 +152,7 @@ body {
 .top-sellers-item img {
     height: 15em;
     border: 1px solid lightgrey;
+    border-radius: 0.4em;
 }
 
 .top-sellers-item {
@@ -223,6 +224,7 @@ body {
 .nouveautes-item img {
     height: 15em;
     border: 1px solid lightgrey;
+    border-radius: 0.5em;
 }
 
 .nouveautes-item {
@@ -256,6 +258,7 @@ body {
 .promotions-item img {
     height: 15em;
     border: 1px solid lightgrey;
+    border-radius: 0.5em;
 }
 
 .promotions-item {
@@ -289,6 +292,7 @@ body {
 .kits-packs-item img {
     height: 15em;
     border: 1px solid lightgrey;
+    border-radius: 0.5em;
 }
 
 .kits-packs-item {
@@ -629,11 +633,13 @@ body {
 .product-main-image {
     height: 350px;
     border: 1px solid lightgray;
+    border-radius: 0.5em;
 }
 
 .product-preview-images img {
     height: 65px;
     border: 1px solid lightgray;
+    border-radius: 0.3em;
 }
 
 .product-buttons {
