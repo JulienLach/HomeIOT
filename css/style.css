@@ -748,6 +748,109 @@ body {
 
 
 
+
+
+/* PAGE MA COMMANDE - ORDER SECTION */
+
+.order .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.order-content {
+    display: grid;
+    grid-template-columns: 4fr 1.3fr;
+}
+
+.order-sumary h1 {
+    margin-bottom: 1em;
+}
+
+.order-sumary {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.order-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+
+.black-separator {
+    height: 2px;
+    background-color: black;
+}
+
+
+.order-validate-btn {
+    background-color: #0D67B5;
+    font-family: 'Noto Sans', sans-serif;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.7em 2em;
+    color: #FFF;
+    margin-top: 2em;
+}
+
+
+/* PAGE MON PANIER - SHOPPING-CART PENDING-ITEMS SECTION */
+
+.order-pending-items {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.order-pending-items h1 {
+    margin-bottom: 1em;
+}
+
+.order-pending-items p {
+    font-size: 0.7em;
+    color: rgb(97, 97, 97);
+}
+
+.item-pending {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+}
+
+.item-info {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.billing-form-header {
+    margin-top: 1em;
+}
+
+.billing-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.billing-form input {
+    width: 50%;
+    padding: 1.5em;
+    gap: 2em;
+}
+
+.billing-form input::placeholder {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
 /* MEDIA QUERIES */
 
 /* MEDIA QUERIES - PAGE MON COMPTE - MY ACCOUNT/PURCHASES SECTION */
