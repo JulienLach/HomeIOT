@@ -867,7 +867,9 @@ body {
     gap: 0.5em;
 }
 
-
+.card-form input::placeholder {
+    font-family: 'Noto Sans', sans-serif;
+}
 
 /* PAGE COMMANDE VALIDÉE - ORDER-CONFIRMED SECTION */
 
