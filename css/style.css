@@ -795,7 +795,7 @@ body {
 }
 
 
-/* PAGE MON PANIER - SHOPPING-CART PENDING-ITEMS SECTION */
+/* PAGE MA COMMADE - ORDER PENDING-ITEMS SECTION */
 
 .order-pending-items {
     margin: 2em auto;
@@ -841,14 +841,37 @@ body {
 }
 
 .billing-form input {
-    width: 50%;
+    width: 60%;
     padding: 1.5em;
     gap: 2em;
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
 }
 
 .billing-form input::placeholder {
     font-family: 'Noto Sans', sans-serif;
 }
+
+/* PAGE MA COMMADE - CARD FORM SECTION */
+
+.card-form {
+    margin-top: 1em;
+}
+
+.card-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+
+
+
+
+
+
+
+
 
 
 /* MEDIA QUERIES */
