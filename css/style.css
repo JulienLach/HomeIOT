@@ -81,6 +81,11 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.main-menu ul li span {
+    color: #FFF;
+    font-weight: bold;
+}
+
 
 /* CATEGORIES NAVBAR */
 
@@ -176,23 +181,17 @@ body {
 
 .small-banners-content {
     display: flex;
-    justify-content: space-between;
-}
-
-.small-banner-nouveautes {
-    text-align: center;
-}
-
-.small-banner-promotions {
-    text-align: center;
+    justify-content: center;
 }
 
 .small-banner-nouveautes img {
-    width: 90%;
+    width: 95%;
+    border-radius: 0.6em;
 }
 
 .small-banner-promotions img {
-    width: 90%;
+    width: 95%;
+    border-radius: 0.6em;
 }
 
 
@@ -296,7 +295,7 @@ body {
 }
 
 
-/* CTA CONTACT SECTION */
+/* PAGE INDEX.HTML - CTA CONTACT SECTION */
 
 .cta-contact .container {
     width: 85%;
@@ -671,7 +670,7 @@ body {
 .shopping-cart .container {
     width: 85%;
     margin: auto;
-    padding-bottom: 4em;
+    padding-bottom: 15em;
 }
 
 .shopping-cart-content {
