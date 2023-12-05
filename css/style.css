@@ -895,6 +895,7 @@ body {
 }
 
 
+
 /* PAGE CONTACT - CONTACT FORM SECTION */
 
 .contact .container {
@@ -947,12 +948,39 @@ textarea {
 }
 
 
+/* PAGE QUI SOMMES-NOUS ? + QU'EST CE QUE L'IOT + CGV + MENTIONS LEGALES - ABOUT SECTION */
+
+.about .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.about-header {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.about-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    margin-bottom: 20vh;
+}
+
+.about-infos p {
+    color: rgb(97, 97, 97);
+}
 
 
 
-/* MEDIA QUERIES */
 
-/* MEDIA QUERIES - PAGE MON COMPTE - MY ACCOUNT/PURCHASES SECTION */
+
+/* -----  MEDIA QUERIES   ------ */
+
+
+/* PAGE MON COMPTE - MY ACCOUNT/PURCHASES SECTION */
 
 @media (max-width: 997px) {
     .my-account-content {
