@@ -879,6 +879,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+
 /* PAGE COMMANDE VALIDÉE - ORDER-CONFIRMED SECTION */
 
 .order-confirmed .container {
@@ -992,7 +993,7 @@ textarea {
 
 /* PAGE MON COMPTE - MY ACCOUNT/PURCHASES SECTION */
 
-@media (max-width: 997px) {
+@media (max-width: 1000px) {
     .my-account-content {
         grid-template-columns: 1fr;
     }
