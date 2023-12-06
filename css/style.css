@@ -986,6 +986,97 @@ textarea {
 
 
 
+/* PAGE ADMIN PANEL - CREATE SECTION */
+
+.admin-panel .container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 4em;
+}
+
+.admin-panel-content {
+    display: grid;
+    grid-template-columns: 1.3fr 4fr;
+}
+
+.admin-panel-sumary h1 {
+    margin-bottom: 1em;
+}
+
+.admin-panel-sumary {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.admin-panel-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+
+/* PAGE ADMIN PANEL - CREATE FORM SECTION */
+
+.create-product-header {
+    margin: 2em auto;
+    font-size: 1.3em;
+}
+
+.create-product-content div:nth-child(2) {
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
+    width: 85%;
+    margin: 2em auto;
+}
+
+.create-product-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+}
+
+.create-product-form input::placeholder {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.create-product-content div:nth-child(3) {
+    width: 85%;
+    margin: auto;
+    background-color: #83A0BA;
+    border-radius: 0.3em;
+    padding: 1em;
+}
+
+.text-form {
+    border: 1px solid lightgray;
+    border-radius: 0.4em;
+    padding: 1.6em;
+}
+
+.forgot-password {
+    color: #0D67B5;
+}
+
+.create-product-form .create-product-btn {
+    max-width: 15em;
+    background-color: #0D67B5;
+    font-family: 'Noto Sans', sans-serif;
+    border: none;
+    border-radius: 0.3em;
+    padding: 1.5em 2em;
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* -----  MEDIA QUERIES   ------ */
