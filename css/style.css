@@ -997,6 +997,7 @@ textarea {
 .admin-panel-content {
     display: grid;
     grid-template-columns: 1.3fr 4fr;
+    gap: 2em;
 }
 
 .admin-panel-sumary h1 {
@@ -1016,6 +1017,7 @@ textarea {
 
 /* PAGE ADMIN PANEL - CREATE FORM SECTION */
 
+
 .create-product-header {
     margin: 2em auto;
     font-size: 1.3em;
@@ -1031,8 +1033,10 @@ textarea {
 .create-product-form {
     display: flex;
     flex-direction: column;
+    border: 1px solid lightgray;
     padding: 2em;
     gap: 2em;
+
 }
 
 .create-product-form input::placeholder {
@@ -1052,6 +1056,13 @@ textarea {
     border-radius: 0.4em;
     padding: 1.6em;
 }
+
+.create-product-form label {
+    font-size: 0.8em;
+    color: rgb(97, 97, 97);
+}
+
+
 
 .forgot-password {
     color: #0D67B5;

@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="HomeIOT-logos/favicon.ico" type="image/x-icon" />
     <!-- STYLE.CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <title>HomeIOT</title>
+    <title>HomeIOT - Admin - Créer un produit</title>
 </head>
 
 <body>
@@ -81,18 +81,18 @@
 
 
     <!-- ADMIN PANEL CREATE SECTION -->
-    <section class="my-account">
+    <section class="admin-panel">
         <div class="container">
-            <div class="my-account-content">
+            <div class="admin-panel-content">
 
-                <div class="my-account-sumary">
+                <div class="admin-panel-sumary">
                     <div>
                         <h1>Admin panel</h1>
                     </div>
-                    <div class="my-account-menu">
-                        <h5>Mes commandes</h5>
+                    <div class="admin-panel-menu">
+                        <h5>Créer un produit</h5>
                         <div class="black-separator"></div>
-                        <h5>Mes informations</h5>
+                        <h5>Modifier/Supprimer</h5>
                         <div class="black-separator"></div>
                         <div>
                             <button class="disconnect-btn">Me déconnecter</button>
@@ -102,14 +102,19 @@
 
                 <div class="create-product">
                     <div class="create-product-header">
-                        <h1>Connexion</h1>
+                        <h1>Créer un produit</h1>
                     </div>
                     <div>
                         <form class="create-product-form" action="">
-                            <input class="text-form" type="email" name="" id="" placeholder="Email">
-                            <input class="text-form" type="password" placeholder="Mot de passe">
-                            <a class="forgot-password" href="">Mot de passe oublié ?</a>
-                            <button class="create-product-btn" type="submit">Connexion</button>
+                            <input class="text-form" type="email" name="" id="" placeholder="Nom du produit">
+                            <input class=" text-form" type="password" placeholder="Prix du produit">
+                            <label for="selectOption">Selectionner une catégorie :</label>
+                            <select class="text-form" id="selectOption" name="selectOption">
+                                <option value="option1">Kits/Packs</option>
+                                <option value="option2">Nouveautés</option>
+                                <option value="option3">Promotions</option>
+                            </select>
+                            <button class="create-product-btn" type="submit">Créer le produit</button>
                         </form>
                     </div>
                 </div>
