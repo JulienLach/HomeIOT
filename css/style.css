@@ -1414,9 +1414,39 @@ textarea {
     }
 
 
-    /* MY ACCOUNT SECTION */
+    /* PAGE MY ACCOUNT -  MY ACCOUNT SUMMARY SECTION */
+
+
+    .my-account .container {
+        width: 90%;
+        margin: auto;
+        padding-bottom: 4em;
+    }
 
     .my-account-content {
         grid-template-columns: 1fr;
+    }
+
+    .my-account-sumary {
+        margin-left: 1em;
+        font-size: 1.3em;
+    }
+
+    /* PAGE MY ACCOUNT - PURCHASES SECTION */
+
+    .items-purchased {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .item-purchased {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
+    .item-info {
+        gap: 0.5em;
     }
 }
