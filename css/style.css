@@ -1354,6 +1354,43 @@ textarea {
     }
 
 
+    /* PAGE ADMIN PANEL - CREATE SECTION */
+
+    .admin-panel .container {
+        width: 100%;
+        margin: auto;
+        padding-bottom: 5em;
+    }
+
+    .admin-panel-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* gap: 2em; */
+    }
+
+    .admin-panel-sumary {
+        margin-left: 1em;
+        font-size: 1.3em;
+    }
+
+    .create-product-header {
+        margin-left: 1em;
+        font-size: 1.2em;
+    }
+
+
+    /* PAGE ADMIN PANEL - UPDATE DELETE SECTION */
+
+    .update-delete-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .delete-product-btn {
+        max-width: 15em;
+    }
+
 
     /* MY ACCOUNT SECTION */
 
