@@ -383,9 +383,10 @@ body {
 }
 
 .cta-contact-content p {
-    font-size: 1.3em;
+    font-size: 1.2em;
     width: 65%;
     margin: auto;
+    color: rgb(97, 97, 97);
 }
 
 .contact-btn {
@@ -1312,6 +1313,12 @@ textarea {
         flex-direction: column;
     }
 
+    .cta-contact-content p {
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
 
     /* PAGE KITS/PACKS - KITS/PACKS SECTION */
 
@@ -1336,6 +1343,15 @@ textarea {
         font-size: 1em;
     }
 
+
+    /* FOOTER SECTION */
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+        gap: 3em;
+        color: #FFF;
+    }
 
 
 
