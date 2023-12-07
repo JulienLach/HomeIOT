@@ -1343,6 +1343,16 @@ textarea {
         font-size: 1em;
     }
 
+    /* PAGE CONTACT - CONTACT FORM */
+    .contact-form div {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .contact-submit-btn {
+        padding: 1em 3em;
+    }
 
     /* FOOTER SECTION */
 
