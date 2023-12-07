@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONT NOTO SANS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="HomeIOT-logos/favicon.ico" type="image/x-icon" />
+    <!-- STYLE.CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>HomeIOT - Admin - Modifier/Supprimer</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+        <div class="container">
+
+            <!-- LOGO -->
+            <div class=" logo">
+                <a href="index.html">
+                    <img src="HomeIOT-logos/HomeIOT-logos-cropped.jpeg" alt="">
+                </a>
+            </div>
+
+            <!-- SEARCH CONTAINER -->
+            <div class="search-container">
+                <form action="">
+                    <input type="text" placeholder="" name="search">
+                    <a href=""><img style="height: 20px;" src="img/loupe.png" alt=""></a>
+                </form>
+            </div>
+
+            <!-- MAIN MENU -->
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <img style="height: 20px;" src="img/shopping_cart_white.png" alt="">
+                        <a href="index.html">Mon panier</a>
+                    </li>
+                    <li>
+                        <img style="height: 20px;" src="img/utilisateur.png" alt="">
+                        <a href="connexion.html">Connexion</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <!-- CATEGORIES NAVBAR -->
+    <section class="categories">
+        <div class="container">
+            <div class="categories-menu">
+                <div class="categories-links">
+                    <ul>
+                        <li>
+                            <img src="img/white_hamburger_menu.png" alt="">
+                            <a href="kits-packs.html">Catégories</a>
+                            <img src="img/chevron-down-white.png" alt="">
+                        </li>
+                        <li>
+                            <a href="nouveautes.html">Nouveautés</a>
+                        </li>
+                        <li>
+                            <a href="promotions.html">Promotions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ADMIN PANEL CREATE SECTION -->
+    <section class="admin-panel">
+        <div class="container">
+            <div class="admin-panel-content">
+
+                <div class="admin-panel-sumary">
+                    <div>
+                        <h1>Admin panel</h1>
+                    </div>
+                    <div class="admin-panel-menu">
+                        <h5>Créer un produit</h5>
+                        <div class="black-separator"></div>
+                        <h5>Modifier/Supprimer</h5>
+                        <div class="black-separator"></div>
+                        <div>
+                            <button class="disconnect-btn">Me déconnecter</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="create-product">
+                    <div class="create-product-header">
+                        <h1>Modifier/Supprimer</h1>
+                    </div>
+                    <div>
+                        <form class="create-product-form" action="">
+                            <input class="text-form" type="email" name="" id="" placeholder="ID du produit">
+                            <input class="text-form" type="email" name="" id="" placeholder="Arduino UNO+">
+                            <input class=" text-form" type="password" placeholder="13,99 €">
+                            <label for="selectOption">Selectionner une catégorie :</label>
+                            <select class="text-form" id="selectOption" name="selectOption">
+                                <option value="option1">Kits/Packs</option>
+                                <option value="option2">Nouveautés</option>
+                                <option value="option3">Promotions</option>
+                            </select>
+                            <label class="custom-file-label" for="myFile">Ajouter une image</label>
+                            <input class="add-file text-form" type="file" id="myFile" name="filename">
+                            <div class="update-delete-btns">
+                                <button class="update-product-btn create-product-btn" type="submit">Modifier le
+                                    produit</button>
+                                <button class="delete-product-btn" type="submit">Supprimer le
+                                    produit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="HomeIOT-logos/HomeIOT-logos_white_cropped.png" alt="">
+                </div>
+                <div class="footer-links">
+                    <h2>Liens rapides</h2>
+                    <ul>
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h2>Informations</h2>
+                    <ul>
+                        <li><a href="cgv.html">CGV</a></li>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="about.html">Qui sommes-nous ?</a></li>
+                        <li><a href="iot.html">Qu'est ce que l'IOT ?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h2>Mon compte</h2>
+                    <ul>
+                        <li><a href="my-account.html">Mon compte</a></li>
+                        <li><a href="shopping-cart.html">Mon panier</a></li>
+                        <li><a href="my-account.html"></a>Mes Commandes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>

@@ -1079,7 +1079,22 @@ textarea {
 }
 
 
+/* PAGE ADMIN PANEL - UPDATE/DELETE FORM SECTION */
 
+
+.update-delete-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-product-btn {
+    background-color: #FFF;
+    font-family: 'Noto Sans', sans-serif;
+    border: 1px solid #0D67B5;
+    border-radius: 0.3em;
+    padding: 1.5em 2em;
+    color: #0D67B5;
+}
 
 
 
