@@ -20,14 +20,69 @@ body {
     margin: 2em 2em;
 }
 
+/* HAMBURGER BUTTON */
 
-/* LOGO */
-.logo {
-    width: 15%;
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
 }
 
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #0D67B5;
+    margin: 6px 0;
+    border-radius: 3em;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li {
+    margin: 10px 50px;
+    list-style: none;
+}
+
+.mobile-menu ul li a {
+    font-size: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #0D67B5;
+}
+
+.mobile-menu.active {
+    right: 0px;
+}
+
+.chevron-mobile-menu {
+    height: 0.9em;
+}
+
+
+/* LOGO */
+
 .logo img {
-    width: 100%;
+    width: 200px;
     border-radius: 0.3em;
 }
 
@@ -176,8 +231,8 @@ body {
 /* SMALL BANNERS SECTION */
 
 .small-banners {
-    background-color: lightgray;
-    padding: 1em;
+    background-color: rgb(236, 236, 236);
+    padding: 0.7em;
 }
 
 .small-banners .container {
@@ -191,13 +246,20 @@ body {
 }
 
 .small-banner-nouveautes img {
-    width: 95%;
-    border-radius: 0.6em;
+    width: 98%;
+    border-radius: 0.3em;
 }
 
 .small-banner-promotions img {
-    width: 95%;
-    border-radius: 0.6em;
+    width: 98%;
+    border-radius: 0.3em;
+}
+
+
+/* MOBILE BANNER SECTION */
+
+.mobile-header-banner {
+    display: none;
 }
 
 
@@ -1108,9 +1170,177 @@ textarea {
 /* -----  MEDIA QUERIES   ------ */
 
 
+
+
 /* PAGE MON COMPTE - MY ACCOUNT/PURCHASES SECTION */
 
-@media (max-width: 1000px) {
+
+@media(max-width: 1000px) {
+
+
+
+    /* NAVBAR */
+    .navbar .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 2em 2em;
+        justify-content: space-between;
+    }
+
+    /* HAMBURGER BUTTON */
+    .hamburger-button {
+        display: block;
+    }
+
+    /* LOGO IMG */
+    .logo img {
+        width: 150px;
+    }
+
+    /* SEARCH CONTAINER */
+    .search-container {
+        display: none;
+    }
+
+    /* MAIN MENU */
+    .main-menu {
+        display: none;
+    }
+
+    /* CATEGORIES */
+
+    .categories {
+        display: none;
+    }
+
+    /* HEADER BANNER */
+    .header-banner {
+        display: none;
+    }
+
+    /* MOBILE HEADER BANNER */
+    .mobile-header-banner {
+        display: block;
+    }
+
+    .mobile-header-banner img {
+        width: 100%;
+    }
+
+
+    /* SMALL BANNERS */
+    .small-banners-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* TOP SELLERS SECTION */
+
+    .top-sellers-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        margin-bottom: 3em;
+    }
+
+    .top-sellers-item img {
+        height: 8em;
+        border: 1px solid lightgrey;
+        border-radius: 0.4em;
+    }
+
+    .top-sellers-header {
+        font-size: 1em;
+    }
+
+    .top-sellers-item h3 {
+        font-size: 1em;
+    }
+
+    /* NOUVEAUTES SECTION */
+
+    .nouveautes-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        margin-bottom: 3em;
+    }
+
+    .nouveautes-item img {
+        height: 8em;
+        border: 1px solid lightgrey;
+        border-radius: 0.4em;
+    }
+
+    .nouveautes-header {
+        font-size: 1em;
+    }
+
+    .nouveautes-item h3 {
+        font-size: 1em;
+    }
+
+    /* PROMOTIONS SECTION */
+
+    .promotions-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        margin-bottom: 3em;
+    }
+
+    .promotions img {
+        height: 8em;
+        border: 1px solid lightgrey;
+        border-radius: 0.4em;
+    }
+
+    .promotions-header {
+        font-size: 1em;
+    }
+
+    .promotions-item h3 {
+        font-size: 1em;
+    }
+
+    /* CTA CONTACT SECTION */
+
+    .cta-contact-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* PAGE KITS/PACKS - KITS/PACKS SECTION */
+
+    .kits-packs-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        margin-bottom: 3em;
+    }
+
+    .kits-packs img {
+        height: 8em;
+        border: 1px solid lightgrey;
+        border-radius: 0.4em;
+    }
+
+    .kits-packs-header {
+        font-size: 1em;
+    }
+
+    .kits-packs-item h3 {
+        font-size: 1em;
+    }
+
+
+
+
+    /* MY ACCOUNT SECTION */
+
     .my-account-content {
         grid-template-columns: 1fr;
     }
