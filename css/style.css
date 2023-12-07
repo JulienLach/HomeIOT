@@ -525,6 +525,8 @@ body {
     margin: 2em auto;
 }
 
+/* PAGE CREATION COMPTE - CREATE ACCOUNT FORM SECTION */
+
 .create-account-form {
     display: flex;
     flex-direction: column;
@@ -1168,16 +1170,13 @@ textarea {
 
 
 
-/* -----  MEDIA QUERIES   ------ */
-
-
+/* -------  MEDIA QUERIES  -------- */
 
 
 /* PAGE MON COMPTE - MY ACCOUNT/PURCHASES SECTION */
 
 
 @media(max-width: 1000px) {
-
 
 
     /* NAVBAR */
@@ -1399,6 +1398,19 @@ textarea {
 
     .delete-product-btn {
         max-width: 15em;
+    }
+
+
+    /* PAGE CREATE ACCOUNT */
+
+    .create-account-form div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .create-account-form div:first-child input {
+        width: 100%;
     }
 
 
