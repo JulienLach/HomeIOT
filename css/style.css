@@ -1479,11 +1479,45 @@ textarea {
     }
 
 
+    /* PAGE PRODUCT - PRODUCT SECTION */
+
+    .product-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0em;
+
+    }
+
+    .product-infos {
+        margin: 0em;
+    }
+
+    .product-buttons {
+        margin-top: 2em;
+    }
+
+    .product-buttons button {
+        padding: 1em 1em;
+    }
+
+    .product-buttons {
+        padding-left: 0;
+    }
+
+    .product-description {
+        margin-left: 0;
+    }
 
 
 
+    /* PAGE MON PANIER - SHHOPPING CART SECTION */
 
+    .shopping-cart-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
-
-
+    .shopping-cart-sumary {
+        margin: 0;
+    }
 }
