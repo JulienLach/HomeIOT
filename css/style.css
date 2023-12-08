@@ -20,24 +20,29 @@ body {
     margin: 2em 2em;
 }
 
-/* HAMBURGER BUTTON */
 
-.hamburger-button {
+/* HAMBURGER BUTTON - MOBILE MENU */
+
+/* ICON MOBILE MENU */
+
+.icon-menu {
+    height: 32px;
     display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1000;
+    position: relative;
+    z-index: 200;
+    bottom: 0.2em;
 }
 
-.hamburger-button .hamburger-line {
-    width: 30px;
-    height: 3px;
-    background: #0D67B5;
-    margin: 6px 0;
-    border-radius: 3em;
+/* CLOSE HAMBURGER BUTON */
+
+.icon-close {
+    height: 35px;
+    display: none;
+    position: relative;
+    z-index: 200;
+    bottom: 0.2em;
 }
+
 
 /* MOBILE MENU */
 
@@ -219,6 +224,7 @@ body {
 }
 
 .add-to-cart-btn {
+    cursor: pointer;
     background-color: #0D67B5;
     font-family: 'Noto Sans', sans-serif;
     border: none;
@@ -390,6 +396,7 @@ body {
 }
 
 .contact-btn {
+    cursor: pointer;
     background-color: #FFF;
     font-family: 'Noto Sans', sans-serif;
     border: 1px solid #0D67B5;
@@ -1520,4 +1527,13 @@ textarea {
     .shopping-cart-sumary {
         margin: 0;
     }
+
+
+    /* ICON MOBILE MENU */
+    .icon-menu {
+        display: block;
+    }
+
+
+
 }
