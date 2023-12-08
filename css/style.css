@@ -267,6 +267,7 @@ li:nth-child(3) {
 }
 
 .top-sellers-item {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,6 +348,7 @@ li:nth-child(3) {
 }
 
 .nouveautes-item {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -381,6 +383,7 @@ li:nth-child(3) {
 }
 
 .promotions-item {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -415,6 +418,7 @@ li:nth-child(3) {
 }
 
 .kits-packs-item {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
