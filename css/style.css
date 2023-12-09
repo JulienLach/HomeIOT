@@ -1550,6 +1550,10 @@ textarea {
 
     }
 
+    .product-main-image {
+        height: 300px;
+    }
+
     .product-infos {
         margin: 0em;
     }
