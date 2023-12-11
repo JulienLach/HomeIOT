@@ -948,11 +948,11 @@ li:nth-child(3) {
     color: rgb(97, 97, 97);
 }
 
-.item-pending {
+/* .item-pending {
     display: flex;
     flex-direction: row;
     gap: 4em;
-}
+} */
 
 .item-info {
     display: flex;
