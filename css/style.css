@@ -704,11 +704,11 @@ li:nth-child(3) {
     align-items: center;
 }
 
-.item-price {
+/* .item-price {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
 
@@ -876,10 +876,20 @@ li:nth-child(3) {
     align-items: center;
 }
 
+.quantity-selector {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 0.2em;
+    padding: 0.2em;
+    color: rgb(97, 97, 97);
+}
+
 .item-price {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5em;
 }
 
 
@@ -961,11 +971,11 @@ li:nth-child(3) {
     align-items: center;
 }
 
-.item-price {
+/* .item-price {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .billing-form-header {
     margin-top: 1em;
