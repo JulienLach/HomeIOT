@@ -96,7 +96,7 @@
                         </div>
 
                         <div>
-                            <a href="order-confirmed.html">
+                            <a href="order-confirmed.php">
                                 <button class="order-validate-btn">Valider ma commande</button>
                             </a>
                         </div>

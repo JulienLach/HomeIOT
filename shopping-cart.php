@@ -77,7 +77,7 @@
                         <div class="black-separator"></div>
                         <h5>Sous total :<span> 59,89 €</span></h5>
                         <div>
-                            <a href="order.html">
+                            <a href="order.php">
                                 <button class="shopping-cart-validate-btn">Valider mon panier</button>
                             </a>
                         </div>

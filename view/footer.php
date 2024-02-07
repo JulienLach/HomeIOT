@@ -8,30 +8,31 @@
                 <div class="footer-links">
                     <h2>Liens rapides</h2>
                     <ul>
-                        <li><a href="index.html">Acceuil</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.php">Acceuil</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h2>Informations</h2>
                     <ul>
-                        <li><a href="cgv.html">CGV</a></li>
-                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="cgv.php">CGV</a></li>
+                        <li><a href="mentions-legales.php">Mentions légales</a></li>
                         <li><a href="about.php">Qui sommes-nous ?</a></li>
-                        <li><a href="iot.html">Qu'est ce que l'IOT ?</a></li>
+                        <li><a href="iot.php">Qu'est ce que l'IOT ?</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h2>Mon compte</h2>
                     <ul>
-                        <li><a href="my-account.html">Mon compte</a></li>
-                        <li><a href="shopping-cart.html">Mon panier</a></li>
-                        <li><a href="my-account.html">Mes Commandes</a></li>
+                        <li><a href="my-account.php">Mon compte</a></li>
+                        <li><a href="shopping-cart.php">Mon panier</a></li>
+                        <li><a href="my-account.php">Mes Commandes</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="javascript/main.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
+</html>

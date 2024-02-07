@@ -363,7 +363,7 @@
                     en
                     partiulier, nous pouvrons vous le trouver.
                 </p>
-                <a href="contact.html"><button class="contact-btn">Contact</button></a>
+                <a href="contact.php"><button class="contact-btn">Contact</button></a>
             </div>
         </div>
     </section>

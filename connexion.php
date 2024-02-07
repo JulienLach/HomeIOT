@@ -16,7 +16,7 @@
                     </form>
                 </div>
                 <div>
-                    <a class="create-account-link" href="create-account.html">Pas de compte ? Créez-en un</a>
+                    <a class="create-account-link" href="create-account.php">Pas de compte ? Créez-en un</a>
                 </div>
             </div>
         </div>

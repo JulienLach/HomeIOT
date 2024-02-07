@@ -24,7 +24,7 @@
 
             <!-- LOGO -->
             <div class=" logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="HomeIOT-logos/HomeIOT-logos-cropped.jpeg" alt="">
                 </a>
             </div>
@@ -40,26 +40,26 @@
                 <ul>
                     <li>
                         <img class="chevron-mobile-menu" src="img/chevron-mobile-menu.png" alt="">
-                        <a href="index.html">Acceuil</a>
+                        <a href="index.php">Acceuil</a>
                     </li>
                     <li>
                         <img class="chevron-mobile-menu" src="img/chevron-mobile-menu.png" alt="">
-                        <a href="kits-packs.html">Catégories</a>
+                        <a href="kits-packs.php">Catégories</a>
                     </li>
                     <li>
                         <img class="chevron-mobile-menu" src="img/chevron-mobile-menu.png" alt="">
-                        <a href="nouveautes.html">Nouveautés</a>
+                        <a href="nouveautes.php">Nouveautés</a>
                     </li>
                     <li>
                         <img class="chevron-mobile-menu" src="img/chevron-mobile-menu.png" alt="">
-                        <a href="promotions.html">Promotions</a>
+                        <a href="promotions.php">Promotions</a>
                     </li>
                     <li>
-                        <a href="shopping-cart.html"><button class="add-to-cart-btn"><span>0 </span>Mon
+                        <a href="shopping-cart.php"><button class="add-to-cart-btn"><span>0 </span>Mon
                                 panier</button></a>
                     </li>
                     <li>
-                        <a href="connexion.html"><button class="add-to-cart-btn">Connexion</button></a>
+                        <a href="connexion.php"><button class="add-to-cart-btn">Connexion</button></a>
                     </li>
                 </ul>
             </div>
@@ -68,7 +68,7 @@
             <div class="search-container">
                 <form action="">
                     <input type="text" placeholder="" name="search">
-                    <a href="search.html"><img style="height: 20px;" src="img/loupe.png" alt=""></a>
+                    <a href="search.php"><img style="height: 20px;" src="img/loupe.png" alt=""></a>
                 </form>
             </div>
 
@@ -78,11 +78,11 @@
                     <li>
                         <span>0</span>
                         <img style="height: 20px;" src="img/shopping_cart_white.png" alt="">
-                        <a href="shopping-cart.html">Mon panier</a>
+                        <a href="shopping-cart.php">Mon panier</a>
                     </li>
                     <li>
                         <img style="height: 20px;" src="img/utilisateur.png" alt="">
-                        <a href="connexion.html">Connexion</a>
+                        <a href="connexion.php">Connexion</a>
                     </li>
                 </ul>
             </div>
@@ -99,14 +99,14 @@
                     <ul>
                         <li>
                             <img src="img/white_hamburger_menu.png" alt="">
-                            <a class="categories-menu-link" href="kits-packs.html">Catégories</a>
+                            <a class="categories-menu-link" href="kits-packs.php">Catégories</a>
                             <!-- DROPDOWN MENU -->
                             <div class="dropdown-menu">
                                 <ul>
                                     <li><img class="chevron-categories-menu" src="img/chevron-mobile-menu.png" alt=""><a
-                                            href="kits-packs.html">Kits/Packs</a></li>
+                                            href="kits-packs.php">Kits/Packs</a></li>
                                     <li><img class="chevron-categories-menu" src="img/chevron-mobile-menu.png" alt=""><a
-                                            href="nouveautes.html">Nouveautés</a></li>
+                                            href="nouveautes.php">Nouveautés</a></li>
                                     <li><img class="chevron-categories-menu" src="img/chevron-mobile-menu.png" alt=""><a
                                             href="">Promotions</a></li>
                                 </ul>
@@ -114,10 +114,10 @@
                             <img src="img/chevron-down-white.png" alt="">
                         </li>
                         <li>
-                            <a href="nouveautes.html">Nouveautés</a>
+                            <a href="nouveautes.php">Nouveautés</a>
                         </li>
                         <li>
-                            <a href="promotions.html">Promotions</a>
+                            <a href="promotions.php">Promotions</a>
                         </li>
                     </ul>
                 </div>
