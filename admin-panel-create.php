@@ -25,17 +25,17 @@
                         <h1>Créer un produit</h1>
                     </div>
                     <div>
-                        <form class="create-product-form" action="">
-                            <input class="text-form" type="email" name="" id="" placeholder="Nom du produit">
-                            <input class=" text-form" type="number" placeholder="Prix du produit">
+                        <form class="create-product-form" action="data.php" method="POST">
+                            <input class="text-form" type="text" name="productName" id="" placeholder="Nom du produit">
+                            <input class=" text-form" type="number" name="productPrice" placeholder="Prix du produit">
                             <label for="selectOption">Selectionner une catégorie :</label>
-                            <select class="text-form" id="selectOption" name="selectOption">
+                            <select class="text-form" id="selectOption" name="categorieOption">
                                 <option value="option1">Kits/Packs</option>
                                 <option value="option2">Nouveautés</option>
                                 <option value="option3">Promotions</option>
                             </select>
-                            <label class="custom-file-label" for="myFile">Ajouter une image</label>
-                            <input class="add-file text-form" type="file" id="myFile" name="filename">
+                            <label class="custom-file-label" for="filename">Ajouter une image</label>
+                            <input class="add-file text-form" type="file" name="filename" id="">
                             <button class="create-product-btn" type="submit">Créer le produit</button>
                         </form>
                     </div>

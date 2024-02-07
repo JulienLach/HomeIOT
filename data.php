@@ -1,0 +1,52 @@
+<?php include 'view/header.php'; ?>
+
+<?php
+// Récupérer les données du formulaire de connexion et les afficher
+if (isset($_POST['email']) && isset($_POST['password'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+}
+
+if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['password'])){
+    $lastname = $_POST['lastname'];
+    $firstname = $_POST['password'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+}
+?>
+
+<section class="about">
+      <div class="container">
+        <div class="about-content">
+
+          <div class="about-header">
+            <h4>$_POST Formulaire connexion</h4>
+          </div>
+          <div class="about-infos">
+            <p>
+                <?php
+                echo "Email: " . $email . "<br>";
+                echo "Password: " . $password . "<br>";
+                ?>
+            </p>
+          </div>
+
+          <div class="about-header">
+            <h4>$_POST Formulaire inscription</h4>
+          </div>
+          <div class="about-infos">
+            <p>
+                <?php
+                echo "Lastname: " . $lastname . "<br>";
+                echo "Firstname: " . $firstname . "<br>";
+                echo "Email: " . $email . "<br>";
+                echo "Password: " . $password . "<br>";
+                ?>
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+<?php include 'view/footer.php'; ?>

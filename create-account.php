@@ -9,14 +9,14 @@
                     <h1>Créer un compte</h1>
                 </div>
                 <div>
-                    <form class="create-account-form" action="">
+                    <form class="create-account-form" action="data.php" method="POST">
                         <div>
-                            <input class="text-form" type="name" name="" id="" placeholder="Nom">
-                            <input class="text-form" type="email" name="" id="" placeholder="Prénom">
+                            <input class="text-form" type="text" name="lastname" id="" placeholder="Nom">
+                            <input class="text-form" type="text" name="firstname" id="" placeholder="Prénom">
                         </div>
-                        <input class="text-form" type="email" placeholder="Email">
-                        <input class="text-form" type="password" placeholder="Mot de passe">
-                        <input class="text-form" type="password" placeholder="Confirmer le mot de passe">
+                        <input class="text-form" type="email" name="email" placeholder="Email">
+                        <input class="text-form" type="password" name="password" placeholder="Mot de passe">
+                        <input class="text-form" type="password" name="password" placeholder="Confirmer le mot de passe">
                         <button class="create-account-btn" type="submit">Créer mon compte</button>
                     </form>
                 </div>
