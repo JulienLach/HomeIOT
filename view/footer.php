@@ -35,3 +35,4 @@
 
     <script src="javascript/main.js"></script>
 </body>
+</html>
