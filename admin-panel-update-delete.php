@@ -26,18 +26,18 @@
                         <h1>Modifier/Supprimer</h1>
                     </div>
                     <div>
-                        <form class="create-product-form" action="">
-                            <input class="text-form" type="email" name="" id="" placeholder="ID du produit">
-                            <input class="text-form" type="email" name="" id="" placeholder="Arduino UNO+">
-                            <input class=" text-form" type="password" placeholder="13,99 €">
+                        <form class="create-product-form" action="data.php" method="POST">
+                            <input class="text-form" type="number" name="productId" id="" placeholder="ID du produit">
+                            <input class="text-form" type="text" name="productName" id="" placeholder="Arduino UNO+">
+                            <input class=" text-form" type="number" name="productPrice" placeholder="13,99 €">
                             <label for="selectOption">Selectionner une catégorie :</label>
-                            <select class="text-form" id="selectOption" name="selectOption">
-                                <option value="option1">Kits/Packs</option>
-                                <option value="option2">Nouveautés</option>
-                                <option value="option3">Promotions</option>
+                            <select class="text-form" id="" name="categorieOption">
+                                <option value="Kits/Packs">Kits/Packs</option>
+                                <option value="Nouveautés">Nouveautés</option>
+                                <option value="Promotions">Promotions</option>
                             </select>
-                            <label class="custom-file-label" for="myFile">Ajouter une image</label>
-                            <input class="add-file text-form" type="file" id="myFile" name="filename">
+                            <label class="custom-file-label" for="filename">Ajouter une image</label>
+                            <input class="add-file text-form" type="file" name="filename" id="">
                             <div class="update-delete-btns">
                                 <button class="update-product-btn create-product-btn" type="submit">Modifier le
                                     produit</button>

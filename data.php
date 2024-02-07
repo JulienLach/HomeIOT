@@ -20,6 +20,15 @@ if (isset($_POST['productName']) && isset($_POST['productPrice']) && isset($_POS
   $categorieOption = $_POST['categorieOption'];
   $filename = $_POST['filename'];
 }
+
+if (isset($_POST['productId']) && isset($_POST['productName']) && isset($_POST['productPrice']) && isset($_POST['categorieOption']) && isset($_POST['filename'])){
+  $productId = $_POST['productId'];
+  $productName = $_POST['productName'];
+  $productPrice = $_POST['productPrice'];
+  $categorieOption = $_POST['categorieOption'];
+  $filename = $_POST['filename'];
+}
+
 ?>
 
 <section class="about">
@@ -58,6 +67,21 @@ if (isset($_POST['productName']) && isset($_POST['productPrice']) && isset($_POS
           <div class="about-infos">
             <p>
                 <?php
+                echo "Nom du produit: " . $productName . "<br>";
+                echo "Prix: " . $productPrice . " €". "<br>";
+                echo "Categorie: " . $categorieOption . "<br>";
+                echo "Nom du fichier: " . $filename . "<br>";
+                ?>
+            </p>
+          </div>
+
+          <div class="about-header">
+            <h4>$_POST Formulaire Modifier/Supprimer un produit</h4>
+          </div>
+          <div class="about-infos">
+            <p>
+                <?php
+                echo "ID du produit: " . $productId . "<br>";
                 echo "Nom du produit: " . $productName . "<br>";
                 echo "Prix: " . $productPrice . " €". "<br>";
                 echo "Categorie: " . $categorieOption . "<br>";

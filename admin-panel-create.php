@@ -29,7 +29,7 @@
                             <input class="text-form" type="text" name="productName" id="" placeholder="Nom du produit">
                             <input class=" text-form" type="number" name="productPrice" placeholder="Prix du produit">
                             <label for="selectOption">Selectionner une catégorie :</label>
-                            <select class="text-form" id="selectOption" name="categorieOption">
+                            <select class="text-form" id="" name="categorieOption">
                                 <option value="Kits/Packs">Kits/Packs</option>
                                 <option value="Nouveautés">Nouveautés</option>
                                 <option value="Promotions">Promotions</option>
