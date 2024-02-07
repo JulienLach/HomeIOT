@@ -9,9 +9,16 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
 if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['password'])){
     $lastname = $_POST['lastname'];
-    $firstname = $_POST['password'];
+    $firstname = $_POST['firstname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+}
+
+if (isset($_POST['productName']) && isset($_POST['productPrice']) && isset($_POST['categorieOption']) && isset($_POST['filename'])){
+  $productName = $_POST['productName'];
+  $productPrice = $_POST['productPrice'];
+  $categorieOption = $_POST['categorieOption'];
+  $filename = $_POST['filename'];
 }
 ?>
 
@@ -44,7 +51,21 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['ema
                 ?>
             </p>
           </div>
-          
+
+          <div class="about-header">
+            <h4>$_POST Formulaire Créer un produit</h4>
+          </div>
+          <div class="about-infos">
+            <p>
+                <?php
+                echo "Nom du produit: " . $productName . "<br>";
+                echo "Prix: " . $productPrice . " €". "<br>";
+                echo "Categorie: " . $categorieOption . "<br>";
+                echo "Nom du fichier: " . $filename . "<br>";
+                ?>
+            </p>
+          </div>
+
         </div>
       </div>
     </section>

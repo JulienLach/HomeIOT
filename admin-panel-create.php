@@ -30,9 +30,9 @@
                             <input class=" text-form" type="number" name="productPrice" placeholder="Prix du produit">
                             <label for="selectOption">Selectionner une catégorie :</label>
                             <select class="text-form" id="selectOption" name="categorieOption">
-                                <option value="option1">Kits/Packs</option>
-                                <option value="option2">Nouveautés</option>
-                                <option value="option3">Promotions</option>
+                                <option value="Kits/Packs">Kits/Packs</option>
+                                <option value="Nouveautés">Nouveautés</option>
+                                <option value="Promotions">Promotions</option>
                             </select>
                             <label class="custom-file-label" for="filename">Ajouter une image</label>
                             <input class="add-file text-form" type="file" name="filename" id="">
