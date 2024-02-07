@@ -1,86 +1,78 @@
-document.addEventListener('DOMContentLoaded', function () { //initier la fonction
+document.addEventListener("DOMContentLoaded", function () {
+  // Initier la fonction
 
+  // MOBILE MENU
 
-    // MOBILE MENU
+  const iconMenu = document.querySelector(".icon-menu");
+  const iconClose = document.querySelector(".icon-close");
 
-    const iconMenu = document.querySelector('.icon-menu');
-    const iconClose = document.querySelector('.icon-close');
+  iconMenu.addEventListener("click", function () {
+    // Première fonction quand je clique sur l'icone hamburger
 
-    iconMenu.addEventListener('click', function () {  //première fonction quand je clique sur l'icone hamburger
+    iconMenu.style.display = "none";
+    iconClose.style.display = "block";
+  });
 
-        iconMenu.style.display = 'none';
-        iconClose.style.display = 'block';
+  iconClose.addEventListener("click", function () {
+    // Afficher l'icone croix
+
+    iconMenu.style.display = "block";
+    iconClose.style.display = "none";
+  });
+
+  const iconMobileMenu = document.querySelector(".icon-menu");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  iconMobileMenu.addEventListener("click", () =>
+    mobileMenu.classList.toggle("active")
+  );
+
+  iconClose.addEventListener("click", () =>
+    mobileMenu.classList.toggle("active")
+  );
+
+  // FONCTIONS DE RENVOI VERS PAGE PRODUCT POUR CHAQUE ARTICLE
+
+  const topSellersItems = document.querySelectorAll(".top-sellers-item");
+
+  if (topSellersItems.length > 0) {
+    topSellersItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        // Redirect to product.php for each clicked element
+        window.location.href = "product.php";
+      });
     });
+  }
 
-    iconClose.addEventListener('click', function () {  //afficher l'icone croix
+  const nouveautesItems = document.querySelectorAll(".nouveautes-item");
 
-        iconMenu.style.display = 'block';
-        iconClose.style.display = 'none';
+  if (nouveautesItems.length > 0) {
+    nouveautesItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        window.location.href = "product.php";
+      });
     });
+  }
 
+  const promotionItems = document.querySelectorAll(".promotions-item");
 
-    const iconMobileMenu = document.querySelector('.icon-menu');
-    const mobileMenu = document.querySelector('.mobile-menu');
+  if (promotionItems.length > 0) {
+    promotionItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        window.location.href = "product.php";
+      });
+    });
+  }
 
-    iconMobileMenu.addEventListener('click', () =>
-        mobileMenu.classList.toggle('active')
+  const kitsPacksItems = document.querySelectorAll(".kits-packs-item");
 
-    );
-
-    iconClose.addEventListener('click', () =>
-        mobileMenu.classList.toggle('active')
-
-    );
-
-
-
-    // FONCTIONS DE RENVOI VERS PAGE PRODUCT POUR CHAQUE ARTICLE 
-
-    const topSellersItems = document.querySelectorAll('.top-sellers-item');
-
-    if (topSellersItems.length > 0) {
-        topSellersItems.forEach(function (item) {
-            item.addEventListener('click', function () {
-                // Redirect to product.html for each clicked element
-                window.location.href = 'product.html';
-            });
-        });
-    }
-
-    const nouveautesItems = document.querySelectorAll('.nouveautes-item');
-
-    if (nouveautesItems.length > 0) {
-        nouveautesItems.forEach(function (item) {
-            item.addEventListener('click', function () {
-                window.location.href = 'product.html';
-            });
-        });
-    }
-
-    const promotionItems = document.querySelectorAll('.promotions-item');
-
-    if (promotionItems.length > 0) {
-        promotionItems.forEach(function (item) {
-            item.addEventListener('click', function () {
-                window.location.href = 'product.html';
-            });
-        });
-    }
-
-    const kitsPacksItems = document.querySelectorAll('.kits-packs-item');
-
-    if (kitsPacksItems.length > 0) {
-        kitsPacksItems.forEach(function (item) {
-            item.addEventListener('click', function () {
-                window.location.href = 'product.html';
-            });
-        });
-    }
+  if (kitsPacksItems.length > 0) {
+    kitsPacksItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        window.location.href = "product.php";
+      });
+    });
+  }
 });
 
-
-
-
-
-nouveautes - item
-
+nouveautes - item;
