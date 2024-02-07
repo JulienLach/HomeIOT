@@ -10,9 +10,9 @@
                         <h1>Admin panel</h1>
                     </div>
                     <div class="admin-panel-menu">
-                        <h5>Créer un produit</h5>
+                        <h5><a href="admin-panel-create.php">Créer un produit</a></h5>
                         <div class="black-separator"></div>
-                        <h5>Modifier/Supprimer</h5>
+                        <h5> <a href="admin-panel-update-delete.php">Modifier/Supprimer</a></h5>
                         <div class="black-separator"></div>
                         <div>
                             <button class="disconnect-btn">Me déconnecter</button>
