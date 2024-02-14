@@ -1,12 +1,12 @@
-<?php require 'model/database.php'; ?>
-<?php include 'view/header.php'; ?>
+<?php // include 'http://jserveur.local/HomeIOT/model/database.php'; ?>
+<?php include 'header.php'; ?>
 
 
     <!-- HEADER BANNER -->
     <section class="banner">
         <div class="container">
             <div class="header-banner">
-                <img src="img/header-banner.png" alt="">
+                <img src="http://jserveur.local/HomeIOT/img/header-banner.png" alt="">
             </div>
         </div>
     </section>
@@ -15,7 +15,7 @@
     <section class="banner">
         <div class="container">
             <div class="mobile-header-banner">
-                <img src="img/header-mobile-banner.png" alt="">
+                <img src="http://jserveur.local/HomeIOT/img/header-mobile-banner.png" alt="">
             </div>
         </div>
     </section>
@@ -34,7 +34,7 @@
 
                 <div class="top-sellers-item">
                     <div>
-                        <img src="img/Arduino_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -49,7 +49,7 @@
 
                 <div class="top-sellers-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -64,7 +64,7 @@
 
                 <div class="top-sellers-item">
                     <div>
-                        <img src="img/Arduino_2.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -79,7 +79,7 @@
 
                 <div class="top-sellers-item">
                     <div>
-                        <img src="img/Arduino_3.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -94,7 +94,7 @@
 
                 <div class="top-sellers-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -109,7 +109,7 @@
 
                 <div class="top-sellers-item">
                     <div>
-                        <img src="img/Arduino_3.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -124,7 +124,7 @@
 
                 <div class="top-sellers-item">
                     <div>
-                        <img src="img/Arduino_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -139,7 +139,7 @@
 
                 <div class="top-sellers-item">
                     <div>
-                        <img src="img/Arduino_2.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -163,10 +163,10 @@
         <div class="container">
             <div class="small-banners-content">
                 <div class="small-banner-nouveautes">
-                    <img src="img/nouveautes_banner.png" alt="">
+                    <img src="http://jserveur.local/HomeIOT/img/nouveautes_banner.png" alt="">
                 </div>
                 <div class="small-banner-promotions">
-                    <img src="img/promotions_banner.png" alt="">
+                    <img src="http://jserveur.local/HomeIOT/img/promotions_banner.png" alt="">
                 </div>
             </div>
         </div>
@@ -185,7 +185,7 @@
 
                 <div class="nouveautes-item">
                     <div>
-                        <img src="img/Arduino_2.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -200,7 +200,7 @@
 
                 <div class="nouveautes-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -215,7 +215,7 @@
 
                 <div class="nouveautes-item">
                     <div>
-                        <img src="img/Arduino_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -230,7 +230,7 @@
 
                 <div class="nouveautes-item">
                     <div>
-                        <img src="img/Arduino_3.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -245,7 +245,7 @@
 
                 <div class="nouveautes-item">
                     <div>
-                        <img src="img/Arduino_3.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -276,7 +276,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/Arduino_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -291,7 +291,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -306,7 +306,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/Arduino_2.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -321,7 +321,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -336,7 +336,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -370,4 +370,4 @@
     </section>
 
 
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>

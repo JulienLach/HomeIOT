@@ -11,7 +11,7 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="HomeIOT-logos/favicon.ico" type="image/x-icon" />
     <!-- STYLE.CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://jserveur.local/HomeIOT/css/style.css">
     <title>HomeIOT</title>
 </head>
 
@@ -25,14 +25,14 @@
             <!-- LOGO -->
             <div class=" logo">
                 <a href="index.php">
-                    <img src="HomeIOT-logos/HomeIOT-logos-cropped.jpeg" alt="">
+                    <img src="http://jserveur.local/HomeIOT/HomeIOT-logos/HomeIOT-logos-cropped.jpeg" alt="">
                 </a>
             </div>
 
             <!-- HAMBURGER ICONS MENU MOBILE -->
             <div>
-                <img class="icon-menu" src="img/icon-menu.png" alt="">
-                <img class="icon-close" src="img/icon-close.png" alt="">
+                <img class="icon-menu" src="http://jserveur.local/HomeIOT/img/icon-menu.png" alt="">
+                <img class="icon-close" src="http://jserveur.local/HomeIOT/img/icon-close.png" alt="">
             </div>
 
             <!--HAMBURGER MENU MOBILE-->
@@ -68,7 +68,7 @@
             <div class="search-container">
                 <form action="">
                     <input type="text" placeholder="" name="search">
-                    <a href="search.php"><img style="height: 20px;" src="img/loupe.png" alt=""></a>
+                    <a href="search.php"><img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/loupe.png" alt=""></a>
                 </form>
             </div>
 
@@ -77,11 +77,11 @@
                 <ul>
                     <li>
                         <span>0</span>
-                        <img style="height: 20px;" src="img/shopping_cart_white.png" alt="">
+                        <img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/shopping_cart_white.png" alt="">
                         <a href="shopping-cart.php">Mon panier</a>
                     </li>
                     <li>
-                        <img style="height: 20px;" src="img/utilisateur.png" alt="">
+                        <img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/utilisateur.png" alt="">
                         <a href="connexion.php">Connexion</a>
                     </li>
                 </ul>
@@ -98,20 +98,20 @@
                 <div class="categories-links">
                     <ul>
                         <li>
-                            <img src="img/white_hamburger_menu.png" alt="">
+                            <img src="http://jserveur.local/HomeIOT/img/white_hamburger_menu.png" alt="">
                             <a class="categories-menu-link" href="kits-packs.php">Catégories</a>
                             <!-- DROPDOWN MENU -->
                             <div class="dropdown-menu">
                                 <ul>
-                                    <li><img class="chevron-categories-menu" src="img/chevron-mobile-menu.png" alt=""><a
+                                    <li><img class="chevron-categories-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt=""><a
                                             href="kits-packs.php">Kits/Packs</a></li>
-                                    <li><img class="chevron-categories-menu" src="img/chevron-mobile-menu.png" alt=""><a
+                                    <li><img class="chevron-categories-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt=""><a
                                             href="nouveautes.php">Nouveautés</a></li>
-                                    <li><img class="chevron-categories-menu" src="img/chevron-mobile-menu.png" alt=""><a
+                                    <li><img class="chevron-categories-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt=""><a
                                             href="">Promotions</a></li>
                                 </ul>
                             </div>
-                            <img src="img/chevron-down-white.png" alt="">
+                            <img src="http://jserveur.local/HomeIOT/img/chevron-down-white.png" alt="">
                         </li>
                         <li>
                             <a href="nouveautes.php">Nouveautés</a>

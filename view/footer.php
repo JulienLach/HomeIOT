@@ -33,6 +33,6 @@
         </div>
     </footer>
 
-    <script src="javascript/script.js"></script>
+    <script src="http://jserveur.local/HomeIOT/javascript/script.js"></script>
 </body>
 </html>

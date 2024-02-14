@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
 
 
     <!-- CONTACT SECTION -->
@@ -23,4 +23,4 @@
     </section>
 
 
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>

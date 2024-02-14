@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
 
 
     <!-- CREATE ACCOUNT SECTION -->
@@ -9,7 +9,7 @@
                     <h1>Créer un compte</h1>
                 </div>
                 <div>
-                    <form class="create-account-form" action="data.php" method="POST">
+                    <form class="create-account-form" action="create-account.php" method="POST">
                         <div>
                             <input class="text-form" type="text" name="lastname" id="" placeholder="Nom">
                             <input class="text-form" type="text" name="firstname" id="" placeholder="Prénom">
@@ -25,4 +25,4 @@
     </section>
 
 
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>

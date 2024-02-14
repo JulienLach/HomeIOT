@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
 
     <!-- CONNEXION SECTION -->
     <section class="connexion">
@@ -22,5 +22,4 @@
         </div>
     </section>
 
-
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>
