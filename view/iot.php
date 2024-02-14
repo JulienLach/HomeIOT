@@ -1,12 +1,12 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
 
 
-    <!-- MENTIONS LEGALES SECTION -->
+    <!-- IOT SECTION -->
     <section class="about">
       <div class="container">
         <div class="about-content">
           <div class="about-header">
-            <h1>Mentions légales</h1>
+            <h1>Qu'est ce que l'IOT ?</h1>
           </div>
           <div class="about-infos">
             <h3>Lorem ipsum dolor sit amet</h3>
@@ -32,5 +32,4 @@
       </div>
     </section>
 
-
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>

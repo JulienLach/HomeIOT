@@ -1,7 +1,8 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
+
 
 <?php
-// Récupérer les données du formulaire de connexion et les afficher
+// Récupérer les données des formulaires de connexion + formulaires admin et les afficher
 if (isset($_POST['email']) && isset($_POST['password'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -95,4 +96,5 @@ if (isset($_POST['productId']) && isset($_POST['productName']) && isset($_POST['
       </div>
     </section>
 
-<?php include 'view/footer.php'; ?>
+
+<?php include 'footer.php'; ?>

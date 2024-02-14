@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
 
 
     <!-- MY ACCOUNT SECTION -->
@@ -31,7 +31,7 @@
 
                         <div class="item-purchased">
                             <div class="item-info">
-                                <img style="height: 50px;" src="img/Arduino_2.png" alt="">
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                                 <p>Arduino Uno+</p>
                                 <p>Numéro de commande : NSH565FRDF45</p>
                             </div>
@@ -42,7 +42,7 @@
 
                         <div class="item-purchased">
                             <div class="item-info">
-                                <img style="height: 50px;" src="img/Arduino_1.png" alt="">
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                                 <p>Arduino Uno+</p>
                                 <p>Numéro de commande : NSH565FRDF45</p>
                             </div>
@@ -53,7 +53,7 @@
 
                         <div class="item-purchased">
                             <div class="item-info">
-                                <img style="height: 50px;" src="img/raspberry_1.png" alt="">
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                                 <p>Arduino Uno+</p>
                                 <p>Numéro de commande : NSH565FRDF45</p>
                             </div>
@@ -64,7 +64,7 @@
 
                         <div class="item-purchased">
                             <div class="item-info">
-                                <img style="height: 50px;" src="img/Arduino_3.png" alt="">
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
                                 <p>Arduino Uno+</p>
                                 <p>Numéro de commande : NSH565FRDF45</p>
                             </div>
@@ -80,4 +80,4 @@
     </section>
 
 
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>

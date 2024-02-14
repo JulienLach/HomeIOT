@@ -1,11 +1,12 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
 
-    <!-- CGV SECTION -->
+
+    <!-- MENTIONS LEGALES SECTION -->
     <section class="about">
       <div class="container">
         <div class="about-content">
           <div class="about-header">
-            <h1>Conditions générales de vente</h1>
+            <h1>Mentions légales</h1>
           </div>
           <div class="about-infos">
             <h3>Lorem ipsum dolor sit amet</h3>
@@ -31,4 +32,5 @@
       </div>
     </section>
 
-<?php include 'view/footer.php'; ?>
+
+<?php include 'footer.php'; ?>

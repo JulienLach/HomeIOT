@@ -1,4 +1,4 @@
-<?php // include 'http://jserveur.local/HomeIOT/model/database.php'; ?>
+<?php // include '../model/database.php'; ?>
 <?php include 'header.php'; ?>
 
 
