@@ -3,7 +3,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="HomeIOT-logos/HomeIOT-logos_white_cropped.png" alt="">
+                    <img src="http://jserveur.local/HomeIOT/HomeIOT-logos/HomeIOT-logos_white_cropped.png" alt="">
                 </div>
                 <div class="footer-links">
                     <h2>Liens rapides</h2>

@@ -1,5 +1,4 @@
-<?php include 'view/header.php'; ?>
-
+<?php include 'header.php'; ?>
 
     <!-- ADMIN PANEL CREATE SECTION -->
     <section class="admin-panel">
@@ -23,13 +22,12 @@
 
                 <div class="create-product">
                     <div class="create-product-header">
-                        <h1>Modifier/Supprimer</h1>
+                        <h1>Créer un produit</h1>
                     </div>
                     <div>
                         <form class="create-product-form" action="data.php" method="POST">
-                            <input class="text-form" type="number" name="productId" id="" placeholder="ID du produit">
-                            <input class="text-form" type="text" name="productName" id="" placeholder="Arduino UNO+">
-                            <input class=" text-form" type="number" name="productPrice" placeholder="13,99 €">
+                            <input class="text-form" type="text" name="productName" id="" placeholder="Nom du produit">
+                            <input class=" text-form" type="number" name="productPrice" placeholder="Prix du produit">
                             <label for="selectOption">Selectionner une catégorie :</label>
                             <select class="text-form" id="" name="categorieOption">
                                 <option value="Kits/Packs">Kits/Packs</option>
@@ -38,12 +36,7 @@
                             </select>
                             <label class="custom-file-label" for="filename">Ajouter une image</label>
                             <input class="add-file text-form" type="file" name="filename" id="">
-                            <div class="update-delete-btns">
-                                <button class="update-product-btn create-product-btn" type="submit">Modifier le
-                                    produit</button>
-                                <button class="delete-product-btn" type="submit">Supprimer le
-                                    produit</button>
-                            </div>
+                            <button class="create-product-btn" type="submit">Créer le produit</button>
                         </form>
                     </div>
                 </div>
@@ -52,4 +45,4 @@
         </div>
     </section>
 
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>

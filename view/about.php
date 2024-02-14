@@ -1,5 +1,4 @@
-<?php include 'view/header.php'; ?>
-
+<?php include 'header.php'; ?>
 
 
     <!-- ABOUT SECTION -->
@@ -29,5 +28,5 @@
     </section>
 
 
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>
 
