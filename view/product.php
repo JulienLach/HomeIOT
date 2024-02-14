@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
 
 
     <!-- PRODUCT SECTION -->
@@ -7,11 +7,11 @@
             <div class="product-content">
 
                 <div class="product-images">
-                    <img class="product-main-image" src="img/Arduino_1.png" alt="">
+                    <img class="product-main-image" src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                     <div class="product-preview-images">
-                        <img src="img/Arduino_1.png" alt="">
-                        <img src="img/Arduino_2.png" alt="">
-                        <img src="img/Arduino_3.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
                     </div>
                 </div>
 
@@ -70,4 +70,4 @@
     </section>
 
 
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>

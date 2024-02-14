@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
 
 
     <!-- TOUTES LES PROMOTIONS SECTION -->
@@ -13,7 +13,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/Arduino_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -28,7 +28,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -43,7 +43,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/Arduino_2.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -58,7 +58,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -73,7 +73,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/Arduino_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -88,7 +88,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -103,7 +103,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/Arduino_2.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -118,7 +118,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -133,7 +133,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/Arduino_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -148,7 +148,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -163,7 +163,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/Arduino_2.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -178,7 +178,7 @@
 
                 <div class="promotions-item">
                     <div>
-                        <img src="img/raspberry_1.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
                         <h3>
@@ -196,4 +196,4 @@
     </section>
 
 
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>

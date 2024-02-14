@@ -1,4 +1,4 @@
-<?php include 'view/header.php'; ?>
+<?php include 'header.php'; ?>
 
 
     <!-- CART SECTION -->
@@ -16,7 +16,7 @@
 
                         <div class="item-pending">
                             <div class="item-info">
-                                <img style="height: 50px;" src="img/Arduino_2.png" alt="">
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                                 <p>Arduino Uno+</p>
                                 <p>Code article : 08975</p>
                             </div>
@@ -29,7 +29,7 @@
 
                         <div class="item-pending">
                             <div class="item-info">
-                                <img style="height: 50px;" src="img/Arduino_1.png" alt="">
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                                 <p>Arduino Uno+</p>
                                 <p>Code article : 74935</p>
                             </div>
@@ -42,7 +42,7 @@
 
                         <div class="item-pending">
                             <div class="item-info">
-                                <img style="height: 50px;" src="img/raspberry_1.png" alt="">
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                                 <p>Arduino Uno+</p>
                                 <p>Code article : 67939</p>
                             </div>
@@ -55,7 +55,7 @@
 
                         <div class="item-pending">
                             <div class="item-info">
-                                <img style="height: 50px;" src="img/Arduino_3.png" alt="">
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
                                 <p>Arduino Uno+</p>
                                 <p>Code article : 36576</p>
                             </div>
@@ -90,4 +90,4 @@
     </section>
 
 
-<?php include 'view/footer.php'; ?>
+<?php include 'footer.php'; ?>
