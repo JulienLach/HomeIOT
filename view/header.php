@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="HomeIOT-logos/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://jserveur.local/HomeIOT/HomeIOT-logos/favicon.ico" type="image/x-icon" />
     <!-- STYLE.CSS -->
     <link rel="stylesheet" href="http://jserveur.local/HomeIOT/css/style.css">
     <title>HomeIOT</title>
