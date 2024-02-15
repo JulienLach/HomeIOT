@@ -39,19 +39,19 @@
             <div class="mobile-menu">
                 <ul>
                     <li>
-                        <img class="chevron-mobile-menu" src="img/chevron-mobile-menu.png" alt="">
+                        <img class="chevron-mobile-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt="">
                         <a href="index.php">Acceuil</a>
                     </li>
                     <li>
-                        <img class="chevron-mobile-menu" src="img/chevron-mobile-menu.png" alt="">
+                        <img class="chevron-mobile-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt="">
                         <a href="kits-packs.php">Catégories</a>
                     </li>
                     <li>
-                        <img class="chevron-mobile-menu" src="img/chevron-mobile-menu.png" alt="">
+                        <img class="chevron-mobile-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt="">
                         <a href="nouveautes.php">Nouveautés</a>
                     </li>
                     <li>
-                        <img class="chevron-mobile-menu" src="img/chevron-mobile-menu.png" alt="">
+                        <img class="chevron-mobile-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt="">
                         <a href="promotions.php">Promotions</a>
                     </li>
                     <li>

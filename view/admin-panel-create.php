@@ -25,17 +25,20 @@
                         <h1>Créer un produit</h1>
                     </div>
                     <div>
-                        <form class="create-product-form" action="data.php" method="POST">
-                            <input class="text-form" type="text" name="productName" id="" placeholder="Nom du produit">
-                            <input class=" text-form" type="number" name="productPrice" placeholder="Prix du produit">
+                        <form class="create-product-form" action="../controller/admin-panel-create.php" method="POST">
+                            <input class="text-form" type="text" name="name" id="" placeholder="Nom du produit">
+                            <input class=" text-form" type="number" name="price" placeholder="Prix du produit">
+                            <textarea class="text-form" name="short_desc" rows="4" style="resize: vertical;" placeholder="Description courte"></textarea>
+                            <textarea class="text-form" name="description" rows="5" style="resize: vertical;" placeholder="Description"></textarea>
+                            <textarea class="text-form" name="technical_sheet" rows="5" style="resize: vertical;" placeholder="Fiche technique"></textarea>
                             <label for="selectOption">Selectionner une catégorie :</label>
-                            <select class="text-form" id="" name="categorieOption">
-                                <option value="Kits/Packs">Kits/Packs</option>
-                                <option value="Nouveautés">Nouveautés</option>
-                                <option value="Promotions">Promotions</option>
+                            <select class="text-form" name="category_name">
+                                <option value="3">Kits/Packs</option>
+                                <option value="2">Nouveautés</option>
+                                <option value="1">Promotions</option>
                             </select>
                             <label class="custom-file-label" for="filename">Ajouter une image</label>
-                            <input class="add-file text-form" type="file" name="filename" id="">
+                            <input class="add-file text-form" type="file" name="image_path">
                             <button class="create-product-btn" type="submit">Créer le produit</button>
                         </form>
                     </div>
