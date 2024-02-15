@@ -1,6 +1,4 @@
 <?php include 'header.php'; ?>
-<?php require_once '../controller/create-account.php'; ?>
-
 
     <!-- CREATE ACCOUNT SECTION -->
     <section class="create-account">
