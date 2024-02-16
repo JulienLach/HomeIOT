@@ -42,13 +42,14 @@ class Product {
         // Atraper les clés étangère avant de insert into le produit
 
         // Requête SQL pour ajouter un produit à la base de données
-        $query = 'INSERT INTO products (name, price, short_desc, description, technical_sheet) VALUES (:name, :price, :short_desc, :description, :technical_sheet)';
+        $query = 'INSERT INTO products (name, price, short_desc, description, technical_sheet, id_categories) VALUES (:name, :price, :short_desc, :description, :technical_sheet, :id_categories)';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':name', $this->name);
         $statement->bindParam(':price', $this->price);
         $statement->bindParam(':short_desc', $this->short_desc);
         $statement->bindParam(':description', $this->description);
         $statement->bindParam(':technical_sheet', $this->technical_sheet);
+        $statement->bindParam(':id_categories', $this->category_name);
         $statement->execute();
 
         // Attraper le dernier id de la table products créé pour ensuite faire la query
@@ -78,6 +79,15 @@ class Product {
         $statement->execute();
 
         // Faire la query de la catégorie
+        // $query = 'INSERT INTO products (id_categories) VALUES (:id_categories)';
+        // $statement = $connexion->prepare($query);
+        // $statement->bindParam(':id_categories', $this->category_name);
+        // $statement->execute();
+        // Quand je créé le produit, attraper la value de la catégorie
+        // Si catéorie = 1 alors insérer dans id_categorie 1 et le nom de la catégorie va s'afficher dans la BDD
+        // pour savoir si 1 = promotions , je dois SELECT * FROM categories pour
+        // savoir quel id correspond à quelle catégorie avant d'assigner la catégorie au produit
+        
     }
 }
 ?>
