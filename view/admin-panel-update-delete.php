@@ -26,7 +26,7 @@
                         <h1>Modifier/Supprimer</h1>
                     </div>
                     <div>
-                        <form class="create-product-form" action="data.php" method="POST">
+                        <form class="create-product-form" action="admin-panel-update-delete.php" method="POST">
                             <input class="text-form" type="number" name="productId" id="" placeholder="ID du produit">
                             <input class="text-form" type="text" name="productName" id="" placeholder="Arduino UNO+">
                             <input class=" text-form" type="number" name="productPrice" placeholder="13,99 €">
