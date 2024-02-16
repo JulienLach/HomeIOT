@@ -31,7 +31,7 @@
                             <textarea class="text-form" name="short_desc" rows="4" style="resize: vertical;" placeholder="Description courte"></textarea>
                             <textarea class="text-form" name="description" rows="5" style="resize: vertical;" placeholder="Description"></textarea>
                             <textarea class="text-form" name="technical_sheet" rows="5" style="resize: vertical;" placeholder="Fiche technique"></textarea>
-                            <label for="selectOption">Selectionner une catégorie :</label>
+                            <label for="category_name">Selectionner une catégorie :</label>
                             <select class="text-form" name="category_name">
                                 <option value="3">Kits/Packs</option>
                                 <option value="2">Nouveautés</option>

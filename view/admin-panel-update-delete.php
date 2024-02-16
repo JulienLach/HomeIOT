@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php include '../model/database.php'; ?>
 
 
     <!-- ADMIN PANEL CREATE SECTION -->
@@ -26,16 +27,24 @@
                         <h1>Modifier/Supprimer</h1>
                     </div>
                     <div>
-                        <form class="create-product-form" action="admin-panel-update-delete.php" method="POST">
-                            <input class="text-form" type="number" name="productId" id="" placeholder="ID du produit">
-                            <input class="text-form" type="text" name="productName" id="" placeholder="Arduino UNO+">
-                            <input class=" text-form" type="number" name="productPrice" placeholder="13,99 €">
-                            <label for="selectOption">Selectionner une catégorie :</label>
-                            <select class="text-form" id="" name="categorieOption">
+                        <form class="create-product-form" action="../controller/admin-panel-update-delete.php" method="POST">
+                            <input class="text-form" type="number" name="productId" placeholder="ID du produit" value="<?php ?>">
+                            <input class="text-form" type="text" name="name" placeholder="Arduino UNO+">
+                            <input class=" text-form" type="number" name="price" placeholder="13,99 €">
+                            <textarea class="text-form" name="short_desc" rows="4" style="resize: vertical;" placeholder="Description courte"></textarea>
+                            <textarea class="text-form" name="description" rows="5" style="resize: vertical;" placeholder="Description"></textarea>
+                            <textarea class="text-form" name="technical_sheet" rows="5" style="resize: vertical;" placeholder="Fiche technique"></textarea>
+                            <label for="category_name">Selectionner une catégorie :</label>
+                            <select class="text-form" id="" name="category_name">
                                 <option value="Kits/Packs">Kits/Packs</option>
                                 <option value="Nouveautés">Nouveautés</option>
                                 <option value="Promotions">Promotions</option>
                             </select>
+                            <div class="product-preview-images">
+                                <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
+                                <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
+                                <img src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
+                            </div>
                             <label class="custom-file-label" for="filename">Ajouter une image</label>
                             <input class="add-file text-form" type="file" name="filename" id="">
                             <div class="update-delete-btns">

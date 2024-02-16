@@ -33,7 +33,6 @@ class Product {
     }
 
     // Méthode pour ajouter un produit à la base de données
-
     public function addProduct() {
         // Connexion à la base de données
         $homeiot = new Database();
@@ -90,5 +89,26 @@ class Product {
         // savoir quel id correspond à quelle catégorie avant d'assigner la catégorie au produit
         
     }
+
+
+    // Méthode pour update un produit
+    // public function updateProduct() {
+    //     // Connexion à la base de données
+    //     $homeiot = new Database();
+    //     $connexion = $homeiot->connect();
+
+    //     // Requête SQL pour update un produit de la base de données
+    //     $query = 'UPDATE products SET name = :name, price = :price, short_desc = :short_desc, description = :description, technical_sheet = :technical_sheet, id_categories = :id_categories WHERE id = :id';
+    //     $statement = $connexion->prepare($query);
+    //     $statement->bindParam(':name', $this->name);
+    //     $statement->bindParam(':price', $this->price);
+    //     $statement->bindParam(':short_desc', $this->short_desc);
+    //     $statement->bindParam(':description', $this->description);
+    //     $statement->bindParam(':technical_sheet', $this->technical_sheet);
+    //     $statement->bindParam(':id_categories', $this->category_name);
+    //     $statement->execute();
+
+    // }
+
 }
 ?>
