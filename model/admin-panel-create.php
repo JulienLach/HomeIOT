@@ -83,7 +83,8 @@ class Product {
         // $statement = $connexion->prepare($query);
         // $statement->bindParam(':id_categories', $this->category_name);
         // $statement->execute();
-        // Quand je créé le produit, attraper la value de la catégorie
+        // Quand je créé le produit, attraper la value de la catégorie du formulaire
+        // ensuite dans le controller elle est assigné grâce à setCategoryName
         // Si catéorie = 1 alors insérer dans id_categorie 1 et le nom de la catégorie va s'afficher dans la BDD
         // pour savoir si 1 = promotions , je dois SELECT * FROM categories pour
         // savoir quel id correspond à quelle catégorie avant d'assigner la catégorie au produit
