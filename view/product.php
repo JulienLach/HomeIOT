@@ -35,7 +35,7 @@
                         </ul>
                     </div>
                     <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
+                        <button class="add-to-cart-btn">Ajouter au panier</button>
                     </div>
                 </div>
 
