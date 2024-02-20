@@ -4,5 +4,5 @@
 <?php
 $products = new ReadProduct();
 
-require_once '../view/datatest.php'
+require_once '../view/nouveautes.php'
 ?>
