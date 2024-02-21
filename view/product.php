@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php require_once '../controller/read-product-by-id.php';?>
 
 
     <!-- PRODUCT SECTION -->
@@ -14,10 +15,10 @@
                         <img src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
                     </div>
                 </div>
-
+                <?php ?>
                 <div class="product-infos">
                     <div>
-                        <h1>Arduino UNO+</h1>
+                        <h1><?= $product['name'] ?></h1>
                     </div>
                     <div>
                         <h3>13,99 €</h3>

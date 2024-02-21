@@ -11,5 +11,16 @@
         $products = $statement->fetchAll();
         return $products;
     }
+
+    public function readProductById($id) {
+        $homeiot = new Database();
+        $connexion = $homeiot->connect();
+        $query = 'SELECT * FROM products WHERE id_product = :id';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id', $id);
+        $statement->execute();
+        $product = $statement->fetch();
+        return $product;
+    }
 }
 ?>

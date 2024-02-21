@@ -14,7 +14,7 @@
 
             <!-- TEST READ-PRODUCT SANS FILTRE CATEGORIE-->
                 <?php foreach ($products->readproduct() as $product) : ?>
-                <div class="nouveautes-item">
+                <div class="nouveautes-item" style="border: 1px solid red" data-product-id="<?php echo $product['id_product'];?>">
                     <div>
                         <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
                     </div>
