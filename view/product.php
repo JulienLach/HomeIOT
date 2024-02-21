@@ -21,12 +21,11 @@
                         <h1><?= $product['name'] ?></h1>
                     </div>
                     <div>
-                        <h3>13,99 €</h3>
+                        <h3><?= $product['price'] . " €" ?></h3>
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, debitis reprehenderit
-                            repudiandae quas veritatis quae reiciendis dolore libero nobis, aliquam id qui autem magni
-                            maiores esse similique amet explicabo? Repudiandae harum alias aperiam exercitationem illo.
+                        <p>
+                            <?= $product['description'] ?>
                         </p>
                     </div>
                     <div>
