@@ -74,7 +74,7 @@ class Product {
         $query = 'INSERT INTO image (id_product, image_path) VALUES (:id_product, :image_path)';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_product', $last_id);
-        $statement->bindParam(':image_path', $this->image_path);
+        $statement->bindParam(':image_path', $this->image_path, PDO::PARAM_LOB);
         $statement->execute();
 
         // Faire la query de la catégorie

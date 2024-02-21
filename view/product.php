@@ -48,13 +48,9 @@
 
             <div class="product-description">
                 <div>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque suscipit autem iste
-                        laboriosam.
-                        Totam temporibus at exercitationem earum error sunt debitis culpa! Officia delectus iste
-                        nobis
-                        sint optio voluptate! Odio veritatis inventore doloremque. Vero reprehenderit labore aliquid
-                        optio quam nam quod ratione quos maxime. Consequuntur odit maxime error nesciunt obcaecati!
+                    <h3>Fiche technique</h3>
+                    <p>
+                        <?= $product['technical_sheet'] ?>
                     </p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque suscipit autem iste
                         laboriosam.
