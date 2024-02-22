@@ -2,7 +2,7 @@
 <?php require_once '../controller/read-product-by-id.php';?>
 
 
-    <!-- PRODUCT SECTION -->
+<!-- PRODUCT SECTION -->
     <section class="product">
         <div class="container">
             <div class="product-content">
