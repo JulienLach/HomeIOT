@@ -24,6 +24,12 @@
         return $product;
 
         // Essayer de faire une deuxième query pour récupérer l'image du produit
+        $query = 'SELECT * FROM image JOIN products on image.id_product = products.id_product WHERE products.id_product = :id';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id', $id);
+        $statement->execute();
+        $image = $statement->fetch();
+        return $image;
     }
 }
 ?>

@@ -38,7 +38,7 @@
                                 <option value="1">Promotions</option>
                             </select>
                             <label class="custom-file-label" for="filename">Ajouter une image</label>
-                            <input class="add-file text-form" type="file" name="image_path">
+                            <input class="add-file text-form" type="file" accept=".png" name="image_path" >
                             <button class="create-product-btn" type="submit">Créer le produit</button>
                         </form>
                     </div>
