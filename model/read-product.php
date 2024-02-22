@@ -28,8 +28,8 @@
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id', $id);
         $statement->execute();
-        $image = $statement->fetch();
-        return $image;
+        $image_path = $statement->fetch();
+        return $image_path;
     }
 }
 ?>
