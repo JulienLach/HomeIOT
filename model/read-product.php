@@ -21,15 +21,23 @@
         $statement->bindParam(':id', $id);
         $statement->execute();
         $product = $statement->fetch();
-        return $product;
 
-        // Essayer de faire une deuxième query pour récupérer l'image du produit
-        $query = 'SELECT * FROM image JOIN products on image.id_product = products.id_product WHERE products.id_product = :id';
-        $statement = $connexion->prepare($query);
-        $statement->bindParam(':id', $id);
-        $statement->execute();
-        $image_path = $statement->fetch();
-        return $image_path;
+        // Faire une deuxième query pour récupérer l'image du produit
+        $queryImage = 'SELECT image_path FROM image WHERE id_product = :id';
+        $statementImage = $connexion->prepare($queryImage);
+        $statementImage->bindParam(':id', $id);
+        $statementImage->execute();
+        $image_path = $statementImage->fetchColumn();
+
+        // Convertir le blob en base64 pour pouvoir l'afficher dans la vue
+        $image = 'data:image/jpeg;base64,' . base64_encode($image_path);
+
+        // Comme la fonction retourne $product il faut ajouter ['image'] à $product pour pouvoir l'utiliser dans la vue
+        // Je ne peux pas faire return $image et return $product
+        $product['image'] = $image;
+
+    
+        return $product;
     }
 }
 ?>

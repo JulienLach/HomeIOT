@@ -8,7 +8,7 @@
             <div class="product-content">
 
                 <div class="product-images">
-                    <img class="product-main-image" src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
+                    <img class="product-main-image" src="<?= $product['image'];?>" alt="">
                     <div class="product-preview-images">
                         <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                         <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
