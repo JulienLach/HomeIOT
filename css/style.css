@@ -656,7 +656,7 @@ li:nth-child(3) {
 /* PAGE MON COMPTE - PURCHASES SECTION */
 
 .my-account-purchases {
-  margin: 2em auto;
+  margin: 2em;
   font-size: 1.3em;
 }
 
@@ -687,6 +687,23 @@ li:nth-child(3) {
     justify-content: center;
     align-items: center;
 } */
+
+/* PAGE MON COMPTE - INFORMATIONS SECTIONS */
+
+.my-account-informations {
+  margin: 2em;
+  margin-left: 0;
+  font-size: 1.3em;
+}
+
+.my-account-informations h1 {
+  margin-bottom: 1em;
+}
+
+.my-account-informations p {
+  font-size: 0.7em;
+  color: rgb(97, 97, 97);
+}
 
 /* PAGE PRODUCT - PRODUCT SECTION */
 

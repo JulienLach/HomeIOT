@@ -11,9 +11,9 @@
                         <h1>Mon compte</h1>
                     </div>
                     <div class="my-account-menu">
-                        <h5>Mes commandes</h5>
+                        <h5><a href="my-account.php">Mes commandes</a></h5>
                         <div class="black-separator"></div>
-                        <h5>Mes informations</h5>
+                        <h5><a href="my-account-informations.php">Mes informations</a></h5>
                         <div class="black-separator"></div>
                         <div>
                             <button class="disconnect-btn">Me déconnecter</button>
