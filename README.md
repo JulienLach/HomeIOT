@@ -1,6 +1,6 @@
 # Home IoT
 
-![Logo](./HomeIOT-logos/HomeIOT-logos-cropped.jpeg)
+![Logo](./img/HomeIOT-logos-cropped.jpeg)
 
 ## Documentation
 
@@ -23,6 +23,6 @@ CRUDs List :
 - Create account
 - Create product
 - Remove product
-- Modify product
+- Update product
 - Display products
 - Create order
