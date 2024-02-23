@@ -1,4 +1,4 @@
-# Home IoT
+# HomeIOT
 
 ![Logo](./img/HomeIOT-logos-cropped.jpeg)
 
