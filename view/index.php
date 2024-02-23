@@ -25,7 +25,7 @@
         <div class="container">
 
             <div class="top-sellers-header">
-                <h1>Top sellers</h1>
+                <h1>Meilleures ventes</h1>
             </div>
 
             <div class="top-sellers-items">

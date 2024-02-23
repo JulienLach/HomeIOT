@@ -9,6 +9,7 @@
         $statement = $connexion->prepare($query);
         $statement->execute();
         $products = $statement->fetchAll();
+
         return $products;
     }
 
@@ -20,14 +21,14 @@
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id', $id);
         $statement->execute();
-        $product = $statement->fetch();
+        $product = $statement->fetch(); // fetch retourne un tableau associatif
 
-        // Faire une deuxième query pour récupérer l'image du produit
+        // Deuxième query pour récupérer l'image du produit
         $queryImage = 'SELECT image_path FROM image WHERE id_product = :id';
         $statementImage = $connexion->prepare($queryImage);
         $statementImage->bindParam(':id', $id);
         $statementImage->execute();
-        $image_path = $statementImage->fetchColumn();
+        $image_path = $statementImage->fetchColumn(); // fetchColumn() retourne une chaîne de caractères
 
         // Convertir le blob en base64 pour pouvoir l'afficher dans la vue
         $image = 'data:image/jpeg;base64,' . base64_encode($image_path);
@@ -36,7 +37,6 @@
         // Je ne peux pas faire return $image et return $product
         $product['image'] = $image;
 
-    
         return $product;
     }
 }
