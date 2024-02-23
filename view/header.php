@@ -40,7 +40,7 @@
                 <ul>
                     <li>
                         <img class="chevron-mobile-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt="">
-                        <a href="index.php">Acceuil</a>
+                        <a href="index.php">Accueil</a>
                     </li>
                     <li>
                         <img class="chevron-mobile-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt="">
