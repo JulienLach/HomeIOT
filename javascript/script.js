@@ -74,4 +74,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // FONCTION SLIDER HEADER BANNER //
+
+  var slides = document.querySelectorAll(".slide");
+  var currentSlide = 0; // Slide au chargement de la page
+  var slideInterval = setInterval(nextSlide, 7000); // Change le slide toutes les  7 secondes
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }
 });

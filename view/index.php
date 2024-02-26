@@ -4,7 +4,8 @@
     <section class="banner">
         <div class="container">
             <div class="header-banner">
-                <img src="http://jserveur.local/HomeIOT/img/header-banner.png" alt="">
+                <img class="slide active" src="http://jserveur.local/HomeIOT/img/header-banner.png" alt="">
+                <img class="slide" src="http://jserveur.local/HomeIOT/img/header-banner-2.png" alt="">
             </div>
         </div>
     </section>
