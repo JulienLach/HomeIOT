@@ -1,8 +1,7 @@
-<?php require_once '../model/read-product.php';?>
-<?php require_once '../model/database.php';?>
+<?php require_once '../model/product.php';?>
 
 <?php
-$product = new ReadProduct();
+$product = new Product();
 $product = $product->readProductById($_GET['id']);
 
 require_once '../view/product.php'

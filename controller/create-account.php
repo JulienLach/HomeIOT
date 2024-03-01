@@ -1,5 +1,5 @@
 <?php
-require_once '../model/create-account.php';
+require_once '../model/user.php';
 
 if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['password'])) {
     $lastname = $_POST['lastname'];
@@ -7,7 +7,7 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['ema
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $user = new Utilisateur();
+    $user = new User();
     $user->setLastname($lastname);
     $user->setFirstname($firstname);
     $user->setEmail($email);
@@ -18,6 +18,3 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['ema
     header("Location: ../view/index.php");
 }
 ?>
-
-
-<!-- controleur -> modele -> controleur -> vue -->

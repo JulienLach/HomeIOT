@@ -1,7 +1,7 @@
 <?php
 require_once 'database.php';
 
-class Utilisateur {
+class User {
     public $lastname;
     public $firstname;
     public $email;

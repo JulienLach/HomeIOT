@@ -1,5 +1,5 @@
 <?php
-require_once '../model/admin-panel-update-delete.php';
+require_once '../model/product.php';
 
 if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['short_desc']) && isset($_POST['description']) && isset($_POST['technical_sheet']) && isset($_POST['category_name']) && isset($_POST['image_path'])) {
 
@@ -11,7 +11,7 @@ if (isset($_POST['name']) && isset($_POST['price']) && isset($_POST['short_desc'
     $category_name = $_POST['category_name'];
     $image_path = $_POST['image_path'];
 
-    $updateProduct = new UpdateProduct();
+    $updateProduct = new Product();
     $updateProduct->setName($name);
     $updateProduct->setPrice($price);
     $updateProduct->setShortDesc($short_desc);
