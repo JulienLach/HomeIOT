@@ -23,9 +23,8 @@ class Utilisateur {
 
     // Méthode pour ajouter un utilisateur à la base de données
     public function addUser() {
-        // Connexion à la base de données 
-        $homeiot = new Database(); // Créer une nouvelle instance de la classe Database
-        $connexion = $homeiot->connect(); // Appeler la méthode connect de la classe Database pour se connecter à la base de données ici $connexion est un objet PDO
+        // Connexion à la base de données en Singleton
+        $connexion = Database::connect();
 
         // Requête SQL pour ajouter un utilisateur à la base de données
         $query = 'INSERT INTO users (user_lastname, user_firstname, user_email, user_password) VALUES (:user_lastname, :user_firstname, :user_email, :user_password)';

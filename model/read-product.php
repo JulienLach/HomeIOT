@@ -3,8 +3,7 @@
 
 <?php class ReadProduct {
     public function readProduct() {
-        $homeiot = new Database();
-        $connexion = $homeiot->connect();
+        $connexion = Database::connect();
         $query = 'SELECT * FROM products';
         $statement = $connexion->prepare($query);
         $statement->execute();
@@ -14,8 +13,7 @@
     }
 
     public function readProductById($id) {
-        $homeiot = new Database();
-        $connexion = $homeiot->connect();
+        $connexion = Database::connect();
 
         $query = 'SELECT * FROM products WHERE id_product = :id';
         $statement = $connexion->prepare($query);

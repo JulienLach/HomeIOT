@@ -35,8 +35,7 @@ class Product {
     // Méthode pour ajouter un produit à la base de données
     public function addProduct() {
         // Connexion à la base de données
-        $homeiot = new Database();
-        $connexion = $homeiot->connect();
+        $connexion = Database::connect();
 
         // Atraper les clés étangère avant de insert into le produit
 

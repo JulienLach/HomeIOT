@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var slides = document.querySelectorAll(".slide");
   var currentSlide = 0; // Slide au chargement de la page
-  var slideInterval = setInterval(nextSlide, 7000); // Change le slide toutes les  7 secondes
+  var slideInterval = setInterval(nextSlide, 8000); // Change le slide toutes les  7 secondes
 
   function nextSlide() {
     slides[currentSlide].classList.remove("active");
