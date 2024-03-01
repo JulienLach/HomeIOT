@@ -6,6 +6,7 @@
 
 body {
   font-family: "Noto Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -239,13 +240,15 @@ li:nth-child(3) {
   opacity: 0;
   display: block;
   position: absolute;
+  right: -100%;
+  transition: right 0.3s ease;
 }
 
 .slide.active {
-  transition: opacity 0.7s ease-in-out;
   opacity: 1;
-  display: block;
+  right: 0;
   position: relative;
+  z-index: -100;
 }
 
 /* TOP SELLERS SECTION */
