@@ -31,14 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileMenu.classList.toggle("active")
   );
 
-  // FONCTIONS DE RENVOI VERS PAGE PRODUCT POUR CHAQUE ARTICLE
+  // FONCTIONS DE RENVOI VERS PAGE PRODUCT POUR CHAQUE ARTICLE CLIQUÉ
 
   const topSellersItems = document.querySelectorAll(".top-sellers-item");
 
   if (topSellersItems.length > 0) {
     topSellersItems.forEach(function (item) {
       item.addEventListener("click", function () {
-        // Redirect to product.php for each clicked element
         window.location.href = "product.php";
       });
     });
@@ -79,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var slides = document.querySelectorAll(".slide");
   var currentSlide = 0; // Slide au chargement de la page
-  var slideInterval = setInterval(nextSlide, 8000); // Change le slide toutes les  7 secondes
+  var slideInterval = setInterval(nextSlide, 8000); // Change le slide toutes les 8 secondes
 
   function nextSlide() {
     slides[currentSlide].classList.remove("active");

@@ -2,15 +2,15 @@
 // Faire en singleton
 class Database
 {
-    static private $instance = null;
+    static private $connexion = null;
     public static function connect()
     {
-        // Si aucune instance n'existe on en crée
-        if (is_null(self::$instance)) {
-       self::$instance = new PDO('mysql:host=localhost;dbname=homeiot', 'julien', 'mysqlpassword');
+        // Si aucune connexion n'existe on en crée
+        if (is_null(self::$connexion)) {
+            self::$connexion = new PDO('mysql:host=localhost;dbname=homeiot', 'julien', 'mysqlpassword');
         }
         // Sinon on retourne l'instance existante
-        return self::$instance;
+        return self::$connexion;
     }
 }
 ?>
