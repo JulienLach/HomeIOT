@@ -27,7 +27,7 @@
                         <h1>Modifier/Supprimer</h1>
                     </div>
                     <div>
-                        <form class="create-product-form" action="../controller/admin-panel-update-delete.php" method="POST">
+                        <form class="create-product-form" action="../controller/admin-panel-update.php" method="POST">
                             <input class="text-form" type="number" name="productId" value="<?= $product['id_product']?>" readonly>
                             <input class="text-form" type="text" name="name" value="<?= $product['name']?>">
                             <input class="text-form" type="number" name="price" value="<?= $product['price']?>">
@@ -36,9 +36,9 @@
                             <textarea class="text-form" name="technical_sheet" rows="5" style="resize: vertical;"><?= $product['technical_sheet']?></textarea>
                             <label for="category_name">Selectionner une catégorie :</label>
                             <select class="text-form" name="category_name">
-                                <option value="Kits/Packs" <?= $product['category_name'] == 'Kits/Packs' ? 'selected' : '' ?>>Kits/Packs</option>
-                                <option value="Nouveautés" <?= $product['category_name'] == 'Nouveautés' ? 'selected' : '' ?>>Nouveautés</option>
-                                <option value="Promotions" <?= $product['category_name'] == 'Promotions' ? 'selected' : '' ?>>Promotions</option>
+                                <option value="3" <?= $product['category_name'] == 'Kits/Packs' ? 'selected' : '' ?>>Kits/Packs</option>
+                                <option value="2" <?= $product['category_name'] == 'Nouveautés' ? 'selected' : '' ?>>Nouveautés</option>
+                                <option value="1" <?= $product['category_name'] == 'Promotions' ? 'selected' : '' ?>>Promotions</option>
                             </select>
                             <div class="product-preview-images">
                                 <img src="<?= $product['image']?>" alt="">
@@ -47,11 +47,13 @@
                             <label class="custom-file-label" for="filename">Ajouter une image</label>
                             <input class="add-file text-form" type="file" name="filename" id="">
                             <div class="update-delete-btns">
-                                <button class="update-product-btn create-product-btn" type="submit">Modifier le
-                                    produit</button>
-                                <button class="delete-product-btn" type="submit">Supprimer le
-                                    produit</button>
+                                <button class="update-product-btn create-product-btn" type="submit">Modifier le produit</button>
                             </div>
+                            <!-- Faire un deuxième formulaire avec l'ID caché et juste le boutton supprimer -->
+                        </form>
+                        <form class="create-product-form" action="../controller/admin-panel-delete.php" method="POST">
+                        <input class="text-form" type="number" name="productId" value="<?= $product['id_product']?>" hidden>
+                        <button class="delete-product-btn" type="submit">Supprimer le produit</button>
                         </form>
                     </div>
                 </div>

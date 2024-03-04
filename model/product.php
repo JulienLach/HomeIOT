@@ -1,6 +1,7 @@
 <?php require_once 'database.php';?>
 
 <?php class Product {
+    public $id;
     public $name;
     public $price;
     public $short_desc;
@@ -9,6 +10,9 @@
     public $category_name;
     public $image_path;
 
+    public function setId($id) {
+        $this->id = $id;
+    }
     public function setName($name) {
         $this->name = $name;
     }
@@ -29,6 +33,9 @@
     }
     public function setImagePath($image_path) {
         $this->image_path = $image_path;
+    }
+    public function getId() {
+        return $this->id;
     }
     public function getName() {
         return $this->name;
@@ -134,16 +141,20 @@
     public function updateProduct() {
         $connexion = Database::connect();
         // Requête SQL pour mettre à jour un produit
-        $query = 'UPDATE products SET name = :name, price = :price, short_desc = :short_desc, description = :description, technical_sheet = :technical_sheet, id_categories = :id_categories, image_path = :image_path WHERE id = :id';
+        $query = 'UPDATE products SET name = :name, price = :price, short_desc = :short_desc, description = :description, technical_sheet = :technical_sheet, id_categories = :id_categories WHERE id_product = :id';
         $statement = $connexion->prepare($query);
+        $statement->bindParam(':id', $this->id);
         $statement->bindParam(':name', $this->name);
         $statement->bindParam(':price', $this->price);
         $statement->bindParam(':short_desc', $this->short_desc);
         $statement->bindParam(':description', $this->description);
         $statement->bindParam(':technical_sheet', $this->technical_sheet);
         $statement->bindParam(':id_categories', $this->category_name);
-        $statement->bindParam(':image_path', $this->image_path);
         $statement->execute();
+
+        // Ajouter le update de l'image dans une query séparée
+        // $statement->bindParam(':image_path', $this->image_path);
+
     }
 
     // Méthode pour rechercher un produit pour le UPDATE/DELETE
@@ -170,6 +181,21 @@
             }
             return $products;
         }
+    }
+
+    public function deleteProduct() {
+        $connexion = Database::connect();
+
+        // d'abord supprimer l'image
+        $query = 'DELETE FROM image WHERE id_product = :id';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id', $this->id);
+        $statement->execute();
+
+        $query = 'DELETE FROM products WHERE id_product = :id';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id', $this->id);
+        $statement->execute();
     }
 
 }
