@@ -137,5 +137,22 @@
         $statement->bindParam(':image_path', $this->image_path);
         $statement->execute();
     }
+
+    // Méthode pour rechercher un produit pour le UPDATE/DELETE
+    public function searchProduct() {
+        if(isset($_POST['search'])) {
+            $connexion = Database::connect();
+            $query = 'SELECT * FROM products WHERE name LIKE :search';
+            $statement = $connexion->prepare($query);
+            $statement->bindValue(':search', '%' . $_POST['search'] . '%');
+            $statement->execute();
+            $product = $statement->fetchAll(PDO::FETCH_ASSOC);
+            if(empty($product)) {
+                echo 'Aucun produit trouvé';
+            }
+            return $product;
+        }
+    }
+
 }
 ?>
