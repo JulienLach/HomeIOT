@@ -27,7 +27,7 @@
                     <div>
                         <form class="create-product-form" action="../controller/admin-panel-create.php" method="POST">
                             <input class="text-form" type="text" name="name" id="" placeholder="Nom du produit">
-                            <input class=" text-form" type="number" name="price" placeholder="Prix du produit">
+                            <input class=" text-form" type="number" name="price" step="0.01" placeholder="Prix du produit">
                             <textarea class="text-form" name="short_desc" rows="4" style="resize: vertical;" placeholder="Description courte"></textarea>
                             <textarea class="text-form" name="description" rows="5" style="resize: vertical;" placeholder="Description"></textarea>
                             <textarea class="text-form" name="technical_sheet" rows="5" style="resize: vertical;" placeholder="Fiche technique"></textarea>

@@ -16,7 +16,7 @@
                 <?php foreach ($products->readproduct() as $product) : ?>
                 <div class="nouveautes-item" data-product-id="<?php echo $product['id_product'];?>">
                     <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
+                        <img src="<?php echo $product['image']; ?>" alt="">
                     </div>
                     <div>
                         <h3>

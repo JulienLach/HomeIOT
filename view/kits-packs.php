@@ -6,7 +6,7 @@
         <div class="container">
 
             <div class="kits-packs-header">
-                <h1>Toutes les Kits/Packs</h1>
+                <h1>Tous les Kits/Packs</h1>
             </div>
 
             <div class="kits-packs-items">

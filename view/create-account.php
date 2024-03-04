@@ -10,12 +10,12 @@
                 <div>
                     <form class="create-account-form" action="../controller/create-account.php" method="POST">
                         <div>
-                            <input class="text-form" type="text" name="lastname" id="" placeholder="Nom">
-                            <input class="text-form" type="text" name="firstname" id="" placeholder="Prénom">
+                            <input class="text-form" type="text" name="lastname" id="" placeholder="Nom" required>
+                            <input class="text-form" type="text" name="firstname" id="" placeholder="Prénom" required>
                         </div>
                         <input class="text-form" type="email" name="email" placeholder="Email">
-                        <input class="text-form" type="password" name="password" placeholder="Mot de passe">
-                        <input class="text-form" type="password" name="password" placeholder="Confirmer le mot de passe">
+                        <input class="text-form" type="password" name="password" placeholder="Mot de passe" required>
+                        <input class="text-form" type="password" name="password" placeholder="Confirmer le mot de passe" required>
                         <button class="create-account-btn" type="submit">Créer mon compte</button>
                     </form>
                 </div>

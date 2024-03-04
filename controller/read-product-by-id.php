@@ -4,5 +4,5 @@
 $product = new Product();
 $product = $product->readProductById($_GET['id']);
 
-require_once '../view/product.php'
+// require_once '../view/product.php'
 ?>

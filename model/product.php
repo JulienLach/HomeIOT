@@ -31,6 +31,28 @@
         $this->image_path = $image_path;
     }
 
+    public function getName() {
+        return $this->name;
+    }
+    public function getPrice() {
+        return $this->price;
+    }
+    public function getShortDesc() {
+        return $this->short_desc;
+    }
+    public function getDescription() {
+        return $this->description;
+    }
+    public function getTechnicalSheet() {
+        return $this->technical_sheet;
+    }
+    public function getCategoryName() {
+        return $this->category_name;
+    }
+    public function getImagePath() {
+        return $this->image_path;
+    }
+
     // Méthode pour ajouter un produit à la base de données
     public function addProduct() {
         // Connexion à la base de données
@@ -126,13 +148,25 @@
         $statement->execute();
     }
 
+    // Méthode pour afficher tous les produits avec leurs images toutes les catégories
     public function readProduct() {
         $connexion = Database::connect();
         $query = 'SELECT * FROM products';
         $statement = $connexion->prepare($query);
         $statement->execute();
-        $products = $statement->fetchAll();
-
+        $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+        foreach ($products as $key => $product) {
+            $query = 'SELECT image_path FROM image WHERE id_product = :id';
+            $statement = $connexion->prepare($query);
+            $statement->bindParam(':id', $product['id_product']);
+            $statement->execute();
+            $image_path = $statement->fetchColumn();
+            $image = 'data:image/jpeg;base64,' . base64_encode($image_path);
+    
+            $products[$key]['image'] = $image;
+        }
+    
         return $products;
     }
 
@@ -145,12 +179,11 @@
         $product = $statement->fetch(); // fetch retourne un tableau associatif
 
         // Deuxième query pour récupérer l'image du produit
-        $queryImage = 'SELECT image_path FROM image WHERE id_product = :id';
-        $statementImage = $connexion->prepare($queryImage);
+        $query = 'SELECT image_path FROM image WHERE id_product = :id';
+        $statementImage = $connexion->prepare($query);
         $statementImage->bindParam(':id', $id);
         $statementImage->execute();
         $image_path = $statementImage->fetchColumn(); // fetchColumn() retourne une chaîne de caractères
-
         // Convertir le blob en base64 pour pouvoir l'afficher dans la vue
         $image = 'data:image/jpeg;base64,' . base64_encode($image_path);
         // Comme la fonction retourne $product il faut ajouter ['image'] à $product pour pouvoir l'utiliser dans la vue
