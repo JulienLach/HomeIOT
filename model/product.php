@@ -107,7 +107,15 @@
         $statement->execute();
         $product = $statement->fetch(); // fetch retourne un tableau associatif
 
-        // Deuxième query pour récupérer l'image du produit
+        // Query pour récupérer la catégorie
+        $query = 'SELECT category_name FROM categories WHERE id_categories = :id';
+        $statementCategory = $connexion->prepare($query);
+        $statementCategory->bindParam(':id', $product['id_categories']);
+        $statementCategory->execute();
+        $category_name = $statementCategory->fetchColumn();
+        $product['category_name'] = $category_name;
+
+        // Troisème query pour récupérer l'image du produit
         $query = 'SELECT image_path FROM image WHERE id_product = :id';
         $statementImage = $connexion->prepare($query);
         $statementImage->bindParam(':id', $id);
@@ -146,11 +154,21 @@
             $statement = $connexion->prepare($query);
             $statement->bindValue(':search', '%' . $_POST['search'] . '%');
             $statement->execute();
-            $product = $statement->fetchAll(PDO::FETCH_ASSOC);
-            if(empty($product)) {
+            $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+            if(empty($products)) {
                 echo 'Aucun produit trouvé';
             }
-            return $product;
+            foreach ($products as $key => $product) {
+                $query = 'SELECT image_path FROM image WHERE id_product = :id';
+                $statement = $connexion->prepare($query);
+                $statement->bindParam(':id', $product['id_product']);
+                $statement->execute();
+                $image_path = $statement->fetchColumn();
+                $image = 'data:image/jpeg;base64,' . base64_encode($image_path);
+        
+                $products[$key]['image'] = $image; // Ajouter l'image au tableau associatif
+            }
+            return $products;
         }
     }
 

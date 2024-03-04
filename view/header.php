@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <a href="http://jserveur.local/HomeIOT/view/admin-panel-update-delete-search.php">Admin panel</a>
 
     <!-- NAVBAR -->
 

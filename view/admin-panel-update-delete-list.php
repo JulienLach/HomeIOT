@@ -1,5 +1,4 @@
 <?php include 'header.php'; ?>
-<?php include '../model/database.php'; ?>
 <?php require_once '../controller/admin-panel-update-delete-list.php'; ?>
 
 
@@ -28,20 +27,18 @@
                         <h1>Rechercher un produit</h1>
                     </div>
 
-                    <?php 
-                    
+                    <?php
+                    echo "Résultats pour : ". $_POST['search'];
                     foreach ($products as $product) {
-                        echo '<div>';
-                        echo '<h1>' . $product['name'] . '</h1>';
+                        echo '<div class="item-pending">';
+                        echo '<h3>' . $product['name'] . '</h3>';
                         echo '<p>' . $product['price'] . '</p>';
-                        echo '<p>' . $product['short_desc'] . '</p>';
-                        echo '<p>' . $product['description'] . '</p>';
-                        echo '<p>' . $product['technical_sheet'] . '</p>';
-                        echo '<p>' . $product['category_name'] . '</p>';
-                        echo '<img src="' . $product['image_path'] . '" alt="">';
+                        echo '<div class="product-preview-images">';
+                        echo '<img src="' . $product['image'] . '" alt="">';
+                        echo '</div>';
+                        echo '<a href="admin-panel-update-delete.php?id=' . $product['id_product'] . '">Modifier/Supprimer</a>';
                         echo '</div>';
                     }
-
                     ?>
                     
                     <div>

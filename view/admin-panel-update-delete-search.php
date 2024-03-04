@@ -24,7 +24,7 @@
 
                 <div class="create-product">
                     <div class="create-product-header">
-                        <h1>Rechercher un produit</h1>
+                        <h1>Modifier un produit</h1>
                     </div>
                     <div>
                         <form class="create-product-form" action="../view/admin-panel-update-delete-list.php" method="POST">
