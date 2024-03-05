@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (promotionItems.length > 0) {
     promotionItems.forEach(function (item) {
       item.addEventListener("click", function () {
-        window.location.href = "product.php";
+        const productId = item.dataset.productId; // Dataset récupère les attributs data-....
+        window.location.href = "product.php?id=" + productId; // Redirige vers la page product.php avec l'id du produit stocké dans l'URL
       });
     });
   }
