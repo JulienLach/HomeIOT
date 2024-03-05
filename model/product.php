@@ -133,6 +133,7 @@
         $image = 'data:image/jpeg;base64,' . base64_encode($image_path);
         // Comme la fonction retourne $product il faut ajouter ['image'] à $product pour pouvoir l'utiliser dans la vue
         // Je ne peux pas faire return $image et return $product
+        // on ajoute la clé 'image' au tableau associatif $product
         $product['image'] = $image;
 
         return $product;
