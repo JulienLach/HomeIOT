@@ -85,11 +85,12 @@
         $statement->execute();
     }
 
-    // Méthode pour afficher tous les produits avec leurs images toutes les catégories
+    // Méthode pour afficher tous les produits avec leurs images et toutes les catégories
     public function readProduct() {
         $connexion = Database::connect();
-        $query = 'SELECT * FROM products';
+        $query = 'SELECT * FROM products WHERE id_categories = :id_categories';
         $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_categories', $this->category_name);
         $statement->execute();
         $products = $statement->fetchAll(PDO::FETCH_ASSOC);
         foreach ($products as $key => $product) {
