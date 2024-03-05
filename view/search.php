@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php require_once '../controller/search.php'; ?>
 
 
     <!-- SEARCH SECTION -->
@@ -6,190 +7,29 @@
         <div class="container">
 
             <div class="kits-packs-header">
-                <h1>Resultats pour " ... "</h1>
+                <h1>Resultats pour " <?= $_POST['search'] ?> "</h1>
             </div>
 
             <div class="kits-packs-items">
 
+                <?php foreach ($products as $product): ?>
                 <div class="kits-packs-item">
                     <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
+                        <img src="<?= $product['image'];?>" alt="">
                     </div>
                     <div>
                         <h3>
-                            Arduino UNO+
+                            <?= $product['name'];?>
                         </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
-                    </div>
-                    <div>
                         <h3>
-                            Arduino UNO+
+                            <?= $product['price'] . " €";?>
                         </h3>
-                        <h3>13,99 €</h3>
                     </div>
                     <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
+                        <button class="add-to-cart-btn">Ajouter au panier</button>
                     </div>
                 </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="kits-packs-item">
-                    <div>
-                        <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
+                <?php endforeach; ?>
 
             </div>
         </div>

@@ -67,9 +67,9 @@
 
             <!-- SEARCH CONTAINER -->
             <div class="search-container">
-                <form action="">
-                    <input type="text" placeholder="" name="search">
-                    <a href="search.php"><img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/loupe.png" alt=""></a>
+                <form action="../view/search.php" method="POST">
+                    <input type="text" name="search" placeholder="Rechercher un produit" value="<?php ?>" required>
+                    <button class="search-button" type="submit"><img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/loupe.png" alt=""></button>
                 </form>
             </div>
 

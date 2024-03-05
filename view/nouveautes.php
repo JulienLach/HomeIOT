@@ -13,7 +13,7 @@
             <div class="nouveautes-items">
 
             <!-- TEST READ-PRODUCT SANS FILTRE CATEGORIE-->
-                <?php foreach ($products->readproduct() as $product) : ?>
+                <?php foreach ($products as $product) : ?>
                 <div class="nouveautes-item" data-product-id="<?php echo $product['id_product'];?>">
                     <div>
                         <img src="<?php echo $product['image']; ?>" alt="">
