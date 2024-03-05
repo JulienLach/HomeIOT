@@ -2,7 +2,7 @@
 
 <?php
 $products = new Product();
-$products->setCategoryName('3');
+$products->setCategoryName('1');
 $products = $products->readproduct();
 
 require_once '../view/promotions.php'

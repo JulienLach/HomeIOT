@@ -27,7 +27,7 @@
                         <h1>Modifier/Supprimer</h1>
                     </div>
                     <div>
-                        <form class="create-product-form" action="../controller/admin-panel-update.php" method="POST">
+                        <form class="create-product-form" action="../controller/admin-panel-update.php" method="POST" enctype="multipart/form-data">
                             <input class="text-form" type="number" name="productId" value="<?= $product['id_product']?>" readonly>
                             <input class="text-form" type="text" name="name" value="<?= $product['name']?>">
                             <input class="text-form" type="number" name="price" value="<?= $product['price']?>">
@@ -45,7 +45,7 @@
                             </div>
 
                             <label class="custom-file-label" for="filename">Ajouter une image</label>
-                            <input class="add-file text-form" type="file" name="filename" id="">
+                            <input class="add-file text-form" type="file" accept=".jpeg" name="image_path">
                             <div class="update-delete-btns">
                                 <button class="update-product-btn create-product-btn" type="submit">Modifier le produit</button>
                             </div>

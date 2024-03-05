@@ -154,10 +154,17 @@
         $statement->bindParam(':id_categories', $this->category_name);
         $statement->execute();
 
-        // Ajouter le update de l'image dans une query séparée
-        // $statement->bindParam(':image_path', $this->image_path);
-
+    // TEST Requete changement image, commenter pour modifier le reste
+    // Ajouter le update de l'image dans une query séparée seulement si une nouvelle image a été uploadée
+        if($this->image_path != null) {
+            $query = 'UPDATE image SET image_path = :image_path WHERE id_product = :id';
+            $statement = $connexion->prepare($query);
+            $statement->bindParam(':id', $this->id);
+            $statement->bindParam(':image_path', $this->image_path, PDO::PARAM_LOB);
+            $statement->execute();
+        }
     }
+    // La requete update de l'image est ignorée si l'image n'a pas été uploadée donc si $this->image_path == null
 
     // Méthode pour rechercher un produit pour le UPDATE/DELETE
     public function searchProduct() {
