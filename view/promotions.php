@@ -14,22 +14,22 @@
 
                 <!-- Affichage des produits avec le controlleur qui filtre la catégorie promotions-->
                 <?php foreach ($products as $product) : ?>
-                    <div class="promotions-item" data-product-id="<?php echo $product['id_product'];?>">
-                        <div>
-                            <img src="<?php echo $product['image']; ?>" alt="">
-                        </div>
-                        <div>
-                            <h3>
-                                <?= $product['name'] ?>
-                            </h3>
-                            <h3>
-                                <?= $product['price'] . " €"?>
-                            </h3>
-                        </div>
-                        <div>
-                            <button class="add-to-cart-btn">Ajouter au panier</button>
-                        </div>
+                <div class="promotions-item product-id" data-product-id="<?php echo $product['id_product'];?>">
+                    <div>
+                        <img src="<?php echo $product['image']; ?>" alt="">
                     </div>
+                    <div>
+                        <h3>
+                            <?= $product['name'] ?>
+                        </h3>
+                        <h3>
+                            <?= $product['price'] . " €"?>
+                        </h3>
+                    </div>
+                    <div>
+                        <button class="add-to-cart-btn">Ajouter au panier</button>
+                    </div>
+                </div>
                 <?php endforeach; ?>
 
             </div>

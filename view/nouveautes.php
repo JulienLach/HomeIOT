@@ -14,7 +14,7 @@
 
                 <!-- Affichage des produits avec le controlleur qui filtre la catégorie nouveautés-->
                 <?php foreach ($products as $product) : ?>
-                <div class="nouveautes-item" data-product-id="<?php echo $product['id_product'];?>">
+                <div class="nouveautes-item product-id" data-product-id="<?php echo $product['id_product'];?>">
                     <div>
                         <img src="<?php echo $product['image']; ?>" alt="">
                     </div>

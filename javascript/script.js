@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Initier la fonction
-
   // MOBILE MENU
 
   const iconMenu = document.querySelector(".icon-menu");
@@ -43,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const nouveautesItems = document.querySelectorAll(".nouveautes-item");
+  const nouveautesItems = document.querySelectorAll(".product-id");
 
   if (nouveautesItems.length > 0) {
     nouveautesItems.forEach(function (item) {
@@ -54,27 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const promotionItems = document.querySelectorAll(".promotions-item");
+  // const nouveautesItems = document.querySelectorAll(".nouveautes-item");
 
-  if (promotionItems.length > 0) {
-    promotionItems.forEach(function (item) {
-      item.addEventListener("click", function () {
-        const productId = item.dataset.productId; // Dataset récupère les attributs data-....
-        window.location.href = "product.php?id=" + productId; // Redirige vers la page product.php avec l'id du produit stocké dans l'URL
-      });
-    });
-  }
-
-  const kitsPacksItems = document.querySelectorAll(".kits-packs-item");
-
-  if (kitsPacksItems.length > 0) {
-    kitsPacksItems.forEach(function (item) {
-      item.addEventListener("click", function () {
-        const productId = item.dataset.productId; // Dataset récupère les attributs data-....
-        window.location.href = "product.php?id=" + productId; // Redirige vers la page product.php avec l'id du produit stocké dans l'URL
-      });
-    });
-  }
+  // if (nouveautesItems.length > 0) {
+  //   nouveautesItems.forEach(function (item) {
+  //     item.addEventListener("click", function () {
+  //       const productId = item.dataset.productId; // Dataset récupère les attributs data-....
+  //       window.location.href = "product.php?id=" + productId; // Redirige vers la page product.php avec l'id du produit stocké dans l'URL
+  //     });
+  //   });
+  // }
 
   // FONCTION SLIDER HEADER BANNER //
 

@@ -14,7 +14,7 @@
 
                 <!-- Affichage des produits avec le controlleur qui filtre la catégorie kits/packs-->
                 <?php foreach ($products as $product) : ?>
-                <div class="kits-packs-item" data-product-id="<?php echo $product['id_product'];?>">
+                <div class="kits-packs-item product-id" data-product-id="<?php echo $product['id_product'];?>">
                     <div>
                         <img src="<?php echo $product['image']; ?>" alt="">
                     </div>
