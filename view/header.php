@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <a href="http://jserveur.local/HomeIOT/view/admin-panel-update-delete-search.php">Admin panel</a>
+    <a href="http://jserveur.local/HomeIOT/view/admin-panel-update-delete-search.php" style="font-weight: bold;">Admin panel🛠️</a>
 
     <!-- NAVBAR -->
 
@@ -68,7 +68,7 @@
             <!-- SEARCH CONTAINER -->
             <div class="search-container">
                 <form action="../view/search.php" method="POST">
-                    <input type="text" name="search" placeholder="Rechercher un produit" value="<?php ?>" required>
+                    <input type="text" name="search" placeholder="Rechercher un produit" value="<?php ?>">
                     <button class="search-button" type="submit"><img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/loupe.png" alt=""></button>
                 </form>
             </div>

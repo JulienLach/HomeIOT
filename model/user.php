@@ -35,7 +35,7 @@ class User {
     }
 
 
-    // Méthode pour ajouter un utilisateur à la base de données
+    // Méthode pour ajouter un utilisateur
     public function addUser() {
         // Connexion à la base de données en Singleton
         $connexion = Database::connect();
@@ -48,6 +48,9 @@ class User {
         $statement->bindParam(':user_password', $this->password);
         $statement->execute();
     }
+
+
+    // Méthode pour vérifier si le user est dans la BDD et si les identifiants sont corrects
 }
 
 ?>

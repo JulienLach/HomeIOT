@@ -194,7 +194,6 @@
 
     public function deleteProduct() {
         $connexion = Database::connect();
-
         // d'abord supprimer l'image
         $query = 'DELETE FROM image WHERE id_product = :id';
         $statement = $connexion->prepare($query);
@@ -206,6 +205,5 @@
         $statement->bindParam(':id', $this->id);
         $statement->execute();
     }
-
 }
 ?>

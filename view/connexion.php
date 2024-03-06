@@ -8,9 +8,9 @@
                     <h1>Connexion</h1>
                 </div>
                 <div>
-                    <form class="connexion-form" action="index.php" method="POST">
-                        <input class="text-form" type="email" name="email" id="" placeholder="Email">
-                        <input class="text-form" type="password" name="password" placeholder="Mot de passe">
+                    <form class="connexion-form" action="../controller/connexion.php" method="POST">
+                        <input class="text-form" type="email" name="user_email" id="" placeholder="Email">
+                        <input class="text-form" type="password" name="user_password" placeholder="Mot de passe">
                         <a class="forgot-password" href="">Mot de passe oublié ?</a>
                         <button class="connexion-btn" type="submit">Connexion</button>
                     </form>
