@@ -18,7 +18,7 @@ class User {
         $this->email = $email;
     }
     public function setPassword($password) {
-        $this->password = password_hash($password, PASSWORD_DEFAULT);
+        $this->password = $password;
     }
     // Définir les geters du user
     public function getLastname() {
@@ -45,12 +45,31 @@ class User {
         $statement->bindParam(':user_lastname', $this->lastname);
         $statement->bindParam(':user_firstname', $this->firstname);
         $statement->bindParam(':user_email', $this->email);
-        $statement->bindParam(':user_password', $this->password);
+        // Hacher le mot de passe avant de l'insérer dans la base de données
+        $hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
+        $statement->bindParam(':user_password', $hashedPassword);
         $statement->execute();
     }
 
-
     // Méthode pour vérifier si le user est dans la BDD et si les identifiants sont corrects
-}
+    // avec fonction de vérif du password hashé
+    public function checkUser() {
+        $connexion = Database::connect();
+        // d'abord vérifier l'email et ensuite voir si le mot de passe correspond
+        $query = 'SELECT * FROM users WHERE user_email = :user_email';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':user_email', $this->email);
+        $statement->execute();
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
 
+        if($user && password_verify($this->password, $user['user_password'])) {
+            // l'utilisateur est connecté
+            $_SESSION['user_firstname'] = $user['user_firstname'];
+            $_SESSION['user_lastname'] = $user['user_lastname'];
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
 ?>
