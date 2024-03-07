@@ -1,5 +1,6 @@
 <?php
-// Faire en singleton
+// Faire en singleton : Database::connect() en singleton elle ne peut pas être instanciée
+// la méthode connect() est static et s'appelle directement sur la classe avec les "::"
 class Database
 {
     static private $connexion = null;

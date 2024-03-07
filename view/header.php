@@ -91,8 +91,15 @@ if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
                         <a href="shopping-cart.php">Mon panier</a>
                     </li>
                     <li>
-                        <img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/utilisateur.png" alt="">
-                        <a href="connexion.php">Connexion</a>
+                        <?php
+                        if(isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
+                            echo '<img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/utilisateur.png" alt="">
+                            <a href="../controller/logout.php">Déconnexion</a>';
+                        } else {
+                            echo '<img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/utilisateur.png" alt="">
+                            <a href="connexion.php">Connexion</a>';
+                        }
+                        ?>
                     </li>
                 </ul>
             </div>
