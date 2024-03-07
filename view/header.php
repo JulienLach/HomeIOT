@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 
+<?php
+session_start();
+if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
+    echo 'Connecté en tant que : ' . $_SESSION['user_firstname'] . ' ' . $_SESSION['user_lastname'];
+} else {
+    echo 'Non connecté';
+}
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
