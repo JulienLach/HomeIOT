@@ -13,7 +13,7 @@
             <div class="kits-packs-items">
 
                 <?php foreach ($products as $product): ?>
-                <div class="kits-packs-item">
+                <div class="kits-packs-item product-id" data-product-id="<?php echo $product['id_product'];?>">
                     <div>
                         <img src="<?= $product['image'];?>" alt="">
                     </div>
