@@ -9,6 +9,7 @@ if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
     echo 'Non connecté';
 }
 ?>
+<a href="../controller/logout.php" style="color: orangered">Se déconnecter</a>
 
 <head>
     <meta charset="UTF-8">
@@ -28,7 +29,6 @@ if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
     <a href="http://jserveur.local/HomeIOT/view/admin-panel-update-delete-search.php" style="font-weight: bold;">Admin panel🛠️</a>
 
     <!-- NAVBAR -->
-
     <nav class="navbar">
         <div class="container">
 
