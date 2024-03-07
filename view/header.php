@@ -2,14 +2,17 @@
 <html lang="fr">
 
 <?php
-session_start();
+// Débug
+session_start(); // à enlever
 if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
-    echo 'Connecté en tant que : ' . $_SESSION['user_firstname'] . ' ' . $_SESSION['user_lastname'];
+    echo 'Connecté en tant que : ' . $_SESSION['user_firstname'] . ' ' . $_SESSION['user_lastname']. ' |';
 } else {
-    echo 'Non connecté';
+    echo 'Non connecté |';
 }
 ?>
 <a href="../controller/logout.php" style="color: orangered">Se déconnecter</a>
+<a href="http://jserveur.local/HomeIOT/view/admin-panel-update-delete-search.php" style="font-weight: bold;">| Admin panel 🛠️</a>
+
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +29,6 @@ if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
 </head>
 
 <body>
-    <a href="http://jserveur.local/HomeIOT/view/admin-panel-update-delete-search.php" style="font-weight: bold;">Admin panel🛠️</a>
 
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -92,8 +94,9 @@ if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
                     </li>
                     <li>
                         <?php
+                        // session_start(); à rétablir et enelver le session start du début en haut de la page
                         if(isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
-                            echo '<img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/utilisateur.png" alt="">
+                            echo '<img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/deconnexion.png" alt="">
                             <a href="../controller/logout.php">Déconnexion</a>';
                         } else {
                             echo '<img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/utilisateur.png" alt="">

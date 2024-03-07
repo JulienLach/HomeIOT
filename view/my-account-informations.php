@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-
     <!-- MY ACCOUNT SECTION -->
     <section class="my-account">
         <div class="container">
@@ -26,14 +25,25 @@
                     <h1>Mes informations</h1>
                 </div>
                 <div>
-                    <form class="create-account-form" action="../controller/create-account.php" method="POST">
-                        <div>
-                            <input class="text-form" type="text" name="lastname" id="" placeholder="Nom" value="Lach">
-                            <input class="text-form" type="text" name="firstname" id="" placeholder="Prénom" value="Julien">
-                        </div>
-                        <input class="text-form" type="email" name="email" placeholder="Email" value="julien.lach@outlook.com">
-                        <button class="create-account-btn" type="submit">Mettre à jour mes informations</button>
-                    </form>
+                    
+                    <?php 
+                    if(isset($_SESSION['user_lastname']) && isset($_SESSION['user_firstname']) && isset($_SESSION['user_email'])) {
+                    ?>
+                        <form class="create-account-form" action="" method="POST">
+                            <div>
+                                <input class="text-form" type="text" name="lastname" id="" placeholder="Nom" value="<?= $_SESSION['user_lastname'];?>">
+                                <input class="text-form" type="text" name="firstname" id="" placeholder="Prénom" value="<?= $_SESSION['user_firstname'];?>">
+                            </div>
+                            <input class="text-form" type="email" name="email" placeholder="Email" value="<?= $_SESSION['user_email'];?>">
+                            <button class="create-account-btn" type="submit">Mettre à jour mes informations</button>
+                        </form>
+                    <?php 
+                    } else {
+                        echo '<a href="connexion.php">Connexion</a>';
+                        exit();
+                    }
+                    ?>
+                    
                 </div>
             </div>
         </div>
