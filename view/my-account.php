@@ -1,5 +1,10 @@
 <?php include 'header.php'; ?>
 
+<?php if(!isset($_SESSION['user_lastname']) && !isset($_SESSION['user_firstname'])) {
+    echo '<script>window.location.href = "connexion.php";</script>';
+    exit();
+}
+?>
 
     <!-- MY ACCOUNT SECTION -->
     <section class="my-account">

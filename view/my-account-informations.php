@@ -1,5 +1,11 @@
 <?php include 'header.php'; ?>
 
+<?php if(!isset($_SESSION['user_lastname']) && !isset($_SESSION['user_firstname'])) {
+    echo '<script>window.location.href = "connexion.php";</script>';
+    exit();
+}
+?>
+
     <!-- MY ACCOUNT SECTION -->
     <section class="my-account">
         <div class="container">
@@ -38,9 +44,6 @@
                             <button class="create-account-btn" type="submit">Mettre à jour mes informations</button>
                         </form>
                     <?php 
-                    } else {
-                        echo '<a href="connexion.php">Connexion</a>';
-                        exit();
                     }
                     ?>
                     
