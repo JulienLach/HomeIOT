@@ -72,5 +72,11 @@ class User {
             return false;
         }
     }
+
+    // Méthode pour update les informations de l'utilisateur
+    public function updateUser() {
+
+    }
 }
+
 ?>
