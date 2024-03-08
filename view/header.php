@@ -10,7 +10,7 @@ if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
     echo 'Non connecté |';
 }
 ?>
-<a href="../controller/logout.php" style="color: orangered">Se déconnecter</a>
+<a href="../controller/logout.php" style="color: #c51949; font-weight: bold;">Se déconnecter</a>
 <a href="http://jserveur.local/HomeIOT/view/admin-panel-update-delete-search.php" style="font-weight: bold;">| Admin panel 🛠️</a>
 
 
