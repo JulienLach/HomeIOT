@@ -33,21 +33,6 @@
 
                 <div class="top-sellers-item">
                     <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
-                    </div>
-                    <div>
-                        <h3>
-                            Arduino UNO+
-                        </h3>
-                        <h3>13,99 €</h3>
-                    </div>
-                    <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
-                    </div>
-                </div>
-
-                <div class="top-sellers-item">
-                    <div>
                         <img src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
                     </div>
                     <div>
@@ -181,21 +166,27 @@
             </div>
 
             <div class="nouveautes-items">
+            <?php require_once '../controller/read-product-nouveautes-index.php';?>
 
-                <div class="nouveautes-item">
+                <!-- Affichage des produits avec le controlleur qui filtre la catégorie nouveautés-->
+                <?php foreach ($products as $product) : ?>
+                <div class="nouveautes-item product-id" data-product-id="<?php echo $product['id_product'];?>">
                     <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
+                        <img src="<?php echo $product['image']; ?>" alt="">
                     </div>
                     <div>
                         <h3>
-                            Arduino UNO+
+                            <?= $product['name'] ?>
                         </h3>
-                        <h3>13,99 €</h3>
+                        <h3>
+                            <?= $product['price'] . " €"?>
+                        </h3>
                     </div>
                     <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
+                        <button class="add-to-cart-btn">Ajouter au panier</button>
                     </div>
                 </div>
+                <?php endforeach; ?>
 
                 <div class="nouveautes-item">
                     <div>
@@ -272,21 +263,27 @@
             </div>
 
             <div class="promotions-items">
+            <?php require_once '../controller/read-product-promotions-index.php';?>
 
-                <div class="promotions-item">
+                <!-- Affichage des produits avec le controlleur qui filtre la catégorie promotions-->
+                <?php foreach ($products as $product) : ?>
+                <div class="promotions-item product-id" data-product-id="<?php echo $product['id_product'];?>">
                     <div>
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
+                        <img src="<?php echo $product['image']; ?>" alt="">
                     </div>
                     <div>
                         <h3>
-                            Arduino UNO+
+                            <?= $product['name'] ?>
                         </h3>
-                        <h3>13,99 €</h3>
+                        <h3>
+                            <?= $product['price'] . " €"?>
+                        </h3>
                     </div>
                     <div>
-                        <button class="add-to-cart-btn">Add to cart</button>
+                        <button class="add-to-cart-btn">Ajouter au panier</button>
                     </div>
                 </div>
+                <?php endforeach; ?>
 
                 <div class="promotions-item">
                     <div>
