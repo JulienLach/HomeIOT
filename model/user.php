@@ -73,6 +73,7 @@ class User {
             $_SESSION['user_firstname'] = $user['user_firstname'];
             $_SESSION['user_lastname'] = $user['user_lastname'];
             $_SESSION['user_email'] = $user['user_email'];
+            $_SESSION['id_users'] = $user['id_users'];
             return true;
         } else {
             return false;

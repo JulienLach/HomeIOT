@@ -33,12 +33,14 @@
                 <div>
                     
                     <?php 
-                    if(isset($_SESSION['user_lastname']) && isset($_SESSION['user_firstname']) && isset($_SESSION['user_email'])) {
+                    if(isset($_SESSION['user_lastname']) && isset($_SESSION['user_firstname'])) {
+                    
                     ?>
                         <form class="create-account-form" action="../controller/my-account-informations-update.php" method="POST">
                             <div>
-                                <input class="text-form" type="text" name="lastname" id="" placeholder="Nom" value="<?= $_SESSION['user_lastname'];?>">
-                                <input class="text-form" type="text" name="firstname" id="" placeholder="Prénom" value="<?= $_SESSION['user_firstname'];?>">
+                                <input class="text-form" type="text" name="id_users" value="<?= $_SESSION['id_users'];?>" hidden>
+                                <input class="text-form" type="text" name="lastname" placeholder="Nom" value="<?= $_SESSION['user_lastname'];?>">
+                                <input class="text-form" type="text" name="firstname" placeholder="Prénom" value="<?= $_SESSION['user_firstname'];?>">
                             </div>
                             <input class="text-form" type="email" name="email" placeholder="Email" value="<?= $_SESSION['user_email'];?>">
                             <button class="create-account-btn" type="submit">Mettre à jour mes informations</button>
