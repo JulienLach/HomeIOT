@@ -35,7 +35,7 @@
                     <?php 
                     if(isset($_SESSION['user_lastname']) && isset($_SESSION['user_firstname']) && isset($_SESSION['user_email'])) {
                     ?>
-                        <form class="create-account-form" action="" method="POST">
+                        <form class="create-account-form" action="../controller/my-account-informations-update.php" method="POST">
                             <div>
                                 <input class="text-form" type="text" name="lastname" id="" placeholder="Nom" value="<?= $_SESSION['user_lastname'];?>">
                                 <input class="text-form" type="text" name="firstname" id="" placeholder="Prénom" value="<?= $_SESSION['user_firstname'];?>">

@@ -6,6 +6,7 @@ class User {
     public $firstname;
     public $email;
     public $password;
+    public $id;
 
     // Définir les seters du user
     public function setLastname($lastname) {
@@ -20,6 +21,9 @@ class User {
     public function setPassword($password) {
         $this->password = $password;
     }
+    public function setId($id) {
+        $this->id = $id;
+    }
     // Définir les geters du user
     public function getLastname() {
         return $this->lastname;
@@ -33,7 +37,9 @@ class User {
     public function getPassword() {
         return $this->password;
     }
-
+    public function getId() {
+        return $this->id;
+    }
 
     // Méthode pour ajouter un utilisateur
     public function addUser() {
@@ -73,9 +79,16 @@ class User {
         }
     }
 
-    // Méthode pour update les informations de l'utilisateur
+    // Méthode pour update les informations de l'utilisateur en fonction de son id
     public function updateUser() {
-
+        $connexion = Database::connect();
+        $query = 'UPDATE users SET user_lastname = :user_lastname, user_firstname = :user_firstname, user_email = :user_email WHERE id_users = :id_users';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':user_lastname', $this->lastname);
+        $statement->bindParam(':user_firstname', $this->firstname);
+        $statement->bindParam(':user_email', $this->email);
+        $statement->bindParam(':id_users', $this->id);
+        $statement->execute();
     }
 }
 
