@@ -4,14 +4,12 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 require_once '../model/product.php';
 
-if(isset($_POST['productId'])) {
-    $productId = $_POST['productId'];
+if (isset($_POST['id_product_removed'])) {
+    $productId = $_POST['id_product_removed'];
     $product = new Product();
-    $product->setId($produuctId);
-    $product->addToCart($productId);
+    $product->removeFromCart($productId);
 
     header('Location: ../view/shopping-cart.php');
 }
-
 
 ?>

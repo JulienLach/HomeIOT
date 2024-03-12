@@ -208,14 +208,17 @@
 
     // Méthode pour ajouter un produit au panier avec appel à la méthode readProductById
     public function addToCart($id) {
-        // read les infos produit en fonction de sont ID
-        $product = $this->readProductById($id); // retourne un tableau associatif des infos produits
-        // déclarer un tableau panier vide si il n'existe pas
+        $product = $this->readProductById($id);
         if(!isset($_SESSION['cart'])) {
             $_SESSION['cart'] = [];
         }
-        // Ajouter le produit cliqué au tableau vide
         array_push($_SESSION['cart'], $product);
+    }
+
+    // Méthode pour retirer un produit du panier
+    public function removeFromCart($id) {
+        $index = array_search($id, array_column($_SESSION['cart'], 'id_product'));
+        unset($_SESSION['cart'][$index]);
     }
 }
 ?>

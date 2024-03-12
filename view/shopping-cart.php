@@ -28,6 +28,12 @@
                                     min="1" max="5" placeholder="1"> -->
                                 <p><?=$product['price'] . " €";?></p>
                             </div>
+                            <div class="item-remove">
+                                <form action="../controller/remove-from-shopping-cart.php" method="post">
+                                    <input type="hidden" name="id_product_removed" value="<?= $product['id_product']; ?>">
+                                    <input type="submit" value="❌">
+                                </form>
+                            </div>
                         </div>
                         <?php endforeach; ?>
                         <?php }
