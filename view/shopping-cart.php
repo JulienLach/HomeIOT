@@ -1,19 +1,6 @@
 <?php require_once 'header.php'; ?>
 <?php require_once '../controller/add-to-shopping-cart.php';?>
 
-<?php
-if (isset($_SESSION['cart'])) {
-    // afficher les détails des produits dans le panier
-    foreach ($_SESSION['cart'] as $product) {
-        echo $product['name'] . "<br>";
-        echo $product['price'] . "<br>";
-    }
-    // print_r($_SESSION['cart']);
-} else {
-    echo "Le panier est vide.";
-}
-?>
-
     <!-- CART SECTION -->
     <section class="shopping-cart">
         <div class="container">
@@ -27,57 +14,26 @@ if (isset($_SESSION['cart'])) {
 
                     <div class="items-pending">
 
+                    <!--afficher les détails des produits dans le panier -->
+                        <?php if(isset($_SESSION['cart'])) { ?>
+                        <?php foreach ($_SESSION['cart'] as $product): ?>
                         <div class="item-pending">
                             <div class="item-info">
-                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
-                                <p>Arduino Uno+</p>
-                                <p>Code article : 08975</p>
+                                <img style="height: 50px;" src="<?= $product['image'];?>" alt="">
+                                <p><?=$product['name'];?></p>
+                                <p>Code article : <?= $product['id_product'];?></p>
                             </div>
                             <div class="item-price">
-                                <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
-                                    min="1" max="5" placeholder="1">
-                                <p>Total : 13,99 €</p>
+                                <!-- <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
+                                    min="1" max="5" placeholder="1"> -->
+                                <p><?=$product['price'] . " €";?></p>
                             </div>
                         </div>
-
-                        <div class="item-pending">
-                            <div class="item-info">
-                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
-                                <p>Arduino Uno+</p>
-                                <p>Code article : 74935</p>
-                            </div>
-                            <div class="item-price">
-                                <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
-                                    min="1" max="5" placeholder="1">
-                                <p>Total : 23,99 €</p>
-                            </div>
-                        </div>
-
-                        <div class="item-pending">
-                            <div class="item-info">
-                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
-                                <p>Arduino Uno+</p>
-                                <p>Code article : 67939</p>
-                            </div>
-                            <div class="item-price">
-                                <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
-                                    min="1" max="5" placeholder="1">
-                                <p>Total : 16,99 €</p>
-                            </div>
-                        </div>
-
-                        <div class="item-pending">
-                            <div class="item-info">
-                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
-                                <p>Arduino Uno+</p>
-                                <p>Code article : 36576</p>
-                            </div>
-                            <div class="item-price">
-                                <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
-                                    min="1" max="5" placeholder="1">
-                                <p>Total : 12,99 €</p>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
+                        <?php }
+                        else {
+                            echo "Le panier est vide.";
+                        }?>
 
                     </div>
                 </div>
