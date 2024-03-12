@@ -2,7 +2,12 @@
 <?php require_once '../controller/add-to-shopping-cart.php';?>
 
 <?php
-// affichage test des produits dans le tableau panier
+// Vérifiez si 'cart' existe dans la session avant d'y accéder
+if (isset($_SESSION['cart'])) {
+    print_r($_SESSION['cart']);
+} else {
+    echo "Le panier est vide.";
+}
 ?>
 
     <!-- CART SECTION -->
