@@ -1,10 +1,14 @@
-<?php include 'header.php'; ?>
+<?php require_once 'header.php'; ?>
 <?php require_once '../controller/add-to-shopping-cart.php';?>
 
 <?php
-// Vérifiez si 'cart' existe dans la session avant d'y accéder
 if (isset($_SESSION['cart'])) {
-    print_r($_SESSION['cart']);
+    // afficher les détails des produits dans le panier
+    foreach ($_SESSION['cart'] as $product) {
+        echo $product['name'] . "<br>";
+        echo $product['price'] . "<br>";
+    }
+    // print_r($_SESSION['cart']);
 } else {
     echo "Le panier est vide.";
 }

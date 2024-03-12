@@ -206,15 +206,14 @@
         $statement->execute();
     }
 
+    // Méthode pour ajouter un produit au panier avec appel à la méthode readProductById
     public function addToCart($id) {
-        // attraper le produit en fonction de sont ID
-        $product = $this->getId($id);
-
-        // Déclarer un tableau panier vide
+        // read les infos produit en fonction de sont ID
+        $product = $this->readProductById($id); // retourne un tableau associatif des infos produits
+        // déclarer un tableau panier vide si il n'existe pas
         if(!isset($_SESSION['cart'])) {
             $_SESSION['cart'] = [];
         }
-
         // Ajouter le produit cliqué au tableau vide
         array_push($_SESSION['cart'], $product);
     }
