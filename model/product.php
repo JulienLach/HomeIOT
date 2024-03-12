@@ -205,5 +205,18 @@
         $statement->bindParam(':id', $this->id);
         $statement->execute();
     }
+
+    public function addToCart($id) {
+        // attraper le produit en fonction de sont ID
+        $product = $this->getId($id);
+
+        // Déclarer un tableau panier vide
+        if(!isset($_SESSION['cart'])) {
+            $_SESSION['cart'] = [];
+        }
+
+        // Ajouter le produit cliqué au tableau vide
+        array_push($_SESSION['cart'], $product);
+    }
 }
 ?>

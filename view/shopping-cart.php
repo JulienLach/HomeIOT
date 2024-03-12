@@ -1,5 +1,9 @@
 <?php include 'header.php'; ?>
+<?php require_once '../controller/add-to-shopping-cart.php';?>
 
+<?php
+// affichage test des produits dans le tableau panier
+?>
 
     <!-- CART SECTION -->
     <section class="shopping-cart">

@@ -16,7 +16,7 @@ if (isset($_POST['id_users']) && isset($_POST['lastname']) && isset($_POST['firs
     $user->setEmail($email);
     $user->updateUser();
 
-    // Mettre à jour les informations de session de l'utilisateur
+    // Mettre à jour les informations de session de l'utilisateur après le update du User
     $_SESSION['id_users'] = $id_users;
     $_SESSION['user_lastname'] = $lastname;
     $_SESSION['user_firstname'] = $firstname;
