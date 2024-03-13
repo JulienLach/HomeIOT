@@ -14,32 +14,19 @@
 
                     <div class="items-pending">
 
-                    <!--afficher les détails des produits dans le panier -->
-                        <?php if(isset($_SESSION['cart'])) { ?>
-                        <?php foreach ($_SESSION['cart'] as $product): ?>
+                        <!--afficher les détails des produits dans le panier -->
                         <div class="item-pending">
                             <div class="item-info">
-                                <img style="height: 50px;" src="<?= $product['image'];?>" alt="">
-                                <p><?=$product['name'];?></p>
-                                <p>Code article : <?= $product['id_product'];?></p>
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
+                                <p>Arduino Uno+</p>
+                                <p>Code article : 36576</p>
                             </div>
                             <div class="item-price">
-                                <!-- <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
-                                    min="1" max="5" placeholder="1"> -->
-                                <p><?=$product['price'] . " €";?></p>
-                            </div>
-                            <div class="item-remove">
-                                <form action="../controller/remove-from-shopping-cart.php" method="post">
-                                    <input type="hidden" name="id_product_removed" value="<?= $product['id_product']; ?>">
-                                    <input type="submit" value="❌">
-                                </form>
+                                <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
+                                    min="1" max="5" placeholder="1">
+                                <p>Total : 12,99 €</p>
                             </div>
                         </div>
-                        <?php endforeach; ?>
-                        <?php }
-                        else {
-                            echo "Le panier est vide.";
-                        }?>
 
                     </div>
                 </div>

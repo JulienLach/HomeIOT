@@ -208,17 +208,14 @@
 
     // Méthode pour ajouter un produit au panier avec appel à la méthode readProductById
     public function addToCart($id) {
-        $product = $this->readProductById($id);
-        if(!isset($_SESSION['cart'])) {
-            $_SESSION['cart'] = [];
-        }
-        array_push($_SESSION['cart'], $product);
+    
     }
 
     // Méthode pour retirer un produit du panier
     public function removeFromCart($id) {
-        $index = array_search($id, array_column($_SESSION['cart'], 'id_product'));
-        unset($_SESSION['cart'][$index]);
+
     }
+
 }
+
 ?>
