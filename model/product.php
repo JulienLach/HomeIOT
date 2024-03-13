@@ -9,6 +9,7 @@
     public $technical_sheet;
     public $category_name;
     public $image_path;
+    public $id_order;
 
     public function setId($id) {
         $this->id = $id;
@@ -34,6 +35,9 @@
     public function setImagePath($image_path) {
         $this->image_path = $image_path;
     }
+    public function setIdOrder($id_order) {
+        $this->id_order = $id_order;
+    }
     public function getId() {
         return $this->id;
     }
@@ -57,6 +61,9 @@
     }
     public function getImagePath() {
         return $this->image_path;
+    }
+    public function getIdOrder() {
+        return $this->id_order;
     }
 
     // Méthode pour ajouter un produit
@@ -206,14 +213,43 @@
         $statement->execute();
     }
 
-    // Méthode pour ajouter un produit au panier avec appel à la méthode readProductById
-    public function addToCart($id) {
-    
-    }
+    // Méthode pour ajouter un produit au panier avec appel à la méthode readProductById et INSERT INTO orders
+    public function addToShoppingCart($id) {
+        $connexion = Database::connect();
+        $product = $this->readProductById($id);
 
-    // Méthode pour retirer un produit du panier
-    public function removeFromCart($id) {
+        $query = 'SELECT * FROM orders WHERE id_users = :id_users';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_users', $_SESSION['id_users']);
+        $statement->execute();
+        $order = $statement->fetch();
 
+        if ($order) {
+            // Si une commande existe déjà ajouter une quantité produit de 1 produit à la commande
+            $query = 'UPDATE orders SET quantity = quantity + 1, total = total + :price WHERE id_users = :id_users';
+            $statement = $connexion->prepare($query);
+            $statement->bindParam(':price', $product['price']);
+            $statement->bindParam(':id_users', $_SESSION['id_users']);
+            $statement->execute();
+
+            $this->id_order = $order['id_order'];
+        } else {
+            // Si pas de commande, créer une commande avec l'ID user
+            $query = 'INSERT INTO orders (quantity, total, id_users) VALUES (1, :total, :id_users)';
+            $statement = $connexion->prepare($query);
+            $statement->bindParam(':total', $product['price']);
+            $statement->bindParam(':id_users', $_SESSION['id_users']);
+            $statement->execute();
+
+            $this->id_order = $connexion->lastInsertId();
+        }
+
+        // Insérer l'id du produit et l'id de la commande dans la table intermédiaire Contient
+        $query = 'INSERT INTO Contient (id_order, id_product) VALUES (:id_order, :id_product)';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_order', $this->id_order);
+        $statement->bindParam(':id_product', $product['id_product']);
+        $statement->execute();
     }
 
 }
