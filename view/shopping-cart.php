@@ -1,6 +1,12 @@
 <?php require_once 'header.php'; ?>
 <?php require_once '../controller/add-to-shopping-cart.php';?>
 
+<?php if(!isset($_SESSION['user_lastname']) && !isset($_SESSION['user_firstname'])) {
+    echo '<script>window.location.href = "connexion.php";</script>';
+    exit();
+}
+?>
+
     <!-- CART SECTION -->
     <section class="shopping-cart">
         <div class="container">
@@ -13,6 +19,10 @@
                     </div>
 
                     <div class="items-pending">
+                    
+                    <?php 
+                    
+                    ?>
 
                         <!--afficher les détails des produits dans le panier -->
                         <div class="item-pending">

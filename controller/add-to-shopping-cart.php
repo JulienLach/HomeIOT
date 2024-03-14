@@ -12,11 +12,8 @@ if(isset($_POST['productId'])) {
 
     $productId = $_POST['productId'];
     $product = new Product();
-    $product->addToShoppingCart($productId);
-
-    // echo "ok";
-    // die();
-
+    $orderId = $product->addToShoppingCart($productId);
+    
     header('Location: ../view/shopping-cart.php');
 }
 ?>

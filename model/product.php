@@ -231,8 +231,8 @@
             $statement->bindParam(':price', $product['price']);
             $statement->bindParam(':id_users', $_SESSION['id_users']);
             $statement->execute();
-
             $this->id_order = $order['id_order'];
+            
         } else {
             // Si pas de commande, créer une commande avec l'ID user
             $query = 'INSERT INTO orders (quantity, total, id_users) VALUES (1, :total, :id_users)';
@@ -250,6 +250,20 @@
         $statement->bindParam(':id_order', $this->id_order);
         $statement->bindParam(':id_product', $product['id_product']);
         $statement->execute();
+
+    }
+
+    // Méthode pour afficher les produits dans le panier
+    public function getProductsInCart($orderId) {
+        $connexion = Database::connect();
+        $query = 'SELECT * FROM Contient JOIN products ON Contient.id_product = products.id_product WHERE id_order = :id_order';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_order', $orderId);
+        $statement->execute();
+        $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $products;
+    
+        // return $statement->fetchAll();
     }
 
 }
