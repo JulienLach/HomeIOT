@@ -21,7 +21,7 @@
                     <div class="items-pending">
                     
                     <?php 
-                    
+
                     ?>
 
                         <!--afficher les détails des produits dans le panier -->

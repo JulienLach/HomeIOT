@@ -213,7 +213,7 @@
         $statement->execute();
     }
 
-    // Méthode pour ajouter un produit au panier avec appel à la méthode readProductById et INSERT INTO orders
+    // Méthode pour ajouter un produit au panier
     public function addToShoppingCart($id) {
         $connexion = Database::connect();
         $product = $this->readProductById($id);
@@ -225,16 +225,8 @@
         $order = $statement->fetch();
 
         if ($order) {
-            // Si une commande existe déjà ajouter une quantité produit de 1 produit à la commande
-            $query = 'UPDATE orders SET quantity = quantity + 1, total = total + :price WHERE id_users = :id_users';
-            $statement = $connexion->prepare($query);
-            $statement->bindParam(':price', $product['price']);
-            $statement->bindParam(':id_users', $_SESSION['id_users']);
-            $statement->execute();
             $this->id_order = $order['id_order'];
-            
         } else {
-            // Si pas de commande, créer une commande avec l'ID user
             $query = 'INSERT INTO orders (quantity, total, id_users) VALUES (1, :total, :id_users)';
             $statement = $connexion->prepare($query);
             $statement->bindParam(':total', $product['price']);
@@ -244,28 +236,26 @@
             $this->id_order = $connexion->lastInsertId();
         }
 
-        // Insérer l'id du produit et l'id de la commande dans la table intermédiaire Contient
-        $query = 'INSERT INTO Contient (id_order, id_product) VALUES (:id_order, :id_product)';
+        $query = 'SELECT * FROM Contient WHERE id_order = :id_order AND id_product = :id_product';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_order', $this->id_order);
+        $statement->bindParam(':id_product', $product['id_product']);
+        $statement->execute();
+        $contains = $statement->fetch();
+
+        if ($contains) {
+            $query = 'UPDATE Contient SET quantity = quantity + 1 WHERE id_order = :id_order AND id_product = :id_product';
+        } else {
+            $query = 'INSERT INTO Contient (id_order, id_product, quantity) VALUES (:id_order, :id_product, 1)';
+        }
+
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_order', $this->id_order);
         $statement->bindParam(':id_product', $product['id_product']);
         $statement->execute();
 
+        return $this->id_order;
     }
-
-    // Méthode pour afficher les produits dans le panier
-    public function getProductsInCart($orderId) {
-        $connexion = Database::connect();
-        $query = 'SELECT * FROM Contient JOIN products ON Contient.id_product = products.id_product WHERE id_order = :id_order';
-        $statement = $connexion->prepare($query);
-        $statement->bindParam(':id_order', $orderId);
-        $statement->execute();
-        $products = $statement->fetchAll(PDO::FETCH_ASSOC);
-        return $products;
-    
-        // return $statement->fetchAll();
-    }
-
 }
 
 ?>
