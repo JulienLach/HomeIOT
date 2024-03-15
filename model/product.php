@@ -271,6 +271,8 @@
         return $this->id_order;
     }
 
+
+
     // Méthode pour afficher les produits dans le panier en fonction de lID de l'utilisateur
     public function readProductsInShoppingCart($id_users) {
         $connexion = Database::connect();
@@ -292,13 +294,13 @@
             $statement->execute();
             $products = $statement->fetchAll(PDO::FETCH_ASSOC);
     
-            foreach ($products as $key => $product) {
+            foreach ($products as $key => $product) { // Pour chaque produit dans le tableau associatif $products
                 $query = 'SELECT * FROM products WHERE id_product = :id';
                 $statement = $connexion->prepare($query);
                 $statement->bindParam(':id', $product['id_product']);
                 $statement->execute();
                 $product = $statement->fetch();
-                $products[$key] = $product; // ajouter chaque produit au tableau associatif $products
+                $products[$key] = $product; // ajouter chaque information du produit au tableau associatif $products
             }
 
             foreach ($products as $key => $product) {
@@ -319,10 +321,20 @@
                 $statement->execute();
                 $quantity = $statement->fetchColumn();
                 $products[$key]['quantity'] = $quantity; // Ajouter la quantité au tableau associatif
+            
+                // Aller chercher le total de la commande dans la table orders
+                $query = 'SELECT total FROM orders WHERE id_order = :id_order';
+                $statement = $connexion->prepare($query);
+                $statement->bindParam(':id_order', $this->id_order);
+                $statement->execute();
+                $total = $statement->fetchColumn();
+                // Ajouter le total au tableau associatif $products
+                $products[$key]['total'] = $total;
             }
-    
+
             return $products;
-        } else {
+        } 
+        else {
             // Gérer le cas où il n'y a pas d'ordre correspondant à l'id_users
             return null;
         }

@@ -44,7 +44,7 @@
                             <div class="item-price">
                                 <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
                                     min="1" max="5" value="<?= $product['quantity']?>">
-                                <p>Total : <?= $product['price']?> €</p>
+                                <p>Total : <?= $product['price'] * $product['quantity']?> €</p>
                             </div>
                         </div>
                         <?php }?>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="shopping-cart-menu">
                         <div class="black-separator"></div>
-                        <h5>Sous total :<span> 59,89 €</span></h5>
+                        <h5>Sous total : <span><?= $product['total'] . " €"?></span></h5>
                         <div>
                             <a href="order.php">
                                 <button class="shopping-cart-validate-btn">Valider mon panier</button>
