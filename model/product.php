@@ -213,7 +213,7 @@
         $statement->execute();
     }
 
-    // Méthode pour ajouter un produit au panier
+    // Méthode pour ajouter un produit au panier + mettre à jour la table orders et la table Contient
     public function addToShoppingCart($id) {
         $connexion = Database::connect();
         $product = $this->readProductById($id);
@@ -270,6 +270,42 @@
 
         return $this->id_order;
     }
-}
 
+    // Méthode pour afficher les produits dans le panier en fonction de lID de l'utilisateur
+    public function readProductsInShoppingCart($id_users) {
+        $connexion = Database::connect();
+    
+        // Obtenir l'id_order correspondant à l'id_users
+        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_users', $id_users);
+        $statement->execute();
+        $order = $statement->fetch();
+    
+        if ($order) {
+            $this->id_order = $order['id_order'];
+    
+            // Obtenir les produits dans le panier
+            $query = 'SELECT * FROM Contient WHERE id_order = :id_order';
+            $statement = $connexion->prepare($query);
+            $statement->bindParam(':id_order', $this->id_order);
+            $statement->execute();
+            $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+            foreach ($products as $key => $product) {
+                $query = 'SELECT * FROM products WHERE id_product = :id';
+                $statement = $connexion->prepare($query);
+                $statement->bindParam(':id', $product['id_product']);
+                $statement->execute();
+                $product = $statement->fetch();
+                $products[$key] = $product;
+            }
+    
+            return $products;
+        } else {
+            // Gérer le cas où il n'y a pas d'ordre correspondant à l'id_users
+            return null;
+        }
+    }
+}
 ?>

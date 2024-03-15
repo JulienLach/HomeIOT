@@ -21,8 +21,14 @@
                     <div class="items-pending">
                     
                     <?php 
-
-                    ?>
+                    echo $_SESSION['id_users'];
+                    // require_once '../controller/add-to-shopping-cart.php';
+                        if(isset($_SESSION['id_users'])) {
+                            foreach ($products as $product) {
+                                echo $product['name'];
+                            }
+                        }
+                    ?> 
 
                         <!--afficher les détails des produits dans le panier -->
                         <div class="item-pending">
