@@ -33,7 +33,7 @@
                     ?>
 
                         <!--afficher les détails des produits dans le panier -->
-                        <?php if(isset($_SESSION['id_users'])) {
+                        <?php if(isset($_SESSION['id_users']) && isset($products)) {
                             foreach ($products as $product) { ?>
                         <div class="item-pending">
                             <div class="item-info">

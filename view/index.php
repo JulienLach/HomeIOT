@@ -47,7 +47,10 @@
                         </h3>
                     </div>
                     <div>
-                        <button class="add-to-cart-btn">Ajouter au panier</button>
+                        <form action="../controller/add-to-shopping-cart.php" method="POST">
+                            <input type="hidden" name="productId" value="<?= $product['id_product'];?>">
+                            <button type="submit" class="add-to-cart-btn">Ajouter au panier</button>
+                        </form>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -99,7 +102,10 @@
                         </h3>
                     </div>
                     <div>
-                        <button class="add-to-cart-btn">Ajouter au panier</button>
+                        <form action="../controller/add-to-shopping-cart.php" method="POST">
+                            <input type="hidden" name="productId" value="<?= $product['id_product'];?>">
+                            <button type="submit" class="add-to-cart-btn">Ajouter au panier</button>
+                        </form>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -136,7 +142,10 @@
                         </h3>
                     </div>
                     <div>
-                        <button class="add-to-cart-btn">Ajouter au panier</button>
+                        <form action="../controller/add-to-shopping-cart.php" method="POST">
+                            <input type="hidden" name="productId" value="<?= $product['id_product'];?>">
+                            <button type="submit" class="add-to-cart-btn">Ajouter au panier</button>
+                        </form>
                     </div>
                 </div>
                 <?php endforeach; ?>

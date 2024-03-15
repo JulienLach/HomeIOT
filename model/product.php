@@ -331,12 +331,12 @@
                 // Ajouter le total au tableau associatif $products
                 $products[$key]['total'] = $total;
             }
-
             return $products;
-        } 
+        }
         else {
             // Gérer le cas où il n'y a pas d'ordre correspondant à l'id_users
-            return null;
+            echo 'Votre panier est vide';
+            // return null;
         }
     }
 }
