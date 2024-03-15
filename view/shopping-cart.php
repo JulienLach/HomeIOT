@@ -23,27 +23,33 @@
                     <?php 
                     // echo $_SESSION['id_users'];
                     // require_once '../controller/add-to-shopping-cart.php';
-                        if(isset($_SESSION['id_users'])) {
-                            foreach ($products as $product) {
-                                echo $product['name'] . " " . $product['price'] . " €" . "<br>";
-                            }
-                        }
-                    ?> 
+                    // print_r($products);
+                        // if(isset($_SESSION['id_users'])) {
+                        //     foreach ($products as $product) {
+                        //         echo $product['name'] . " " . $product['price'] ." €" ."<br>";
+                        //         echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
+                        //     }
+                        // }
+                    ?>
 
                         <!--afficher les détails des produits dans le panier -->
+                        <?php if(isset($_SESSION['id_users'])) {
+                            foreach ($products as $product) { ?>
                         <div class="item-pending">
                             <div class="item-info">
-                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
-                                <p>Arduino Uno+</p>
-                                <p>Code article : 36576</p>
+                                <img style="height: 50px;" src="<?= $product['image']?>">
+                                <p><?= $product['name']?></p>
+                                <p>Code article : <?= $product['id_product']?></p>
                             </div>
                             <div class="item-price">
                                 <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
-                                    min="1" max="5" placeholder="1">
-                                <p>Total : 12,99 €</p>
+                                    min="1" max="5" value="<?= $product['quantity']?>">
+                                <p>Total : <?= $product['price']?> €</p>
                             </div>
                         </div>
-
+                        <?php }?>
+                        <?php }?>
+                                
                     </div>
                 </div>
 

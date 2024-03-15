@@ -274,7 +274,7 @@
     // Méthode pour afficher les produits dans le panier en fonction de lID de l'utilisateur
     public function readProductsInShoppingCart($id_users) {
         $connexion = Database::connect();
-    
+
         // Obtenir l'id_order correspondant à l'id_users
         $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
         $statement = $connexion->prepare($query);
@@ -285,7 +285,7 @@
         if ($order) {
             $this->id_order = $order['id_order'];
     
-            // Obtenir les produits dans le panier
+            // Obtenir les produits dans le panier sous forme de tableau associatif
             $query = 'SELECT * FROM Contient WHERE id_order = :id_order';
             $statement = $connexion->prepare($query);
             $statement->bindParam(':id_order', $this->id_order);
@@ -298,7 +298,27 @@
                 $statement->bindParam(':id', $product['id_product']);
                 $statement->execute();
                 $product = $statement->fetch();
-                $products[$key] = $product;
+                $products[$key] = $product; // ajouter chaque produit au tableau associatif $products
+            }
+
+            foreach ($products as $key => $product) {
+                $query = 'SELECT image_path FROM image WHERE id_product = :id';
+                $statement = $connexion->prepare($query);
+                $statement->bindParam(':id', $product['id_product']);
+                $statement->execute();
+                $image_path = $statement->fetchColumn();
+                $image = 'data:image/jpeg;base64,' . base64_encode($image_path);
+                $products[$key]['image'] = $image; // Ajouter l'image au tableau associatif
+            }
+
+            foreach ($products as $key => $product) {
+                $query = 'SELECT quantity FROM Contient WHERE id_order = :id_order AND id_product = :id_product';
+                $statement = $connexion->prepare($query);
+                $statement->bindParam(':id_order', $this->id_order);
+                $statement->bindParam(':id_product', $product['id_product']);
+                $statement->execute();
+                $quantity = $statement->fetchColumn();
+                $products[$key]['quantity'] = $quantity; // Ajouter la quantité au tableau associatif
             }
     
             return $products;
