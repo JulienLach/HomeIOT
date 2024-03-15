@@ -218,24 +218,27 @@
         $connexion = Database::connect();
         $product = $this->readProductById($id);
 
+        // Vérifier si l'utilisateur a déjà un panier
         $query = 'SELECT * FROM orders WHERE id_users = :id_users';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_users', $_SESSION['id_users']);
         $statement->execute();
         $order = $statement->fetch();
 
+        // Si l'utilisateur a déjà un panier on ajoute le produit à ce panier
         if ($order) {
             $this->id_order = $order['id_order'];
+        // Si l'utilisateur n'a pas de panier on crée un nouveau panier
         } else {
-            $query = 'INSERT INTO orders (quantity, total, id_users) VALUES (1, :total, :id_users)';
+            $query = 'INSERT INTO orders (quantity, total, id_users) VALUES (0, 0, :id_users)';
             $statement = $connexion->prepare($query);
-            $statement->bindParam(':total', $product['price']);
             $statement->bindParam(':id_users', $_SESSION['id_users']);
             $statement->execute();
 
             $this->id_order = $connexion->lastInsertId();
         }
 
+        // ensuite on ajoute le produit au panier
         $query = 'SELECT * FROM Contient WHERE id_order = :id_order AND id_product = :id_product';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_order', $this->id_order);
@@ -243,12 +246,23 @@
         $statement->execute();
         $contains = $statement->fetch();
 
+        // requete pour augmenter la quantité total dans la table order avant de faire le update de la quantité dans la table contient
+        $queryOrder = 'UPDATE orders SET quantity = quantity + 1, total = total + :price WHERE id_order = :id_order';
+        $statementOrder = $connexion->prepare($queryOrder);
+        $statementOrder->bindParam(':id_order', $this->id_order);
+        $statementOrder->bindParam(':price', $product['price']);
+        $statementOrder->execute();
+
+        // Si le produit est déjà dans le panier on incrémente la quantité
         if ($contains) {
             $query = 'UPDATE Contient SET quantity = quantity + 1 WHERE id_order = :id_order AND id_product = :id_product';
-        } else {
+        } 
+        // Sinon on ajoute le produit au panier
+        else {
             $query = 'INSERT INTO Contient (id_order, id_product, quantity) VALUES (:id_order, :id_product, 1)';
         }
 
+        // exécuter la requête pour ajouter le produit au panier
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_order', $this->id_order);
         $statement->bindParam(':id_product', $product['id_product']);
