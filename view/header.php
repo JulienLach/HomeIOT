@@ -88,7 +88,8 @@ if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
             <div class="main-menu">
                 <ul>
                     <li>
-                        <span>0</span>
+                        <?php require_once '../controller/products-number-shopping-cart.php' ?>
+                        <span> <?= $numberOfProducts ?? 0 ?></span>
                         <img style="height: 20px;" src="http://jserveur.local/HomeIOT/img/shopping_cart_white.png" alt="">
                         <a href="shopping-cart.php">Mon panier</a>
                     </li>

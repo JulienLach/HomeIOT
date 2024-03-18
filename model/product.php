@@ -388,5 +388,34 @@
         $statement->bindParam(':id_product', $id_product);
         $statement->execute();
     }
+
+
+    // Méthode pour obtenir le nombre total d'articles dans le panier pour un utilisateur donné
+    public function getNumberOfProductsInShoppingCart($id_users) {
+        $connexion = Database::connect();
+
+        // Obtenir l'id_order correspondant à l'id_users
+        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_users', $id_users);
+        $statement->execute();
+        $order = $statement->fetch();
+
+        if ($order) {
+            $this->id_order = $order['id_order'];
+
+            // Obtenir le nombre total d'articles dans le panier
+            $query = 'SELECT SUM(quantity) FROM Contient WHERE id_order = :id_order';
+            $statement = $connexion->prepare($query);
+            $statement->bindParam(':id_order', $this->id_order);
+            $statement->execute();
+            $numberOfProducts = $statement->fetchColumn();
+
+            return $numberOfProducts;
+        } else {
+            // Si la commande n'existe pas, le nombre total d'articles est 0
+            return 0;
+        }
+    }
 }
 ?>
