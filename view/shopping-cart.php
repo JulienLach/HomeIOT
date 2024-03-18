@@ -43,7 +43,7 @@
                             </div>
                             <div class="item-price">
                                 <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
-                                    min="1" max="5" value="<?= $product['quantity']?>">
+                                    min="1" max="10" value="<?= $product['quantity']?>">
                                 <p>Total : <?= $product['price'] * $product['quantity']?> €</p>
                             </div>
                             <div>

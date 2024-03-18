@@ -70,8 +70,10 @@
 
                     <!-- BILLING FORM -->
                     <form class="billing-form" action="">
-                        <input type="text" name="name" id="" placeholder="Nom / Prénom">
-                        <input type="text" name="name" id="" placeholder="Adresse posale">
+                        <input type="text" name="name" id="" placeholder="Nom" value="<?= $_SESSION['user_firstname'];?>">
+                        <input type="text" name="name" id="" placeholder="Prénom" value="<?= $_SESSION['user_lastname'];?>">
+                        <input type="text" name="name" id="" placeholder="Email" value="<?= $_SESSION['user_email'];?>">
+                        <input type="text" name="name" id="" placeholder="Adresse">
                         <input type="text" name="name" id="" placeholder="Ville">
                         <input type="text" name="name" id="" placeholder="Code postal">
                     </form>
