@@ -276,7 +276,7 @@
     // Méthode pour afficher les produits dans le panier en fonction de lID de l'utilisateur
     public function readProductsInShoppingCart($id_users) {
         $connexion = Database::connect();
-
+    
         // Obtenir l'id_order correspondant à l'id_users
         $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
         $statement = $connexion->prepare($query);
@@ -294,6 +294,12 @@
             $statement->execute();
             $products = $statement->fetchAll(PDO::FETCH_ASSOC);
     
+            if (empty($products)) {
+                // Si la commande existe mais ne contient pas de produits
+                echo '<div class="quantity-selector">Votre panier est vide</div>';
+                return null;
+            }
+    
             foreach ($products as $key => $product) { // Pour chaque produit dans le tableau associatif $products
                 $query = 'SELECT * FROM products WHERE id_product = :id';
                 $statement = $connexion->prepare($query);
@@ -302,7 +308,7 @@
                 $product = $statement->fetch();
                 $products[$key] = $product; // ajouter chaque information du produit au tableau associatif $products
             }
-
+    
             foreach ($products as $key => $product) {
                 $query = 'SELECT image_path FROM image WHERE id_product = :id';
                 $statement = $connexion->prepare($query);
@@ -312,7 +318,7 @@
                 $image = 'data:image/jpeg;base64,' . base64_encode($image_path);
                 $products[$key]['image'] = $image; // Ajouter l'image au tableau associatif
             }
-
+    
             foreach ($products as $key => $product) {
                 $query = 'SELECT quantity FROM Contient WHERE id_order = :id_order AND id_product = :id_product';
                 $statement = $connexion->prepare($query);
@@ -332,12 +338,55 @@
                 $products[$key]['total'] = $total;
             }
             return $products;
+        } else {
+            // Si la commande n'existe pas
+            echo '<div class="quantity-selector">Votre panier est vide</div>';
+            return null;
         }
-        else {
-            // Gérer le cas où il n'y a pas d'ordre correspondant à l'id_users
-            echo 'Votre panier est vide';
-            // return null;
-        }
+    }
+
+
+    // Méthode pour supprimer un produit du panier
+    public function removeFromShoppingCart($id_product) {
+        $connexion = Database::connect();
+        // Obtenir l'id_order correspondant à l'id_users
+        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_users', $_SESSION['id_users']);
+        $statement->execute();
+        $order = $statement->fetch();
+        $this->id_order = $order['id_order'];
+
+        // Obtenir la quantité du produit dans le panier
+        $query = 'SELECT quantity FROM Contient WHERE id_order = :id_order AND id_product = :id_product';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_order', $this->id_order);
+        $statement->bindParam(':id_product', $id_product);
+        $statement->execute();
+        $quantity = $statement->fetchColumn();
+
+        // Obtenir le prix du produit
+        $query = 'SELECT price FROM products WHERE id_product = :id_product';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_product', $id_product);
+        $statement->execute();
+        $price = $statement->fetchColumn();
+
+        // Mettre à jour la quantité et le total dans la table orders
+        $total = $price * $quantity;
+        $query = 'UPDATE orders SET quantity = quantity - :quantity, total = total - :total WHERE id_order = :id_order';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':quantity', $quantity);
+        $statement->bindParam(':total', $total);
+        $statement->bindParam(':id_order', $this->id_order);
+        $statement->execute();
+
+        // Supprimer le produit du panier
+        $query = 'DELETE FROM Contient WHERE id_order = :id_order AND id_product = :id_product';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_order', $this->id_order);
+        $statement->bindParam(':id_product', $id_product);
+        $statement->execute();
     }
 }
 ?>

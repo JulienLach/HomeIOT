@@ -46,6 +46,12 @@
                                     min="1" max="5" value="<?= $product['quantity']?>">
                                 <p>Total : <?= $product['price'] * $product['quantity']?> €</p>
                             </div>
+                            <div>
+                                <form action="../controller/remove-from-shopping-cart.php" method="POST">
+                                    <input type="hidden" name="productId" value="<?= $product['id_product']?>">
+                                    <button type="submit" class="delete-item-btn">Retirer</button>
+                                </form>
+                            </div>
                         </div>
                         <?php }?>
                         <?php }?>
@@ -59,8 +65,7 @@
                     </div>
                     <div class="shopping-cart-menu">
                         <div class="black-separator"></div>
-                        <h5>Sous total : <span><?= $product['total'] . " €"?></span></h5>
-                        <div>
+                        <h5>Sous total : <span><?= empty($products) ? 0 : end($products)['total'] ?> €</span></h5>                        <div>
                             <a href="order.php">
                                 <button class="shopping-cart-validate-btn">Valider mon panier</button>
                             </a>
