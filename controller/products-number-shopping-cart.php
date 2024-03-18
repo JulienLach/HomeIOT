@@ -6,5 +6,9 @@ require_once '../model/product.php';
 
 $products = new Product();
 
-$numberOfProducts = $products->getNumberOfProductsInShoppingCart($_SESSION['id_users']);
+if(isset($_SESSION['id_users'])) {
+    $numberOfProducts = $products->getNumberOfProductsInShoppingCart($_SESSION['id_users']);
+} else {
+    $numberOfProducts = 0;
+}
 ?>

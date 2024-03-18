@@ -66,7 +66,7 @@
                     <div class="shopping-cart-menu">
                         <div class="black-separator"></div>
                         <h5>Sous total : <span><?= empty($products) ? 0 : end($products)['total'] ?> €</span></h5>                        <div>
-                            <a href="order.php">
+                            <a href="../controller/shopping-cart-confirm.php">
                                 <button class="shopping-cart-validate-btn">Valider mon panier</button>
                             </a>
                         </div>

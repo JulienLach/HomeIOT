@@ -9,7 +9,7 @@ require_once '../model/product.php';
 $product = new Product();
 
 // d'abord ajouter un produit dans le panier
-if(isset($_POST['productId'])) {
+if(isset($_POST['productId']) && isset($_SESSION['id_users'])) {
     $product->addToShoppingCart($_POST['productId']);
 
     // var_dump($products);
@@ -17,12 +17,18 @@ if(isset($_POST['productId'])) {
     // mettre le header dans le if avant de lire les produits dans le panier
     // sinon erreur de header
     header('Location: ../view/shopping-cart.php');
-
+    exit();
 }
 
-
+if(isset($_SESSION['id_users'])) {
+    $products = $product->readProductsInShoppingCart($_SESSION['id_users']);
+} else {
+    // $products = [];
+    header('Location: ../view/shopping-cart.php');
+}
 // en suite lire les produits dans le panier en dehor de la condition 
 // if(isset($_POST['productId'])) sinon on ne pourra pas lire les produits dans le panier
-$products = $product->readProductsInShoppingCart($_SESSION['id_users']);
+
+// $products = $product->readProductsInShoppingCart($_SESSION['id_users']);
 
 ?>
