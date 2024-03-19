@@ -1,6 +1,5 @@
 <?php include 'header.php'; ?>
 
-
     <!-- ORDER-CONFIRMED SECTION -->
     <section class="order-confirmed">
         <div class="container">
@@ -13,13 +12,10 @@
                         <h3>Votre commande a été enregistrée.</h3>
                     </div>
                     <div>
-                        <p>Numéro de commande :<span> BA4558DDE85</span> </p>
+                        <p>Numéro de commande :<span> <?= $_GET['order_id'];?></span> </p>
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium architecto necessitatibus
-                            aperiam! Exercitationem enim veritatis, tempora, aliquam sit doloremque deleniti numquam,
-                            nobis
-                            explicabo odio quo a expedita earum nisi iste!</p>
+                        <p>Merci pour votre commande ! Elle est bien enregistrée, nous la préparons.</p>
                     </div>
                 </div>
             </div>

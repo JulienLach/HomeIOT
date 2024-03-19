@@ -61,7 +61,7 @@
 
                         <!-- CARD FORM -->
                         <div class="card-form">
-                            <form class="card-form-content" action="../controller/order-confirmed.php">
+                            <form class="card-form-content" action="../controller/confirm-order.php">
                                 <input class="text-form" type="text" name="" id="" placeholder="Numéro de carte" required>
                                 <input class="text-form" type="text" placeholder="Date d'expiration" required>
                                 <input class="text-form" type="text" placeholder="Cryptogramme visuel" required>                                      

@@ -444,5 +444,29 @@
         }
 
     }
+
+    // Méthode pour valider la commande et la passer en status 2 : commande validée
+    public function confirmOrder() {
+        $connexion = Database::connect();
+
+        // requete pour attraper l'id_order
+        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_users', $_SESSION['id_users']);
+        $statement->execute();
+        $order = $statement->fetch();
+
+        if ($order) {
+            $this->id_order = $order['id_order'];
+
+            // Mettre à jour le status de l'order en fonction de l'id_order et de l'id_user
+            $query = 'UPDATE orders SET status = 2 WHERE id_order = :id_order AND id_users = :id_users';
+            $statement = $connexion->prepare($query);
+            $statement->bindParam(':id_order', $this->id_order);
+            $statement->bindParam(':id_users', $_SESSION['id_users']);
+            $statement->execute();
+        }
+        return $this->id_order;
+    }
 }
 ?>
