@@ -10,6 +10,8 @@ if(isset($_SESSION['id_users'])) {
 
     $orderId = $product->getIdOrder();
 
+    // reset le panier avec la fonction resetShoppingCart
+    $product->resetShoppingCart($_SESSION['id_users']);
 
     header('Location: ../view/order-confirmed.php?order_id=' . $orderId);
     exit;

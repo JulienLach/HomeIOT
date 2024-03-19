@@ -218,8 +218,16 @@
         $connexion = Database::connect();
         $product = $this->readProductById($id);
 
+        // aller chercher la dernière commande avec lastInsertId pour l'ajouter à la table Contient en fonction de l'id du user
+        // $query = 'SELECT LAST_INSERT_ID() FROM orders WHERE id_users = :id_users';
+        // $statement = $connexion->prepare($query);
+        // $statement->bindParam(':id_users', $_SESSION['id_users']);
+        // $statement->execute();
+        // $order = $statement->fetch();
+
+
         // Vérifier si l'utilisateur a déjà un panier
-        $query = 'SELECT * FROM orders WHERE id_users = :id_users';
+        $query = 'SELECT * FROM orders WHERE id_users = :id_users AND status < 2';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_users', $_SESSION['id_users']);
         $statement->execute();
@@ -278,7 +286,7 @@
         $connexion = Database::connect();
     
         // Obtenir l'id_order correspondant à l'id_users
-        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
+        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users AND status < 2';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_users', $id_users);
         $statement->execute();
@@ -395,7 +403,7 @@
         $connexion = Database::connect();
 
         // Obtenir l'id_order correspondant à l'id_users
-        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
+        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users AND status < 2';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_users', $id_users);
         $statement->execute();
@@ -423,7 +431,7 @@
         $connexion = Database::connect();
 
         // requete pour attraper l'id_order
-        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
+        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users AND status < 2';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_users', $_SESSION['id_users']);
         $statement->execute();
@@ -450,7 +458,7 @@
         $connexion = Database::connect();
 
         // requete pour attraper l'id_order
-        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
+        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users AND status < 2';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_users', $_SESSION['id_users']);
         $statement->execute();
@@ -466,7 +474,30 @@
             $statement->bindParam(':id_users', $_SESSION['id_users']);
             $statement->execute();
         }
-        return $this->id_order;
+        return $order; 
     }
+
+    public function resetShoppingCart() {
+        $connexion = Database::connect();
+    
+        // Étape 1 : Valider la commande (si ce n'est pas déjà fait)
+        $this->confirmOrder();
+    
+        // Étape 2 : Supprimer les produits du panier actuel
+        $query = 'DELETE FROM Contient WHERE id_order = :id_order';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_order', $this->id_order);
+        $statement->execute();
+    
+        // Créer une nouvelle entrée pour un nouveau panier
+        // $query = 'INSERT INTO orders (quantity, total, id_users) VALUES (0, 0, :id_users)';
+        // $statement = $connexion->prepare($query);
+        // $statement->bindParam(':id_users', $_SESSION['id_users']);
+        // $statement->execute();
+    
+        // Mettre à jour l'ID de la commande pour le nouveau panier
+        $this->id_order = $connexion->lastInsertId();
+    }
+
 }
 ?>
