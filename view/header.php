@@ -67,11 +67,19 @@ if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
                         <a href="promotions.php">Promotions</a>
                     </li>
                     <li>
-                        <a href="shopping-cart.php"><button class="add-to-cart-btn"><span>0 </span>Mon
+                        <?php require_once '../controller/products-number-shopping-cart.php' ?>
+                        <a href="shopping-cart.php"><button class="add-to-cart-btn"><span><?= $numberOfProducts ?? 0 ?> </span>Mon
                                 panier</button></a>
                     </li>
                     <li>
-                        <a href="connexion.php"><button class="add-to-cart-btn">Connexion</button></a>
+                        <?php
+                        // session_start(); à rétablir et enelver le session start du début en haut de la page
+                        if(isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
+                            echo '<a href="../controller/logout.php"><button class="add-to-cart-btn">Déconnexion</button></a>';
+                        } else {
+                            echo '<a href="connexion.php"><button class="add-to-cart-btn">Connexion</button></a>';
+                        }
+                        ?>
                     </li>
                 </ul>
             </div>

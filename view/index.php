@@ -14,7 +14,7 @@
     <section class="banner">
         <div class="container">
             <div class="mobile-header-banner">
-                <img src="http://jserveur.local/HomeIOT/img/header-mobile-banner.png" alt="">
+                <img src="http://jserveur.local/HomeIOT/img/header-mobile-banner-2.png" alt="">
             </div>
         </div>
     </section>
