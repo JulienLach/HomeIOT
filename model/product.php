@@ -358,7 +358,7 @@
     public function removeFromShoppingCart($id_product) {
         $connexion = Database::connect();
         // Obtenir l'id_order correspondant à l'id_users
-        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users';
+        $query = 'SELECT id_order FROM orders WHERE id_users = :id_users AND status < 2';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_users', $_SESSION['id_users']);
         $statement->execute();
@@ -480,10 +480,10 @@
     public function resetShoppingCart() {
         $connexion = Database::connect();
     
-        // Étape 1 : Valider la commande (si ce n'est pas déjà fait)
+        //Valider la commande
         $this->confirmOrder();
     
-        // Étape 2 : Supprimer les produits du panier actuel
+        // Supprimer les produits du panier actuel
         $query = 'DELETE FROM Contient WHERE id_order = :id_order';
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_order', $this->id_order);
@@ -498,6 +498,17 @@
         // Mettre à jour l'ID de la commande pour le nouveau panier
         $this->id_order = $connexion->lastInsertId();
     }
+    
 
+    // Méthode pour affiches les commandes validées d'un utilisateur
+    public function readConfirmedOrders($id_users) {
+        $connexion = Database::connect();
+        $query = "SELECT * FROM orders WHERE id_users = :id_users AND status = 2 ORDER BY id_order DESC";
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_users', $id_users);
+        $statement->execute();
+        $orders = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $orders;
+    }
 }
 ?>

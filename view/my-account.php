@@ -34,40 +34,22 @@
 
                     <div class="items-purchased">
 
-                        <div class="item-purchased">
+                        <?php require_once '../controller/read-confirmed-orders.php'?>
+                        <?php foreach($orders as $order): ?>
+                            <div class="item-purchased">
                             <div class="item-info">
-                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
-                                <p>Arduino Uno+</p>
-                                <p>Numéro de commande : NSH565FRDF45</p>
+                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/order-confirmed.png" alt="">
+                                <p>Numéro de commande : <span><?= $order['id_order'] ?></span></p>
+                                <p>Quantité d'articles : <span><?= $order['quantity'] ?></span></p>
                             </div>
                             <div class="item-price">
-                                <p>Total : 13,99 €</p>
+                                <p>Total : <span><?= $order['total'] ?></span> €</p>
                             </div>
                         </div>
+                        <hr>
+                        <?php endforeach; ?>
 
-                        <div class="item-purchased">
-                            <div class="item-info">
-                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
-                                <p>Arduino Uno+</p>
-                                <p>Numéro de commande : NSH565FRDF45</p>
-                            </div>
-                            <div class="item-price">
-                                <p>Total : 23,99 €</p>
-                            </div>
-                        </div>
-
-                        <div class="item-purchased">
-                            <div class="item-info">
-                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/raspberry_1.png" alt="">
-                                <p>Arduino Uno+</p>
-                                <p>Numéro de commande : NSH565FRDF45</p>
-                            </div>
-                            <div class="item-price">
-                                <p>Total : 16,99 €</p>
-                            </div>
-                        </div>
-
-                        <div class="item-purchased">
+                        <!-- <div class="item-purchased">
                             <div class="item-info">
                                 <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
                                 <p>Arduino Uno+</p>
@@ -76,7 +58,7 @@
                             <div class="item-price">
                                 <p>Total : 12,99 €</p>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
