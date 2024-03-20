@@ -62,10 +62,10 @@
                         <!-- CARD FORM -->
                         <div class="card-form">
                             <form class="card-form-content" action="../controller/confirm-order.php">
-                                <input class="text-form" type="text" name="" id="" placeholder="Numéro de carte">
-                                <input class="text-form" type="text" placeholder="Date d'expiration">
-                                <input class="text-form" type="text" placeholder="Cryptogramme visuel">                                      
-                                <button type="sumbit" class="order-validate-btn">Valider ma commande</button>
+                                <input class="text-form" type="text" name="cardNumber" placeholder="Numéro de carte" pattern="\d{16}" required>
+                                <input class="text-form" type="text" name="expiryDate" placeholder="Date d'expiration" pattern="(0[1-9]|1[0-2])\/\d{2}" required>
+                                <input class="text-form" type="text" name="cvv" placeholder="Cryptogramme visuel" pattern="\d{3}" required>
+                                <button type="submit" class="order-validate-btn">Valider ma commande</button>
                             </form>
                         </div>
 
