@@ -104,7 +104,6 @@ class User {
         if($user) {
             return true;
         } else {
-            echo '<script>window.location.href = "index.php";</script>';
             return false;
         }
     }

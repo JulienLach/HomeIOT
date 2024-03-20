@@ -20,6 +20,11 @@
                         <div class="black-separator"></div>
                         <h5><a href="my-account-informations.php">Mes informations</a></h5>
                         <div class="black-separator"></div>
+                        <?php require_once '../controller/check-admin-link.php' ?>
+                        <?php if($_SESSION['isAdmin'] == true): ?>
+                            <h5><a href="admin-panel-update-delete-search.php">Admin panel</a></h5>
+                            <div class="black-separator"></div>
+                        <?php endif; ?>
                         <div>
                             <button class="disconnect-btn">Me déconnecter</button>
                         </div>
