@@ -66,9 +66,16 @@
                     <div class="shopping-cart-menu">
                         <div class="black-separator"></div>
                         <h5>Sous total : <span><?= empty($products) ? 0 : end($products)['total'] ?> €</span></h5>                        <div>
-                            <a href="../controller/confirm-shopping-cart.php">
+                            <?php if(!isset($products)) {
+                            echo '<a href="index.php"><button class="shopping-cart-validate-btn">Retour à l\'accueil</button></a>';
+                            } else {
+                            echo '<a href="../controller/confirm-shopping-cart.php"><button class="shopping-cart-validate-btn">Valider mon panier</button></a>';
+                            }
+                            ?>
+                            
+                            <!-- <a href="../controller/confirm-shopping-cart.php">
                                 <button class="shopping-cart-validate-btn">Valider mon panier</button>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
