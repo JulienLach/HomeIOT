@@ -43,6 +43,9 @@
                                 <input class="text-form" type="text" name="firstname" placeholder="Prénom" value="<?= $_SESSION['user_firstname'];?>">
                             </div>
                             <input class="text-form" type="email" name="email" placeholder="Email" value="<?= $_SESSION['user_email'];?>">
+                            <input class="text-form" type="text" name="address" placeholder="Adresse" value="<?= $_SESSION['user_address'];?>">
+                            <input class="text-form" type="text" name="zipcode" placeholder="Code postal" value="<?= $_SESSION['user_zipcode'];?>">
+                            <input class="text-form" type="text" name="city" placeholder="Ville" value="<?= $_SESSION['user_city'];?>">
                             <button class="create-account-btn" type="submit">Mettre à jour mes informations</button>
                         </form>
                     <?php 
