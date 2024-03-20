@@ -29,13 +29,14 @@
                     </div>
 
                     <?php
-                    echo "Résultats pour : ". $_POST['search'];
+                    echo "Résultats pour : \"". $_POST['search'] . "\"". "<br>";
+                    echo "<br>";
                     foreach ($products as $product) {
                         echo '<div class="item-pending">';
-                        echo '<h3>' . $product['name'] . '</h3>';
-                        echo '<p>' . $product['price'] . '</p>';
+                        echo '<h4>' . $product['name'] . '</h4>';
+                        echo '<p>' . $product['price'] . " €". '</p>';
                         echo '<div class="product-preview-images">';
-                        echo '<img src="' . $product['image'] . '" alt="">';
+                        echo '<img src="' . $product['image'] . '" alt="" style="height: 50px;">';
                         echo '</div>';
                         echo '<a href="admin-panel-update-delete.php?id=' . $product['id_product'] . '">Modifier/Supprimer</a>';
                         echo '</div>';
