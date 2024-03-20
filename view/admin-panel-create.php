@@ -1,9 +1,5 @@
 <?php include 'header.php'; ?>
-<?php if(!isset($_SESSION['user_lastname']) && !isset($_SESSION['user_firstname'])) {
-    echo '<script>window.location.href = "connexion.php";</script>';
-    exit();
-}
-?>
+<?php require_once '../controller/check-admin-connexion.php' ?>
 
     <!-- ADMIN PANEL CREATE SECTION -->
     <section class="admin-panel">

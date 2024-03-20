@@ -91,6 +91,23 @@ class User {
         $statement->bindParam(':id_users', $this->id);
         $statement->execute();
     }
+
+    // Méthode pour vérifer que le User est admin ou non
+    public function checkAdminConnexion() {
+        // requete pour chercher si le user est admin
+        $connexion = Database::connect();
+        $query = 'SELECT * FROM users WHERE id_users = :id_users AND is_admin = 1';
+        $statement = $connexion->prepare($query);
+        $statement->bindParam(':id_users', $_SESSION['id_users']);
+        $statement->execute();
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+        if($user) {
+            return true;
+        } else {
+            echo '<script>window.location.href = "index.php";</script>';
+            return false;
+        }
+    }
 }
 
 ?>

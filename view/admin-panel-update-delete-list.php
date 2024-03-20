@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php require_once '../controller/check-admin-connexion.php' ?>
 <?php require_once '../controller/admin-panel-update-delete-list.php'; ?>
 
 
