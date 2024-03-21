@@ -148,6 +148,12 @@ a {
   padding: 1em;
   border-radius: 0.3em;
   gap: 1em;
+  transition: 0.1s;
+}
+
+.main-menu ul li:hover {
+  background-color: #0b4e88;
+  transition: 0.3s;
 }
 
 .main-menu ul li a {
@@ -181,6 +187,12 @@ a {
 .categories-links ul li a {
   text-decoration: none;
   color: #fff;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.1s ease-in-out;
+}
+
+.categories-links ul li a:hover {
+  border-bottom: 1px solid #fff;
 }
 
 .categories-links ul img {
@@ -223,6 +235,12 @@ li:nth-child(3) {
 
 .dropdown-menu ul li a {
   color: #0d67b5;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.1s ease-in-out;
+}
+
+.dropdown-menu ul li a:hover {
+  border-bottom: 1px solid #0d67b5;
 }
 
 .dropdown-menu .chevron-categories-menu {
@@ -525,6 +543,12 @@ li:nth-child(3) {
 .footer-links ul li a {
   color: #fff;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.1s ease-in-out;
+}
+
+.footer-links ul li a:hover {
+  border-bottom: 1px solid #fff;
 }
 
 /* PAGE CONNEXION - CONNEXION SECTION */
@@ -822,6 +846,16 @@ li:nth-child(3) {
   margin-left: 2em;
 }
 
+.product-buttons .description-btn {
+  cursor: pointer;
+}
+
+.product-buttons .description-btn:hover {
+  background-color: #0d67b5;
+  color: #fff;
+  transition: 0.2s;
+}
+
 .product-description h3 {
   margin-bottom: 2em;
 }
@@ -875,6 +909,11 @@ li:nth-child(3) {
   padding: 0.7em 2em;
   color: #fff;
   margin-top: 2em;
+  transition: 0.3s;
+}
+
+.shopping-cart-validate-btn:hover {
+  background-color: #0b4e88;
 }
 
 /* PAGE MON PANIER - SHOPPING-CART PENDING-ITEMS SECTION */
@@ -981,6 +1020,11 @@ li:nth-child(3) {
   padding: 0.7em 2em;
   color: #fff;
   margin-top: 2em;
+  transition: 0.3s;
+}
+
+.order-validate-btn:hover {
+  background-color: #0b4e88;
 }
 
 /* PAGE MA COMMADE - ORDER PENDING-ITEMS SECTION */
