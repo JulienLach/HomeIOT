@@ -46,7 +46,9 @@
                             <input class="text-form" type="email" name="email" placeholder="Email" value="<?= $_SESSION['user_email'];?>">
                             <label class="" for="address">Adresse :</label>
                             <input class="text-form" type="text" name="address" placeholder="Adresse" value="<?= $_SESSION['user_address'];?>">
+                            <label class="" for="zipcode">Code postal :</label>
                             <input class="text-form" type="text" name="zipcode" placeholder="Code postal" value="<?= $_SESSION['user_zipcode'];?>">
+                            <label class="" for="city">Ville :</label>
                             <input class="text-form" type="text" name="city" placeholder="Ville" value="<?= $_SESSION['user_city'];?>">
                             <button class="create-account-btn" type="submit">Mettre à jour mes informations</button>
                         </form>

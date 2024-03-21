@@ -31,15 +31,20 @@
                     <?php
                     echo "Résultats pour : \"". $_POST['search'] . "\"". "<br>";
                     echo "<br>";
+
                     foreach ($products as $product) {
                         echo '<div class="item-pending">';
-                        echo '<h4>' . $product['name'] . '</h4>';
-                        echo '<p>' . $product['price'] . " €". '</p>';
-                        echo '<div class="product-preview-images">';
-                        echo '<img src="' . $product['image'] . '" alt="" style="height: 50px;">';
+                        echo '<div class="item-info">';
+                        echo '<img style="height: 50px;" src="' . $product['image'] . '">';
+                        echo '<p>' . $product['name'] . '</p>';
+                        echo '<p>Code article : ' . $product['id_product'] . '</p>';
+                        echo '<p>' . "Prix : ". $product['price'] . " €". '</p>';
                         echo '</div>';
-                        echo '<a href="admin-panel-update-delete.php?id=' . $product['id_product'] . '">Modifier/Supprimer</a>';
+                        echo '<div class="item-price">';
+                        echo '<button class="update-delete-btn" onclick="location.href=\'admin-panel-update-delete.php?id=' . $product['id_product'] . '\'" type="button">Modifier/Supprimer</button>';
                         echo '</div>';
+                        echo '</div>';
+                        echo "<hr>";
                     }
                     ?>
                     

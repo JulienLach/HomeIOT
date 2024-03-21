@@ -20,18 +20,6 @@
 
                     <div class="items-pending">
                     
-                    <?php 
-                    // echo $_SESSION['id_users'];
-                    // require_once '../controller/add-to-shopping-cart.php';
-                    // print_r($products);
-                        // if(isset($_SESSION['id_users'])) {
-                        //     foreach ($products as $product) {
-                        //         echo $product['name'] . " " . $product['price'] ." €" ."<br>";
-                        //         echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
-                        //     }
-                        // }
-                    ?>
-
                         <!--afficher les détails des produits dans le panier -->
                         <?php if(isset($_SESSION['id_users']) && isset($products)) {
                             foreach ($products as $product) { ?>
@@ -57,6 +45,7 @@
                         <?php }?>
                                 
                     </div>
+                    
                 </div>
 
                 <div class="shopping-cart-sumary">
