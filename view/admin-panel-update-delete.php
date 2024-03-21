@@ -29,11 +29,17 @@
                     </div>
                     <div>
                         <form class="create-product-form" action="../controller/admin-panel-update.php" method="POST" enctype="multipart/form-data">
+                            <label for="productID">Code produit :</label>
                             <input class="text-form" type="number" name="productId" value="<?= $product['id_product']?>" readonly>
+                            <label for="name">Nom du produit :</label>
                             <input class="text-form" type="text" name="name" value="<?= $product['name']?>">
+                            <label for="price">Prix :</label>
                             <input class="text-form" type="number" name="price" value="<?= $product['price']?>">
+                            <label for="short_desc">Description courte :</label>
                             <textarea class="text-form" name="short_desc" rows="4" style="resize: vertical;"><?= $product['short_desc']?></textarea>
+                            <label for="description">Description :</label>
                             <textarea class="text-form" name="description" rows="5" style="resize: vertical;"><?= $product['description']?></textarea>
+                            <label for="technical_sheet">Fiche technique :</label>
                             <textarea class="text-form" name="technical_sheet" rows="5" style="resize: vertical;"><?= $product['technical_sheet']?></textarea>
                             <label for="category_name">Selectionner une catégorie :</label>
                             <select class="text-form" name="category_name">
@@ -45,7 +51,7 @@
                                 <img src="<?= $product['image']?>" alt="">
                             </div>
 
-                            <label class="custom-file-label" for="filename">Ajouter une image</label>
+                            <label class="custom-file-label" for="filename">Modifier l'image</label>
                             <input class="add-file text-form" type="file" accept=".jpeg" name="image_path">
                             <div class="update-delete-btns">
                                 <button class="update-product-btn create-product-btn" type="submit">Modifier le produit</button>

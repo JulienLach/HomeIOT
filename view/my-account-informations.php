@@ -37,12 +37,14 @@
                     
                     ?>
                         <form class="create-account-form" action="../controller/my-account-informations-update.php" method="POST">
-                            <div>
-                                <input class="text-form" type="text" name="id_users" value="<?= $_SESSION['id_users'];?>" hidden>
-                                <input class="text-form" type="text" name="lastname" placeholder="Nom" value="<?= $_SESSION['user_lastname'];?>">
-                                <input class="text-form" type="text" name="firstname" placeholder="Prénom" value="<?= $_SESSION['user_firstname'];?>">
-                            </div>
+                            <input class="text-form" type="text" name="id_users" value="<?= $_SESSION['id_users'];?>" hidden>
+                            <label class="" for="lastname">Nom :</label>
+                            <input class="text-form" type="text" name="lastname" placeholder="Nom" value="<?= $_SESSION['user_lastname'];?>">
+                            <label class="" for="firstname">Prénom :</label>
+                            <input class="text-form" type="text" name="firstname" placeholder="Prénom" value="<?= $_SESSION['user_firstname'];?>">
+                            <label class="" for="email">Email :</label>
                             <input class="text-form" type="email" name="email" placeholder="Email" value="<?= $_SESSION['user_email'];?>">
+                            <label class="" for="address">Adresse :</label>
                             <input class="text-form" type="text" name="address" placeholder="Adresse" value="<?= $_SESSION['user_address'];?>">
                             <input class="text-form" type="text" name="zipcode" placeholder="Code postal" value="<?= $_SESSION['user_zipcode'];?>">
                             <input class="text-form" type="text" name="city" placeholder="Ville" value="<?= $_SESSION['user_city'];?>">
