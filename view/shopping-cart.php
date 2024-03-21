@@ -43,13 +43,13 @@
                             </div>
                             <div class="item-price">
                                 <input type="number" class="quantity-selector" id="quantity-selector" name="quantity"
-                                    min="1" max="10" value="<?= $product['quantity']?>">
+                                    min="1" max="10" value="<?= $product['quantity']?>" readonly>
                                 <p>Total : <?= $product['price'] * $product['quantity']?> €</p>
                             </div>
                             <div>
                                 <form action="../controller/remove-from-shopping-cart.php" method="POST">
                                     <input type="hidden" name="productId" value="<?= $product['id_product']?>">
-                                    <button type="submit" class="delete-item-btn">Retirer</button>
+                                    <button type="submit" class="delete-item-btn">❌</button>
                                 </form>
                             </div>
                         </div>

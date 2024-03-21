@@ -208,7 +208,6 @@ li:nth-child(3) {
   display: none;
   transition: transform 0.5s ease-in-out;
   transition-delay: 1s;
-  /* Changed to 1 second */
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -301,6 +300,12 @@ li:nth-child(3) {
   border-radius: 0.3em;
   padding: 0.7em 2em;
   color: #fff;
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0b4e88;
+  color: #fff;
 }
 
 /* SMALL BANNERS SECTION */
@@ -361,6 +366,11 @@ li:nth-child(3) {
   border-radius: 0.5em;
 }
 
+.nouveautes-item img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
 .nouveautes-item {
   cursor: pointer;
   display: flex;
@@ -394,6 +404,11 @@ li:nth-child(3) {
   height: 15em;
   border: 1px solid lightgrey;
   border-radius: 0.5em;
+}
+
+.promotions-item img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 .promotions-item {
@@ -569,6 +584,7 @@ li:nth-child(3) {
   border-radius: 0.3em;
   padding: 1.5em 2em;
   color: #fff;
+  cursor: pointer;
 }
 
 .create-account-link {
@@ -879,6 +895,8 @@ li:nth-child(3) {
 
 .item-pending {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   gap: 4em;
 }
@@ -904,6 +922,21 @@ li:nth-child(3) {
   justify-content: center;
   align-items: center;
   gap: 0.5em;
+}
+
+.delete-item-btn {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  border: 1px solid rgb(255, 173, 158);
+  padding: 0.2em;
+}
+
+.delete-item-btn:hover {
+  background-color: rgb(231, 216, 213);
+  color: #fff;
+  transition: 0.3s;
 }
 
 /* PAGE MA COMMANDE - ORDER SECTION */
@@ -1085,6 +1118,11 @@ textarea {
 
 .contact-form input::placeholder {
   font-family: "Noto Sans", sans-serif;
+}
+
+.contact-form label {
+  font-size: 0.8em;
+  color: rgb(97, 97, 97);
 }
 
 .contact-submit-btn {
@@ -1383,6 +1421,11 @@ textarea {
     height: 8em;
     border: 1px solid lightgrey;
     border-radius: 0.4em;
+  }
+
+  .kits-packs-item img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
   }
 
   .kits-packs-header {
