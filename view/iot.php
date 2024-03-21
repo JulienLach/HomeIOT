@@ -6,26 +6,26 @@
       <div class="container">
         <div class="about-content">
           <div class="about-header">
-            <h1>Qu'est ce que l'IOT ?</h1>
+            <h1>Qu'est ce que l'IoT ?</h1>
           </div>
           <div class="about-infos">
-            <h3>Lorem ipsum dolor sit amet</h3>
+            <h3>IoT</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-              eum magnam iste voluptatibus totam nisi unde optio atque!
-              Explicabo sequi dicta deserunt maiores magnam cupiditate neque
-              voluptate sint! Deserunt, ea?
+            L'IoT, ou Internet des Objets, révolutionne notre 
+            quotidien en connectant des objets à Internet pour collecter, 
+            analyser et partager des données. De la maison intelligente aux industries, 
+            l'IoT offre des avantages significatifs en matière d'efficacité et de commodité.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-              eum magnam iste voluptatibus totam Explicabo sequi dicta deserunt
-              maiores magnam cupiditate neque voluptate sint! Deserunt, ea?
+            L'IoT améliore la surveillance, optimise les opérations industrielles 
+            et simplifie la vie quotidienne. En connectant les objets et en les 
+            rendant intelligents, l'IoT promet un monde plus efficace et réactif.
             </p>
             <p>
-              Lorem ipsum consectetur adipisicing elit. Similique eum magnam
-              iste voluptatibus totam nisi unde optio atque! Explicabo sequi
-              dicta deserunt maiores magnam cupiditate neque voluptate sint!
-              Deserunt, ea?
+            À mesure que l'IoT évolue, son impact croissant sur nos vies ouvre 
+            la voie à un avenir où la connectivité est omniprésente. 
+            Des véhicules autonomes à la santé connectée, l'IoT façonne 
+            un monde plus intelligent, plus sûr et plus durable.
             </p>
           </div>
         </div>
