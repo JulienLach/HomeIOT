@@ -10,9 +10,9 @@
                 <div class="product-images">
                     <img class="product-main-image" src="<?= $product['image'];?>" alt="">
                     <div class="product-preview-images">
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
+                        <!-- <img src="http://jserveur.local/HomeIOT/img/Arduino_1.png" alt="">
                         <img src="http://jserveur.local/HomeIOT/img/Arduino_2.png" alt="">
-                        <img src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
+                        <img src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt=""> -->
                     </div>
                 </div>
                 <?php ?>
@@ -27,12 +27,6 @@
                         <p>
                             <?= $product['description'] ?>
                         </p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Lorem ipsum dolor sit.</li>
-                            <li>Lorem dolor amet est.</li>
-                        </ul>
                     </div>
                     <div>
                         <form action="../controller/add-to-shopping-cart.php" method="POST">
@@ -55,12 +49,7 @@
                     <p>
                         <?= $product['technical_sheet'] ?>
                     </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque suscipit autem iste
-                        laboriosam.
-                        Totam temporibus at exercitationem earum error sunt debitis culpa! Officia delectus iste
-                        nobis
-                        sint optio voluptate! Odio veritatis inventore doloremque. Vero reprehenderit labore aliquid
-                        optio quam nam quod ratione quos maxime. Consequuntur odit maxime error nesciunt obcaecati!
+                    <p> <!-- mettre la description longue -->
                     </p>
                 </div>
             </div>
