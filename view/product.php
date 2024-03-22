@@ -39,17 +39,19 @@
             </div>
 
             <div class="product-buttons">
-                <button class="description-btn">Fiche technique</button>
-                <button class="description-btn">Description détaillée</button>
+                <button class="description-btn" id="technical-sheet-btn">Fiche technique</button>
+                <button class="description-btn" id="description-btn">Description détaillée</button>
             </div>
 
             <div class="product-description">
                 <div>
                     <h3>Fiche technique</h3>
-                    <p>
+                    <p id="technical-sheet-paragraph">
                         <?= $product['technical_sheet'] ?>
                     </p>
-                    <p> <!-- mettre la description longue -->
+                    <p id="description-paragraph"> 
+                        <!-- mettre la description longue -->
+                        <?= $product['description'] ?>
                     </p>
                 </div>
             </div>
