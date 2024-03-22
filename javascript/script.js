@@ -89,4 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
       technicalSheetParagraph.classList.remove("active");
     }
   });
+
+  // Afficher le sub menu mobile dropdown
+  const subMenuMobileLink = document.getElementById("sub-menu-mobile-dropdown");
+  const subMenuMobileDropdown = document.getElementById("sub-menu-mobile");
 });

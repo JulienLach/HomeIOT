@@ -13,6 +13,8 @@ if ($user->checkUser()) {
     header('Location: ../view/index.php');
     exit;
 } else {
-    echo 'Mauvais identifiants';
+    $_SESSION['error'] = 'Mauvais identifiants';
+    header('Location: ../view/connexion.php');
+    exit;
 }
 ?>

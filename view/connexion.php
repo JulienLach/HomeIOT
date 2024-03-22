@@ -8,6 +8,12 @@
                     <h1>Connexion</h1>
                 </div>
                 <div>
+                    <?php
+                        if (isset($_SESSION['error'])) {
+                            echo '<div class="connexion-error">' . $_SESSION['error'] . '</div>';
+                            unset($_SESSION['error']);
+                        }
+                    ?>
                     <form class="connexion-form" action="../controller/connexion.php" method="POST">
                         <label for="email">Email :</label>
                         <input class="text-form" type="email" name="user_email" id="" placeholder="Email">
@@ -16,6 +22,7 @@
                         <a class="forgot-password" href="">Mot de passe oublié ?</a>
                         <button class="connexion-btn" type="submit">Connexion</button>
                     </form>
+
                 </div>
                 <div>
                     <a class="create-account-link" href="create-account.php">Pas de compte ? Créez-en un</a>

@@ -55,7 +55,12 @@
                     </li>
                     <li>
                         <img class="chevron-mobile-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt="">
-                        <a href="kits-packs.php">Catégories</a>
+                        <a href="kits-packs.php" id="sub-menu-mobile-dropdown">Kits/Packs</a>
+                        <!-- <ul id="sub-menu-mobile">
+                            <li><a href="kits-packs.php">Kits/Packs</a></li>
+                            <li><a href="nouveautes.php">Nouveautés</a></li>
+                            <li><a href="promotions.php">Promotions</a></li>
+                        </ul> -->
                     </li>
                     <li>
                         <img class="chevron-mobile-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt="">

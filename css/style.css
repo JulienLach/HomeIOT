@@ -611,6 +611,13 @@ li:nth-child(3) {
   cursor: pointer;
 }
 
+.connexion-error {
+  color: rgb(255, 38, 38);
+  padding: 1em 1em;
+  text-align: center;
+  background-color: rgb(255, 204, 204);
+}
+
 .create-account-link {
   color: #fff;
 }
@@ -1059,24 +1066,12 @@ li:nth-child(3) {
   color: rgb(97, 97, 97);
 }
 
-/* .item-pending {
-    display: flex;
-    flex-direction: row;
-    gap: 4em;
-} */
-
 .item-info {
   display: flex;
   gap: 2em;
   justify-content: center;
   align-items: center;
 }
-
-/* .item-price {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .billing-form-header {
   margin-top: 1em;

@@ -54,17 +54,6 @@
                         <hr>
                         <?php endforeach; ?>
 
-                        <!-- <div class="item-purchased">
-                            <div class="item-info">
-                                <img style="height: 50px;" src="http://jserveur.local/HomeIOT/img/Arduino_3.png" alt="">
-                                <p>Arduino Uno+</p>
-                                <p>Numéro de commande : NSH565FRDF45</p>
-                            </div>
-                            <div class="item-price">
-                                <p>Total : 12,99 €</p>
-                            </div>
-                        </div> -->
-
                     </div>
                 </div>
             </div>
