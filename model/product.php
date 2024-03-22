@@ -146,6 +146,26 @@
         return $product;
     }
 
+    // Méthode pour read tous les produit
+    public function readAllProducts() {
+        $connexion = Database::connect();
+        $query = 'SELECT * FROM products';
+        $statement = $connexion->prepare($query);
+        $statement->execute();
+        $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($products as $key => $product) {
+            $query = 'SELECT image_path FROM image WHERE id_product = :id';
+            $statement = $connexion->prepare($query);
+            $statement->bindParam(':id', $product['id_product']);
+            $statement->execute();
+            $image_path = $statement->fetchColumn();
+            $image = 'data:image/jpeg;base64,' . base64_encode($image_path);
+    
+            $products[$key]['image'] = $image;
+        }
+        return $products;
+    }
+
     // Méthode pour update un produit
     public function updateProduct() {
         $connexion = Database::connect();
@@ -217,14 +237,6 @@
     public function addToShoppingCart($id) {
         $connexion = Database::connect();
         $product = $this->readProductById($id);
-
-        // aller chercher la dernière commande avec lastInsertId pour l'ajouter à la table Contient en fonction de l'id du user
-        // $query = 'SELECT LAST_INSERT_ID() FROM orders WHERE id_users = :id_users';
-        // $statement = $connexion->prepare($query);
-        // $statement->bindParam(':id_users', $_SESSION['id_users']);
-        // $statement->execute();
-        // $order = $statement->fetch();
-
 
         // Vérifier si l'utilisateur a déjà un panier
         $query = 'SELECT * FROM orders WHERE id_users = :id_users AND status < 2';
@@ -488,12 +500,6 @@
         $statement = $connexion->prepare($query);
         $statement->bindParam(':id_order', $this->id_order);
         $statement->execute();
-    
-        // Créer une nouvelle entrée pour un nouveau panier
-        // $query = 'INSERT INTO orders (quantity, total, id_users) VALUES (0, 0, :id_users)';
-        // $statement = $connexion->prepare($query);
-        // $statement->bindParam(':id_users', $_SESSION['id_users']);
-        // $statement->execute();
     
         // Mettre à jour l'ID de la commande pour le nouveau panier
         $this->id_order = $connexion->lastInsertId();

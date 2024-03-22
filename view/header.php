@@ -71,6 +71,10 @@
                         <a href="promotions.php">Promotions</a>
                     </li>
                     <li>
+                        <img class="chevron-mobile-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt="">
+                        <a href="all-products.php">Tout voir</a>
+                    </li>
+                    <li>
                         <?php require_once '../controller/products-number-shopping-cart.php' ?>
                         <a href="shopping-cart.php"><button class="add-to-cart-btn"><span><?= $numberOfProducts ?? 0 ?> </span>Mon
                                 panier</button></a>
@@ -141,7 +145,9 @@
                                     <li><img class="chevron-categories-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt=""><a
                                             href="nouveautes.php">Nouveautés</a></li>
                                     <li><img class="chevron-categories-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt=""><a
-                                            href="">Promotions</a></li>
+                                            href="promotions.php">Promotions</a></li>
+                                    <li><img class="chevron-categories-menu" src="http://jserveur.local/HomeIOT/img/chevron-mobile-menu.png" alt=""><a
+                                            href="all-products.php"> Tout voir</a></li>        
                                 </ul>
                             </div>
                             <img src="http://jserveur.local/HomeIOT/img/chevron-down-white.png" alt="">
