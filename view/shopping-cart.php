@@ -26,7 +26,11 @@
                         <div class="item-pending">
                             <div class="item-info">
                                 <img style="height: 50px;" src="<?= $product['image']?>">
-                                <p><?= $product['name']?></p>
+                                <p>
+                                    <a href="http://jserveur.local/HomeIOT/view/product.php?id=<?=$product['id_product'];?>">
+                                        <?= $product['name']?>
+                                    </a>
+                                </p>
                                 <p>Code article : <?= $product['id_product']?></p>
                             </div>
                             <div class="item-price">

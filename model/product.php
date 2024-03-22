@@ -149,7 +149,7 @@
     // Méthode pour read tous les produit
     public function readAllProducts() {
         $connexion = Database::connect();
-        $query = 'SELECT * FROM products';
+        $query = 'SELECT * FROM products ORDER BY RAND()';
         $statement = $connexion->prepare($query);
         $statement->execute();
         $products = $statement->fetchAll(PDO::FETCH_ASSOC);
