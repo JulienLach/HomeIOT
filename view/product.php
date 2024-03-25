@@ -45,14 +45,19 @@
 
             <div class="product-description">
                 <div>
-                    <h3>Fiche technique</h3>
-                    <p id="technical-sheet-paragraph">
-                        <?= $product['technical_sheet'] ?>
-                    </p>
-                    <p id="description-paragraph"> 
-                        <!-- mettre la description longue -->
-                        <?= $product['description'] ?>
-                    </p>
+                    <div id="technical-sheet-paragraph">
+                        <h3>Fiche technique</h3>
+                        <p>
+                            <?= $product['technical_sheet'] ?>
+                        </p>
+                    </div>
+                    <div id="description-paragraph">
+                        <h3>Description détaillée</h3>
+                        <p> 
+                            <?= $product['description'] ?>
+                        </p>
+                    </div>
+
                 </div>
             </div>
 
