@@ -10,6 +10,7 @@
                     <ul>
                         <li><a href="index.php">Acceuil</a></li>
                         <li><a href="contact.php">Contact</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
