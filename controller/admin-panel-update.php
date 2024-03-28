@@ -21,6 +21,6 @@ if(isset($_POST['productId'])) {
     $product = $product->updateProduct();
 }
 
-header("Location: ../view/nouveautes.php");
+header("Location: ../view/index.php");
 
 ?>

@@ -25,7 +25,7 @@
                     </div>
                     <div>
                         <p>
-                            <?= $product['description'] ?>
+                            <?= $product['short_desc'] ?>
                         </p>
                     </div>
                     <div>
