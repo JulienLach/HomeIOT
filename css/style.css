@@ -464,6 +464,11 @@ li:nth-child(3) {
   border-radius: 0.5em;
 }
 
+.kits-packs-item img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
 .kits-packs-item {
   cursor: pointer;
   display: flex;
@@ -1503,11 +1508,6 @@ textarea {
     height: 8em;
     border: 1px solid lightgrey;
     border-radius: 0.4em;
-  }
-
-  .kits-packs-item img:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
   }
 
   .kits-packs-header {
