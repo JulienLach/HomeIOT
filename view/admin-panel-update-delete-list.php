@@ -36,7 +36,7 @@
                         echo '<div class="item-pending">';
                         echo '<div class="item-info">';
                         echo '<img style="height: 50px;" src="' . $product['image'] . '">';
-                        echo '<p>' . $product['name'] . '</p>';
+                        echo '<p><a class="update-product-list" href="http://jserveur.local/HomeIOT/view/product.php?id=' . $product['id_product'] . '">' . $product['name'] . '</a></p>';
                         echo '<p>Code article : ' . $product['id_product'] . '</p>';
                         echo '<p>' . "Prix : ". $product['price'] . " €". '</p>';
                         echo '</div>';
