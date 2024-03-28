@@ -10,17 +10,17 @@
                 <div>
                     <form class="create-account-form" action="../controller/create-account.php" method="POST">
                         <label for="lastname">Nom :</label>
-                        <input class="text-form" type="text" name="lastname" id="" placeholder="Nom" required>
+                        <input class="text-form" type="text" name="lastname" placeholder="Nom" required pattern="^[a-zA-Z\s]*$">
                         <label for="firstname">Prénom :</label>
-                        <input class="text-form" type="text" name="firstname" id="" placeholder="Prénom" required>
+                        <input class="text-form" type="text" name="firstname" placeholder="Prénom" required pattern="^[a-zA-Z\s]*$">
                         <label for="email">Email :</label>
-                        <input class="text-form" type="email" name="email" placeholder="Email" required>
+                        <input class="text-form" type="email" name="email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                         <label for="address">Adresse :</label>
-                        <input class="text-form" type="text" name="address" placeholder="Adresse" required>
+                        <input class="text-form" type="text" name="address" placeholder="Adresse" required pattern="">
                         <label for="zipcode">Code postal :</label>
-                        <input class="text-form" type="text" name="zipcode" placeholder="Code postal" required>
+                        <input class="text-form" type="text" name="zipcode" placeholder="Code postal" required pattern="/^(?:0[1-9]|[1-8]\d|9[0-8])\d{3}$/">
                         <label for="city">Ville :</label>
-                        <input class="text-form" type="text" name="city" placeholder="Ville" required>
+                        <input class="text-form" type="text" name="city" placeholder="Ville" required pattern="^[a-zA-Z\s\-]*$">
                         <label for="password">Mot de passe :</label>
                         <input class="text-form" type="password" name="password" placeholder="Mot de passe" required>
                         <label for="password">Confirmer le mot de passe :</label>

@@ -16,9 +16,9 @@
                     ?>
                     <form class="connexion-form" action="../controller/connexion.php" method="POST">
                         <label for="email">Email :</label>
-                        <input class="text-form" type="email" name="user_email" id="" placeholder="Email">
+                        <input class="text-form" type="email" name="user_email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                         <label for="password">Mot de passe :</label>
-                        <input class="text-form" type="password" name="user_password" placeholder="Mot de passe">
+                        <input class="text-form" type="password" name="user_password" placeholder="Mot de passe" required>
                         <a class="forgot-password" href="">Mot de passe oublié ?</a>
                         <button class="connexion-btn" type="submit">Connexion</button>
                     </form>

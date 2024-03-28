@@ -39,17 +39,17 @@
                         <form class="create-account-form" action="../controller/my-account-informations-update.php" method="POST">
                             <input class="text-form" type="text" name="id_users" value="<?= $_SESSION['id_users'];?>" hidden>
                             <label class="" for="lastname">Nom :</label>
-                            <input class="text-form" type="text" name="lastname" placeholder="Nom" value="<?= $_SESSION['user_lastname'];?>">
+                            <input class="text-form" type="text" name="lastname" placeholder="Nom" value="<?= $_SESSION['user_lastname'];?>" required pattern="^[a-zA-Z\s]*$">
                             <label class="" for="firstname">Prénom :</label>
-                            <input class="text-form" type="text" name="firstname" placeholder="Prénom" value="<?= $_SESSION['user_firstname'];?>">
+                            <input class="text-form" type="text" name="firstname" placeholder="Prénom" value="<?= $_SESSION['user_firstname'];?>" required pattern="^[a-zA-Z\s]*$">
                             <label class="" for="email">Email :</label>
-                            <input class="text-form" type="email" name="email" placeholder="Email" value="<?= $_SESSION['user_email'];?>">
+                            <input class="text-form" type="email" name="email" placeholder="Email" value="<?= $_SESSION['user_email'];?>" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                             <label class="" for="address">Adresse :</label>
-                            <input class="text-form" type="text" name="address" placeholder="Adresse" value="<?= $_SESSION['user_address'];?>">
+                            <input class="text-form" type="text" name="address" placeholder="Adresse" value="<?= $_SESSION['user_address'];?>" required>
                             <label class="" for="zipcode">Code postal :</label>
-                            <input class="text-form" type="text" name="zipcode" placeholder="Code postal" value="<?= $_SESSION['user_zipcode'];?>">
+                            <input class="text-form" type="text" name="zipcode" placeholder="Code postal" value="<?= $_SESSION['user_zipcode'];?>" required pattern="[^(?:0[1-9]|[1-8]\d|9[0-8])\d{3}$]">
                             <label class="" for="city">Ville :</label>
-                            <input class="text-form" type="text" name="city" placeholder="Ville" value="<?= $_SESSION['user_city'];?>">
+                            <input class="text-form" type="text" name="city" placeholder="Ville" value="<?= $_SESSION['user_city'];?>" required pattern="^[a-zA-Z\s\-]*$">
                             <button class="create-account-btn" type="submit">Mettre à jour mes informations</button>
                         </form>
                     <?php 
