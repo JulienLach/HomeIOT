@@ -18,9 +18,9 @@
                         <label for="address">Adresse :</label>
                         <input class="text-form" type="text" name="address" placeholder="Adresse" required pattern="">
                         <label for="zipcode">Code postal :</label>
-                        <input class="text-form" type="text" name="zipcode" placeholder="Code postal" required pattern="/^(?:0[1-9]|[1-8]\d|9[0-8])\d{3}$/">
+                        <input class="text-form" type="text" name="zipcode" placeholder="Code postal" required pattern="\d{5}">                        
                         <label for="city">Ville :</label>
-                        <input class="text-form" type="text" name="city" placeholder="Ville" required pattern="^[a-zA-Z\s\-]*$">
+                        <input class="text-form" type="text" name="city" placeholder="Ville" required pattern="^[a-zA-Z]+[\s\-a-zA-Z]*$">                        
                         <label for="password">Mot de passe :</label>
                         <input class="text-form" type="password" name="password" placeholder="Mot de passe" required>
                         <label for="password">Confirmer le mot de passe :</label>

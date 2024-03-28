@@ -47,9 +47,9 @@
                             <label class="" for="address">Adresse :</label>
                             <input class="text-form" type="text" name="address" placeholder="Adresse" value="<?= $_SESSION['user_address'];?>" required>
                             <label class="" for="zipcode">Code postal :</label>
-                            <input class="text-form" type="text" name="zipcode" placeholder="Code postal" value="<?= $_SESSION['user_zipcode'];?>" required pattern="[^(?:0[1-9]|[1-8]\d|9[0-8])\d{3}$]">
+                            <input class="text-form" type="text" name="zipcode" placeholder="Code postal" value="<?= $_SESSION['user_zipcode'];?>" required required pattern="\d{5}">
                             <label class="" for="city">Ville :</label>
-                            <input class="text-form" type="text" name="city" placeholder="Ville" value="<?= $_SESSION['user_city'];?>" required pattern="^[a-zA-Z\s\-]*$">
+                            <input class="text-form" type="text" name="city" placeholder="Ville" value="<?= $_SESSION['user_city'];?>" required pattern="^[a-zA-Z]+[\s\-a-zA-Z]*$">
                             <button class="create-account-btn" type="submit">Mettre à jour mes informations</button>
                         </form>
                     <?php 
