@@ -67,7 +67,7 @@
                     </div>
                     <div class="order-menu">
                         <div class="black-separator"></div>
-                        <h5>Sous total : <span><?= empty($products) ? 0 : end($products)['total'] ?> €</span></h5>                        <div>
+                        <h5>Sous-total : <span><?= empty($products) ? 0 : end($products)['total'] ?> €</span></h5>                        <div>
 
                         <!-- CARD FORM -->
                         <div class="card-form">

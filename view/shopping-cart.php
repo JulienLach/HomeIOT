@@ -58,7 +58,7 @@
                     </div>
                     <div class="shopping-cart-menu">
                         <div class="black-separator"></div>
-                        <h5>Sous total : <span><?= empty($products) ? 0 : end($products)['total'] ?> €</span></h5>                        <div>
+                        <h5>Sous-total : <span><?= empty($products) ? 0 : end($products)['total'] ?> €</span></h5>                        <div>
                             <?php if(!isset($products)) {
                             echo '<a href="index.php"><button class="shopping-cart-validate-btn">Retour à l\'accueil</button></a>';
                             } else {
