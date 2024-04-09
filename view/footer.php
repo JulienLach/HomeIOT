@@ -28,7 +28,7 @@
                     <ul>
                         <li><a href="my-account.php">Mon compte</a></li>
                         <li><a href="shopping-cart.php">Mon panier</a></li>
-                        <li><a href="my-account.php">Mes Commandes</a></li>
+                        <li><a href="my-account.php">Mes commandes</a></li>
                     </ul>
                 </div>
             </div>
