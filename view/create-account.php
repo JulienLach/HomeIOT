@@ -16,7 +16,7 @@
                         <label for="email">Email :</label>
                         <input class="text-form" type="email" name="email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                         <label for="address">Adresse :</label>
-                        <input class="text-form" type="text" name="address" placeholder="Adresse" required pattern="">
+                        <input class="text-form" type="text" name="address" placeholder="Adresse" required>
                         <label for="zipcode">Code postal :</label>
                         <input class="text-form" type="text" name="zipcode" placeholder="Code postal" required pattern="\d{5}">                        
                         <label for="city">Ville :</label>
