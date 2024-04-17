@@ -2,10 +2,11 @@
 
 ![Logo](./img/HomeIOT-logos-cropped.jpeg)
 
-## Project Overview
+# Project Overview
+
 HomeIOT is an online store specializing in innovative IoT devices, Raspberry Pi kits, and Arduino components. The goal is to offer comprehensive solutions in the form of kits that cater to simple home automation needs or serve as starter kits for various projects, including programming and electronics learning.
 
-## Features
+### Features
 
 ### Product Categories:
 
@@ -28,7 +29,7 @@ HomeIOT is an online store specializing in innovative IoT devices, Raspberry Pi 
 - FAQ Page: Answers to basic user questions.
 - Resources Page: Links to programming learning resources and guides.
 
-## Target Audience
+### Target Audience
 
 ### The target audience includes:
 
@@ -36,9 +37,9 @@ HomeIOT is an online store specializing in innovative IoT devices, Raspberry Pi 
 - IoT beginners
 - Professionals
 
-# Technical Details
+### Technical Details
 
-## Technologies Used
+### Technologies Used
 
 ### Frontend:
 
@@ -53,7 +54,7 @@ PHP
 MySQL
 phpMyAdmin
 
-## Key Features
+### Key Features
 
 ### User Authentication:
 
