@@ -2,25 +2,25 @@
 
 ![Logo](./img/HomeIOT-logos-cropped.jpeg)
 
-# Project Overview
+## Project Overview
 
 HomeIOT is an online store specializing in innovative IoT devices, Raspberry Pi kits, and Arduino components. The goal is to offer comprehensive solutions in the form of kits that cater to simple home automation needs or serve as starter kits for various projects, including programming and electronics learning.
 
-### Features
+## Features
 
-### Product Categories:
+### Product Categories
 
 - DIY Electronics Project Kits: Includes Arduino kits, sensors, modules, and components for programming initiation.
 - Raspberry Pi Kits: Raspberry Pi kits for creating home servers or starting simple projects.
 - Arduino Kits: Simple Arduino kits for robotics projects or exploring Arduino capabilities.
 
-### Why These Products?
+### Why These Products?
 
 - Widely used and well-documented.
 - Large supportive community for newcomers.
 - Easy access to guides and information for beginners.
 
-### Store Characteristics:
+### Store Characteristics
 
 - Simple Design: Intuitive and clean website design for a pleasant browsing experience.
 - Product Catalog: Organized product categories for easy search and navigation, including new arrivals, promotions, and kits/packs.
@@ -29,52 +29,53 @@ HomeIOT is an online store specializing in innovative IoT devices, Raspberry Pi 
 - FAQ Page: Answers to basic user questions.
 - Resources Page: Links to programming learning resources and guides.
 
-### Target Audience
+### Target Audience
 
-### The target audience includes:
+The target audience includes:
 
 - IoT enthusiasts
 - IoT beginners
 - Professionals
 
-### Technical Details
+## Technical Details
 
 ### Technologies Used
 
-### Frontend:
+#### Frontend
 
-HTML5
-CSS3
-JavaScript
+- HTML5
+- CSS3
+- JavaScript
 
-### Backend:
+#### Backend
 
-Apache
-PHP
-MySQL
-phpMyAdmin
+- Apache
+- PHP
+- MySQL
+- phpMyAdmin
 
-### Key Features
+### Key Features
 
-### User Authentication:
+#### User Authentication
 
 - User registration and login functionality.
 - Authentication using JWT (JSON Web Tokens).
 
-### Product Management:
+#### Product Management
 
 - CRUD operations for products (Create, Read, Update, Delete).
 - Product categorization and filtering.
-- Shopping Cart and Checkout:
+
+#### Shopping Cart and Checkout
 
 - Persistent shopping cart for users.
 - Secure checkout process integrated with payment gateways.
 
-### Admin Panel:
+#### Admin Panel
 
 - Separate dashboard for admins to manage products, orders, and users.
 - Role-based access control (admin vs. user).
 
-### Responsive Design:
+#### Responsive Design
 
 - Mobile-friendly and responsive web design.
