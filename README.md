@@ -26,7 +26,7 @@ HomeIOT is an online store specializing in innovative IoT devices, Raspberry Pi 
 - Product Catalog: Organized product categories for easy search and navigation, including new arrivals, promotions, and kits/packs.
 - Detailed Product Descriptions: Each product includes a long description, short description, technical specifications, main image, and price.
 - Promotions and New Arrivals: Regular promotions, discounts, and special offers highlighted to attract customer attention.
-- FAQ Page: Answers to basic user questions.
+- FAQ Page: Answers to basic users questions.
 - Resources Page: Links to programming learning resources and guides.
 
 ### Target Audience
@@ -59,21 +59,18 @@ The target audience includes:
 #### User Authentication
 
 - User registration and login functionality.
-- Authentication using JWT (JSON Web Tokens).
 
 #### Product Management
 
 - CRUD operations for products (Create, Read, Update, Delete).
-- Product categorization and filtering.
+- Product categorization.
 
 #### Shopping Cart and Checkout
 
 - Persistent shopping cart for users.
-- Secure checkout process integrated with payment gateways.
 
 #### Admin Panel
 
-- Separate dashboard for admins to manage products, orders, and users.
 - Role-based access control (admin vs. user).
 
 #### Responsive Design
